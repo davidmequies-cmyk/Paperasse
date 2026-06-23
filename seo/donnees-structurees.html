@@ -1,0 +1,141 @@
+<!--
+  Données structurées (JSON-LD) enrichies pour chanteursynagogue.art
+  =================================================================
+  À coller dans Wix : Paramètres → Code personnalisé → + Ajouter du code
+    - Emplacement : <head>
+    - Pages : Toutes les pages
+    - Chargement : Une fois (load once)
+
+  AVANT DE PUBLIER, complétez / vérifiez :
+    - "sameAs" : remplacez les URL par vos vrais profils (Facebook, Instagram, YouTube)
+    - "image" / "logo" : URL d'une vraie image (idéalement > 1200px de large)
+    - "priceRange" : ajustez ("€€" est un indicatif, pas un prix exact)
+  Validez ensuite sur https://search.google.com/test/rich-results
+-->
+
+<!-- 1. Entité principale : artiste + entreprise locale -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "MusicGroup"],
+      "@id": "https://www.chanteursynagogue.art/#business",
+      "name": "NESHAMA MUSIC — David Méquiès",
+      "alternateName": "Chanteur de synagogue David Méquiès",
+      "description": "David Méquiès, chanteur de synagogue (hazzan) et pianiste juif à Paris depuis 1987. Cérémonies juives : houppa, bar-mitsva, bat-mitsva, offices de synagogue. Répertoire ashkénaze et sépharade. Formules duo, trio et quartet.",
+      "url": "https://www.chanteursynagogue.art",
+      "image": "https://static.wixstatic.com/media/468f0f_586d10372b7f43a7a93d02583c4dfd47~mv2.png",
+      "logo": "https://static.wixstatic.com/media/468f0f_323d0bb635a74649ab8675d0ef582c57~mv2.jpg",
+      "telephone": "+33745174129",
+      "email": "contact@mdmprod.fr",
+      "priceRange": "€€",
+      "foundingDate": "1987",
+      "genre": ["Musique juive", "Liturgie ashkénaze", "Liturgie sépharade"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "61 Rue de Lyon",
+        "postalCode": "75012",
+        "addressLocality": "Paris",
+        "addressRegion": "Île-de-France",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.8504887,
+        "longitude": 2.3701099
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Paris" },
+        { "@type": "AdministrativeArea", "name": "Île-de-France" },
+        { "@type": "Country", "name": "France" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "10:00",
+          "closes": "18:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/neshamamusic",
+        "https://www.instagram.com/VOTRE_COMPTE",
+        "https://www.youtube.com/@VOTRE_CHAINE"
+      ],
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Houppa (mariage juif)", "serviceType": "Animation musicale de cérémonie de mariage juif" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bar-mitsva / Bat-mitsva", "serviceType": "Animation musicale de bar-mitsva et bat-mitsva" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Offices de synagogue", "serviceType": "Chant liturgique pour offices (Rosh Hashana, Kippour, Shabbat)" } }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.chanteursynagogue.art/#david-mequies",
+      "name": "David Méquiès",
+      "jobTitle": "Chanteur de synagogue (hazzan) et pianiste",
+      "worksFor": { "@id": "https://www.chanteursynagogue.art/#business" },
+      "url": "https://www.chanteursynagogue.art"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.chanteursynagogue.art/#website",
+      "name": "Chanteur Synagogue David Méquiès",
+      "url": "https://www.chanteursynagogue.art",
+      "inLanguage": "fr-FR",
+      "publisher": { "@id": "https://www.chanteursynagogue.art/#business" }
+    }
+  ]
+}
+</script>
+
+<!-- 2. FAQ (à n'ajouter QUE si ces questions/réponses figurent visiblement sur une page du site) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Intervenez-vous partout en France ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Basé à Paris, David Méquiès intervient à Paris, en Île-de-France et dans toute la France pour les houppa, bar-mitsva, bat-mitsva et offices de synagogue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle est la différence entre les formules duo, trio et quartet ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Du chant seul au quartet, chaque formule ajoute des musiciens (piano, instruments) pour adapter l'ambiance musicale à la taille et au type de votre cérémonie. Le détail des formules est présenté sur la page Formules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Proposez-vous un répertoire ashkénaze et sépharade ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, le répertoire couvre les traditions ashkénaze et sépharade, ainsi que les chants liturgiques des grandes fêtes (Rosh Hashana, Kippour) et du Shabbat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment réserver pour une houppa ou une bar-mitsva ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Contactez David Méquiès par téléphone au +33 7 45 17 41 29 ou par e-mail à contact@mdmprod.fr pour recevoir un devis gratuit sous 24 h."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- 3. Open Graph manquant : ajoute la langue (à mettre dans le même bloc de code, head, toutes les pages) -->
+<meta property="og:locale" content="fr_FR" />
