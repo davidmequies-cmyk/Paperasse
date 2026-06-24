@@ -25,6 +25,7 @@ modifiables par API, d'où ce format « copier-coller »).
 | **`strategie-mots-cles.md`** | **Recherche de mots-clés** + analyse concurrentielle + cibles de backlinks | Référence stratégique (création de pages, blog, annuaires) |
 | **`pages-prestations.md`** | **Contenu de 4 pages dédiées** (Houppa, Bar-mitsva, Offices, Répertoire) avec titres/méta/textes | Pages & menu → + Ajouter une page |
 | **`blog-articles.md`** | **3 articles de blog** longue traîne prêts à publier | App Wix Blog → Créer un article |
+| **`AUTOMATISATION-claude-local.md`** | **Prompt + procédure** pour qu'une session Claude Code locale (avec navigateur) applique tout automatiquement dans Wix | Claude Code en local + MCP Playwright |
 
 ## Checklist d'application (par ordre de priorité)
 
