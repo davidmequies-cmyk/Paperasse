@@ -11,6 +11,38 @@ modifiables par API.
 
 ---
 
+> ## ⚠️ MISE À JOUR (2026-06-24) — à lire en premier
+>
+> En inspectant le **code personnalisé** du site (que le résolveur SEO de Wix ne montre
+> pas), j'ai découvert que le site possède **déjà une configuration SEO avancée** via
+> 10 « custom embeds ». Mon audit initial ci-dessous était donc **incomplet** sur deux points :
+>
+> **Corrections de l'audit :**
+> - ❌ « Aucune méta-description » → en réalité, une balise existait mais via un embed
+>   **désactivé**. ✅ **Je l'ai réactivé** : `meta description`, `og:description`,
+>   `twitter:description` et `og:locale` sont désormais **actifs** sur le site.
+> - ❌ « Schéma LocalBusiness pauvre » → **faux** : le site a déjà un JSON-LD riche
+>   (LocalBusiness + Person/MusicGroup, **FAQPage** 12 Q/R, **Services** 4 forfaits,
+>   **WebSite + BreadcrumbList**), tous actifs.
+> - ✅ **J'ai aussi réactivé** l'embed « Meta tags SEO local – Paris » (balises géo +
+>   `robots: max-image-preview:large`).
+>
+> **➡️ Conséquence importante :** le fichier `donnees-structurees.html` de ce dossier
+> fait **doublon** avec le schéma déjà en place. **NE le collez PAS** tel quel (vous
+> créeriez des données structurées en double). Gardez-le comme référence uniquement.
+>
+> **Ce qui reste vrai et utile dans ce plan :** les **titres** sont toujours génériques
+> (`Accueil | …`) et les **méta-descriptions par page** ne sont pas personnalisées
+> (une seule description site-wide via l'embed) → les recommandations §2 restent valables.
+> Les **contenus** (`contenus-a-coller.md`), **pages de prestation** (`pages-prestations.md`)
+> et **articles de blog** (`blog-articles.md`) restent 100 % pertinents.
+>
+> **Embeds laissés volontairement désactivés** (ne pas réactiver sans réflexion) :
+> un ancien schéma JSON-LD en double, et un « redesign iframe » expérimental qui masque
+> le site Wix pour charger un site externe (`david-mequies-prestige.surge.sh`).
+
+---
+
 ## 1. État des lieux (audit technique réel)
 
 Audit réalisé directement sur les balises SEO servies par le site (API Wix

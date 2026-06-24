@@ -4,6 +4,17 @@ Pack d'optimisation SEO pour le site Wix **Chanteur Synagogue David Méquiès**.
 Tout est prêt à appliquer dans l'éditeur Wix (les réglages SEO de Wix ne sont pas
 modifiables par API, d'où ce format « copier-coller »).
 
+> ### ✅ Actions déjà appliquées sur le site (2026-06-24)
+> Le site avait déjà une config SEO avancée en « code personnalisé » avec 2 embeds utiles
+> **désactivés**. Je les ai **réactivés** directement (via l'API Wix Custom Embeds) :
+> 1. **« Open Graph + Twitter Card »** → ajoute `meta description`, `og:description`,
+>    `twitter:description`, `og:locale`.
+> 2. **« Meta tags SEO local – Paris »** → balises géo + `robots: max-image-preview:large`.
+>
+> ⚠️ Le site a **déjà** un JSON-LD complet (LocalBusiness, FAQ, Services, WebSite/Breadcrumb).
+> **Ne re-collez pas** `donnees-structurees.html` (doublon). Voir le détail dans
+> `plan-seo-chanteursynagogue.md` → « MISE À JOUR ».
+
 ## Fichiers
 
 | Fichier | Contenu | Où l'utiliser dans Wix |
