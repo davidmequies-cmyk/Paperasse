@@ -11,6 +11,7 @@ modifiables par API, d'où ce format « copier-coller »).
 | **`plan-seo-chanteursynagogue.md`** | Audit complet + **titres & méta-descriptions** par page + plan d'action (on-page, SEO local, suivi) | Pages & menu → (page) → ⚙️ → SEO de base |
 | **`contenus-a-coller.md`** | **Textes optimisés** prêts à coller (accueil, formules, à propos), alt des images, FAQ | Éditeur de page + champs « alt » |
 | **`donnees-structurees.html`** | **JSON-LD** enrichi (LocalBusiness/MusicGroup, Person, WebSite, FAQPage) + `og:locale` | Paramètres → Code personnalisé (head, toutes pages) |
+| **`strategie-mots-cles.md`** | **Recherche de mots-clés** + analyse concurrentielle + cibles de backlinks | Référence stratégique (création de pages, blog, annuaires) |
 
 ## Démarrage rapide (≈ 30 min)
 
