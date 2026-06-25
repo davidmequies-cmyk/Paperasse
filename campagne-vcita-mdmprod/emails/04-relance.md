@@ -7,12 +7,12 @@
 
 ## Objet (A/B)
 
-- **A :** {{prénom}}, on garde votre créneau diagnostic ?
-- **B :** Dernière chance : votre diagnostic paie offert
+- **A :** {{prénom}}, on garde votre créneau découverte ?
+- **B :** Une dernière chose avant de vous laisser tranquille
 
 ## Pré-en-tête
 
-30 minutes pour sécuriser votre paie intermittents. Sans engagement.
+30 minutes pour voir comment MDMProd peut alléger vos coulisses. Sans engagement.
 
 ---
 
@@ -20,14 +20,14 @@
 
 Bonjour {{prénom}},
 
-Je ne voulais pas clore notre échange sans vous reproposer une dernière fois
-notre **diagnostic paie gratuit**.
+Je ne voulais pas clore notre échange sans vous reproposer une dernière fois un
+**rendez-vous découverte**.
 
 En 30 minutes, nous regardons ensemble :
 
-- où se cachent les risques de non-conformité dans votre gestion actuelle,
-- combien de temps vos équipes y consacrent réellement,
-- ce que MDMProd pourrait reprendre à son compte dès le mois prochain.
+- ce qui vous prend le plus de temps en coulisses (paie, logistique, production…),
+- où se cachent les risques administratifs ou juridiques,
+- ce que MDMProd pourrait reprendre à son compte pour vous libérer.
 
 Aucun engagement — juste un état des lieux clair et des pistes concrètes.
 

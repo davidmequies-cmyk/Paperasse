@@ -15,16 +15,21 @@ services de **MDMProd** (https://www.mdmprod.fr).
 
 | Élément | Choix |
 |---|---|
-| **Service mis en avant (hero)** | Externalisation de la paie des intermittents |
-| **Objectif** | Générer des prises de rendez-vous (diagnostic paie gratuit) |
+| **Périmètre** | **Offre globale MDMProd** — les 3 métiers (paie, événements, audiovisuel) |
+| **Objectif** | Générer des prises de rendez-vous (échange découverte, sans engagement) |
 | **Audience** | Compagnies, producteurs, salles, festivals, services événementiels de grandes maisons |
-| **Canaux** | E-mail (séquence de 4) + SMS de relance |
-| **CTA principal** | « Réserver un diagnostic paie gratuit » (lien de prise de RDV vcita) |
-| **KPI** | Taux d'ouverture, clics CTA, RDV réservés, devis demandés |
+| **Canal** | **E-mail uniquement** — séquence de 4 |
+| **Offre** | Pas de promotion chiffrée — campagne de notoriété/valeur, CTA = prise de RDV |
+| **CTA principal** | « Réserver un échange découverte (30 min) » (lien de prise de RDV vcita) |
+| **KPI** | Taux d'ouverture, clics CTA, RDV réservés, demandes de contact |
 
-La promesse centrale : **« Vous créez. Nous gérons la paperasse. »** — l'angle
-décharge administrative + sécurisation juridique, fort de 10 ans d'expertise et
-de références premium.
+La promesse centrale : **« Vous créez. Nous gérons le reste. »** — un seul
+partenaire pour tout le « hors-scène », fort de 10 ans d'expertise et de
+références premium (Hermès, LVMH, SNCF, Paris Aéroport…).
+
+> 📌 **SMS hors périmètre.** La campagne retenue est **e-mail uniquement**. Les
+> SMS de relance (`sms/relances-sms.md`) sont fournis en **option** si vous
+> souhaitez ajouter un canal plus tard.
 
 ## 2. Contenu du package
 
@@ -51,7 +56,7 @@ HTML-friendly markdown**, et le **libellé du bouton CTA**.
 vcita → **Marketing** → **Campaigns**.
 
 1. **Créer le lien de prise de RDV** (à coller dans tous les CTA)
-   - vcita → *Scheduling* → créer un service « Diagnostic paie — 30 min, gratuit ».
+   - vcita → *Scheduling* → créer un service « Échange découverte — 30 min, sans engagement ».
    - Copier l'URL de réservation publique. Elle remplace `{{LIEN_RDV}}` dans les e-mails.
 
 2. **Importer / segmenter les contacts**

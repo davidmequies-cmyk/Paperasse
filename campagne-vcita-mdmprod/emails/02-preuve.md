@@ -7,12 +7,12 @@
 
 ## Objet (A/B)
 
-- **A :** Hermès, LVMH, SNCF… nous confient leur paie spectacle
+- **A :** Hermès, LVMH, SNCF… nous confient leurs coulisses
 - **B :** {{prénom}}, ils nous ont fait confiance (et voici pourquoi)
 
 ## Pré-en-tête
 
-10 ans d'expertise paie intermittents au service des plus grandes maisons.
+10 ans d'expertise au service des plus grandes maisons : paie, événements, production.
 
 ---
 
@@ -20,10 +20,11 @@
 
 Bonjour {{prénom}},
 
-Quand on confie sa paie intermittents, on cherche avant tout **la fiabilité**.
+Quand on confie la gestion de ses productions et de sa paie intermittents, on
+cherche avant tout **la fiabilité**.
 
-Depuis 2014, des maisons exigeantes nous font confiance pour sécuriser la gestion
-sociale de leurs événements et productions :
+Depuis 2014, des maisons exigeantes nous font confiance pour sécuriser
+l'organisation et la gestion sociale de leurs événements et productions :
 
 > **Hermès · LVMH · Moët & Chandon · Mauboussin · SNCF · Paris Aéroport (ADP)…**
 
