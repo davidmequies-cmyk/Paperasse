@@ -30,9 +30,16 @@ Tout est **prêt en un clic** dès votre validation.
 3. Quand vous validez : je publie + on planifie la bascule du domaine.
 
 ## 🔗 Liens
-- Aperçu du design : _(lien ajouté après import)_
-- Site Studio (éditeur) : tableau de bord Wix → « chanteursyn-studio »
+- **Aperçu du site (rendu, cliquable)** : https://htmlpreview.github.io/?https://raw.githubusercontent.com/davidmequies-cmyk/Paperasse/claude/chanteursynagogue-wix-redesign-68d7g7/index.html
 - Code source : https://github.com/davidmequies-cmyk/Paperasse/tree/claude/chanteursynagogue-wix-redesign-68d7g7
+- Site Studio (éditeur) : tableau de bord Wix → « chanteursyn-studio » (ID 22b2327e-f306-47ae-8670-216712ac4152)
+
+## ⚠️ Action requise de votre part (1 clic)
+Le serveur Wix s'est reconnecté en cours de route et **toutes les actions Wix demandent à nouveau votre autorisation**. Il me reste 2 étapes Wix, bloquées tant que vous n'approuvez pas :
+1. **Intégrer la galerie** (photos + vidéos) dans le design HTML.
+2. **Importer le design dans Wix** pour en faire un vrai site éditable.
+
+👉 Quand vous revenez : autorisez les demandes d'accès Wix (ou dites-moi simplement « continue »), et je termine ces 2 étapes en quelques minutes. **Vos photos/vidéos sont déjà récupérées dans le site Studio** — rien n'est perdu.
 
 ## ✍️ À compléter par vous
 - **Témoignages** : section prévue, à remplir avec de vrais avis (je n'invente pas d'avis).
