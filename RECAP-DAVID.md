@@ -29,17 +29,24 @@ Tout est **prêt en un clic** dès votre validation.
 2. Choisir la voie finale : site Studio (modèle) **ou** le design HTML importé dans Wix.
 3. Quand vous validez : je publie + on planifie la bascule du domaine.
 
+## ✅ Galerie intégrée
+Le design contient désormais **18 vraies photos + 6 vidéos** (avec posters) tirées de votre ancien site. Les 106 médias complets (79 photos + 27 vidéos) sont aussi dans le site Studio.
+
 ## 🔗 Liens
-- **Aperçu du site (rendu, cliquable)** : https://htmlpreview.github.io/?https://raw.githubusercontent.com/davidmequies-cmyk/Paperasse/claude/chanteursynagogue-wix-redesign-68d7g7/index.html
+- **👀 Aperçu du site terminé (cliquable, rendu navigateur)** :
+  https://htmlpreview.github.io/?https://raw.githubusercontent.com/davidmequies-cmyk/Paperasse/claude/chanteursynagogue-wix-redesign-68d7g7/index.html
 - Code source : https://github.com/davidmequies-cmyk/Paperasse/tree/claude/chanteursynagogue-wix-redesign-68d7g7
 - Site Studio (éditeur) : tableau de bord Wix → « chanteursyn-studio » (ID 22b2327e-f306-47ae-8670-216712ac4152)
 
-## ⚠️ Action requise de votre part (1 clic)
-Le serveur Wix s'est reconnecté en cours de route et **toutes les actions Wix demandent à nouveau votre autorisation**. Il me reste 2 étapes Wix, bloquées tant que vous n'approuvez pas :
-1. **Intégrer la galerie** (photos + vidéos) dans le design HTML.
-2. **Importer le design dans Wix** pour en faire un vrai site éditable.
+## ⚙️ Passage dans Wix Studio — où on en est
+Le **design complet est terminé** (fichier `index.html`). L'**import automatique** vers Wix via l'outil intégré **n'est pas possible** : il n'accepte que des sources internes Claude/Wix, pas un lien externe (GitHub/CDN testés, refusés). Aucune perte pour autant.
 
-👉 Quand vous revenez : autorisez les demandes d'accès Wix (ou dites-moi simplement « continue »), et je termine ces 2 étapes en quelques minutes. **Vos photos/vidéos sont déjà récupérées dans le site Studio** — rien n'est perdu.
+Pour mettre ce design dans Wix Studio, 2 options :
+1. **Recommandé** — Ouvrir le site Studio « chanteursyn-studio » dans l'éditeur Wix et reconstruire les sections en suivant `index.html` comme maquette exacte (textes prêts dans `COPY-FR-EN-HE.md`, médias déjà importés). Je peux vous guider section par section.
+2. Utiliser le fichier `index.html` tel quel comme site (hébergement externe) si vous ne tenez pas à Wix Studio.
+
+## ⏸️ Toujours respecté
+**Aucune publication, aucune bascule de domaine.** `chanteursynagogue.art` reste 100 % intact.
 
 ## ✍️ À compléter par vous
 - **Témoignages** : section prévue, à remplir avec de vrais avis (je n'invente pas d'avis).
