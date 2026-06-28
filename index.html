@@ -7,6 +7,7 @@
 <meta name="description" content="David Méquiès, pianiste et chanteur juif à Paris depuis 1987. Accompagnement musical des bar-mitsva et bat-mitsva, animation de houppa et de mariages, concerts et spectacles. Paris, Île-de-France et toute la France.">
 <meta name="keywords" content="pianiste chanteur juif Paris, animation bar mitsva, animation bat mitsva, musicien houppa, animation mariage juif, chanteur cérémonie juive, musique juive ashkénaze séfarade, concert musique juive Paris">
 <meta name="author" content="David Méquiès — NESHAMA MUSIC">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://www.chanteursynagogue.art/">
 <meta name="theme-color" content="#0a0a0a">
 <!-- Open Graph -->
@@ -18,9 +19,15 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:locale:alternate" content="he_IL">
 <meta property="og:url" content="https://www.chanteursynagogue.art/">
+<!-- À COMPLÉTER (David) : déposer une image 1200×630 nommée og-image.jpg à la racine du site pour l'aperçu des partages (WhatsApp, Facebook, etc.) -->
+<meta property="og:image" content="https://www.chanteursynagogue.art/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="David Méquiès — pianiste et chanteur juif à Paris">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="David Méquiès — Pianiste & Chanteur juif à Paris">
 <meta name="twitter:description" content="Pianiste et chanteur juif à Paris depuis 1987. Bar-mitsva, houppa, mariages, concerts.">
+<meta name="twitter:image" content="https://www.chanteursynagogue.art/og-image.jpg">
 <!-- hreflang -->
 <link rel="alternate" hreflang="fr" href="https://www.chanteursynagogue.art/">
 <link rel="alternate" hreflang="en" href="https://www.chanteursynagogue.art/en/">
@@ -58,7 +65,7 @@
       "@type": ["LocalBusiness", "MusicGroup"],
       "@id": "https://www.chanteursynagogue.art/#business",
       "name": "NESHAMA MUSIC — David Méquiès",
-      "image": "https://www.chanteursynagogue.art/",
+      "image": "https://www.chanteursynagogue.art/og-image.jpg",
       "description": "Pianiste et chanteur juif à Paris depuis 1987 : accompagnement musical des bar-mitsva et bat-mitsva, animation de houppa et de mariages, concerts et spectacles. Répertoire ashkénaze et séfarade.",
       "url": "https://www.chanteursynagogue.art/",
       "email": "contact@mdmprod.fr",
@@ -126,6 +133,9 @@ h1,h2,h3,.display{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500
 html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3{font-family:'Frank Ruhl Libre',serif}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink);color:var(--bg);padding:12px 18px;font-size:.85rem;letter-spacing:.04em}
+.skip:focus{left:12px;top:12px}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
 .accent{color:var(--accent)}
 .eyebrow{font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);font-weight:500}
@@ -222,27 +232,35 @@ html[dir="rtl"] .cta,html[dir="rtl"] .stat-row,html[dir="rtl"] .rep-tags{flex-di
 .lb{position:fixed;inset:0;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;z-index:100;padding:30px}
 .lb.show{display:flex}
 .lb img{max-width:92vw;max-height:88vh;object-fit:contain;filter:none}
-.lb .x{position:absolute;top:24px;right:30px;color:#fff;font-size:2rem;cursor:pointer}
+.lb .x{position:absolute;top:24px;right:30px;color:#fff;font-size:2rem;cursor:pointer;background:none;border:0;line-height:1}
+
+/* Accessibilité : respect de la préférence « animations réduites » */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+}
 </style>
 </head>
 <body>
 
+<a class="skip" href="#about" data-i18n="skip">Aller au contenu</a>
+
 <header>
   <div class="wrap nav">
     <a href="#hero" class="brand" data-i18n="brand">David Méquiès<small>NESHAMA MUSIC</small></a>
-    <nav class="menu" id="menu">
+    <nav class="menu" id="menu" aria-label="Navigation principale">
       <a href="#about" data-i18n="nav_about">À propos</a>
       <a href="#services" data-i18n="nav_services">Prestations</a>
       <a href="#gallery" data-i18n="nav_gallery">Galerie</a>
       <a href="#faq" data-i18n="nav_faq">FAQ</a>
       <a href="#contact" data-i18n="nav_contact">Contact</a>
-      <span class="langs">
-        <button data-lang="fr" class="active">FR</button>
-        <button data-lang="en">EN</button>
-        <button data-lang="he">עב</button>
+      <span class="langs" role="group" aria-label="Choix de la langue / Language">
+        <button type="button" data-lang="fr" class="active" lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-lang="en" lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="he" lang="he" aria-pressed="false">עב</button>
       </span>
     </nav>
-    <button class="burger" id="burger" aria-label="Menu">☰</button>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">☰</button>
   </div>
 </header>
 
@@ -315,11 +333,11 @@ html[dir="rtl"] .cta,html[dir="rtl"] .stat-row,html[dir="rtl"] .rep-tags{flex-di
     <span class="eyebrow" data-i18n="faq_eyebrow">Questions fréquentes</span>
     <h2 class="sec-title" data-i18n="faq_title">FAQ</h2>
     <div class="faq">
-      <div class="faq-item"><button class="faq-q"><span data-i18n="faq1_q">David Méquiès est-il hazan ou officiant ?</span><span class="ic">+</span></button><div class="faq-a"><p data-i18n="faq1_a">Non. David est pianiste et chanteur. Il accompagne musicalement les cérémonies (bar/bat-mitsva, houppa) et anime les fêtes, mais ne dirige pas les offices religieux.</p></div></div>
-      <div class="faq-item"><button class="faq-q"><span data-i18n="faq2_q">Dans quelles régions intervenez-vous ?</span><span class="ic">+</span></button><div class="faq-a"><p data-i18n="faq2_a">À Paris, en Île-de-France et dans toute la France.</p></div></div>
-      <div class="faq-item"><button class="faq-q"><span data-i18n="faq3_q">Proposez-vous plusieurs formules ?</span><span class="ic">+</span></button><div class="faq-a"><p data-i18n="faq3_a">Oui : solo piano-voix, duo, trio ou quartet, selon votre cérémonie et votre budget.</p></div></div>
-      <div class="faq-item"><button class="faq-q"><span data-i18n="faq4_q">Quel répertoire jouez-vous ?</span><span class="ic">+</span></button><div class="faq-a"><p data-i18n="faq4_a">Un répertoire ashkénaze et séfarade : liturgique, variété juive, klezmer, mélodies israéliennes et chansons françaises.</p></div></div>
-      <div class="faq-item"><button class="faq-q"><span data-i18n="faq5_q">Comment réserver ?</span><span class="ic">+</span></button><div class="faq-a"><p data-i18n="faq5_a">Contactez-moi par téléphone ou via le formulaire pour un devis personnalisé.</p></div></div>
+      <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false"><span data-i18n="faq1_q">David Méquiès est-il hazan ou officiant ?</span><span class="ic">+</span></button><div class="faq-a"><p data-i18n="faq1_a">Non. David est pianiste et chanteur. Il accompagne musicalement les cérémonies (bar/bat-mitsva, houppa) et anime les fêtes, mais ne dirige pas les offices religieux.</p></div></div>
+      <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false"><span data-i18n="faq2_q">Dans quelles régions intervenez-vous ?</span><span class="ic">+</span></button><div class="faq-a"><p data-i18n="faq2_a">À Paris, en Île-de-France et dans toute la France.</p></div></div>
+      <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false"><span data-i18n="faq3_q">Proposez-vous plusieurs formules ?</span><span class="ic">+</span></button><div class="faq-a"><p data-i18n="faq3_a">Oui : solo piano-voix, duo, trio ou quartet, selon votre cérémonie et votre budget.</p></div></div>
+      <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false"><span data-i18n="faq4_q">Quel répertoire jouez-vous ?</span><span class="ic">+</span></button><div class="faq-a"><p data-i18n="faq4_a">Un répertoire ashkénaze et séfarade : liturgique, variété juive, klezmer, mélodies israéliennes et chansons françaises.</p></div></div>
+      <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false"><span data-i18n="faq5_q">Comment réserver ?</span><span class="ic">+</span></button><div class="faq-a"><p data-i18n="faq5_a">Contactez-moi par téléphone ou via le formulaire pour un devis personnalisé.</p></div></div>
     </div>
   </div>
 </section>
@@ -354,7 +372,7 @@ html[dir="rtl"] .cta,html[dir="rtl"] .stat-row,html[dir="rtl"] .rep-tags{flex-di
   </div>
 </footer>
 
-<div class="lb" id="lb"><span class="x" id="lbx">×</span><img id="lbimg" alt=""></div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image agrandie"><button class="x" id="lbx" type="button" aria-label="Fermer">×</button><img id="lbimg" alt="Photo agrandie"></div>
 
 <script>
 /* ===== i18n dictionary ===== */
@@ -366,7 +384,7 @@ const I18N={
   rep_eyebrow:"Répertoire & formules",tag1:"Liturgique",tag2:"Variété juive",tag3:"Klezmer",tag4:"Israélien",tag5:"Ashkénaze",tag6:"Séfarade",tag7:"Chanson française",tag8:"Solo · Duo · Trio · Quartet",
   gal_eyebrow:"Galerie",gal_title:"Photos",gal_sub:"Cérémonies, concerts et animations.",vid_title:"Vidéos",
   faq_eyebrow:"Questions fréquentes",faq_title:"FAQ",faq1_q:"David Méquiès est-il hazan ou officiant ?",faq1_a:"Non. David est pianiste et chanteur. Il accompagne musicalement les cérémonies (bar/bat-mitsva, houppa) et anime les fêtes, mais ne dirige pas les offices religieux.",faq2_q:"Dans quelles régions intervenez-vous ?",faq2_a:"À Paris, en Île-de-France et dans toute la France.",faq3_q:"Proposez-vous plusieurs formules ?",faq3_a:"Oui : solo piano-voix, duo, trio ou quartet, selon votre cérémonie et votre budget.",faq4_q:"Quel répertoire jouez-vous ?",faq4_a:"Un répertoire ashkénaze et séfarade : liturgique, variété juive, klezmer, mélodies israéliennes et chansons françaises.",faq5_q:"Comment réserver ?",faq5_a:"Contactez-moi par téléphone ou via le formulaire pour un devis personnalisé.",
-  ct_eyebrow:"Contact",ct_title:"Parlons de votre événement",ct_body:"Pour un devis personnalisé ou toute question, n'hésitez pas à me contacter.",ct_addr:"61 Rue de Lyon, 75012 Paris",ct_map:"Voir sur la carte",ph_name:"Nom",ph_email:"Email",ph_event:"Type d'événement (bar-mitsva, houppa…)",ph_msg:"Votre message",ph_send:"Envoyer",foot:"Pianiste & chanteur juif · Paris · depuis 1987"},
+  ct_eyebrow:"Contact",ct_title:"Parlons de votre événement",ct_body:"Pour un devis personnalisé ou toute question, n'hésitez pas à me contacter.",ct_addr:"61 Rue de Lyon, 75012 Paris",ct_map:"Voir sur la carte",ph_name:"Nom",ph_email:"Email",ph_event:"Type d'événement (bar-mitsva, houppa…)",ph_msg:"Votre message",ph_send:"Envoyer",foot:"Pianiste & chanteur juif · Paris · depuis 1987",skip:"Aller au contenu"},
  en:{nav_about:"About",nav_services:"Services",nav_gallery:"Gallery",nav_faq:"FAQ",nav_contact:"Contact",
   hero_eyebrow:"Pianist & Singer · since 1987",hero_title:"The right emotion, in music.",hero_sub:"Jewish pianist and singer in Paris. I accompany and host your most beautiful ceremonies — bar mitzvah, bat mitzvah, chuppah, weddings — and perform concerts and shows.",hero_cta1:"Request a quote",hero_cta2:"Listen & watch",scroll:"scroll",
   about_eyebrow:"About",about_title:"Over 35 years serving your celebrations",about_body:"Since 1987, I have brought music to the great moments of Jewish life. As a pianist and singer, I put my experience at the service of your celebrations: the emotion of a bat mitzvah, the joy of a chuppah, the warmth of an Ashkenazi and Sephardic repertoire. I do not officiate — I accompany, sing and host, so every moment rings true. Solo at the piano, as a duo, trio or quartet, I adapt to your ceremony, your venue and your wishes.",stat1:"Since",stat2:"Years of experience",stat3:"Formats: solo to quartet",
@@ -374,7 +392,7 @@ const I18N={
   rep_eyebrow:"Repertoire & formats",tag1:"Liturgical",tag2:"Jewish popular",tag3:"Klezmer",tag4:"Israeli",tag5:"Ashkenazi",tag6:"Sephardic",tag7:"French chanson",tag8:"Solo · Duo · Trio · Quartet",
   gal_eyebrow:"Gallery",gal_title:"Photos",gal_sub:"Ceremonies, concerts and events.",vid_title:"Videos",
   faq_eyebrow:"Frequently asked",faq_title:"FAQ",faq1_q:"Is David Méquiès a hazan or officiant?",faq1_a:"No. David is a pianist and singer. He provides musical accompaniment for ceremonies (bar/bat mitzvah, chuppah) and hosts celebrations, but does not lead religious services.",faq2_q:"Where do you perform?",faq2_a:"In Paris, the Île-de-France region and throughout France.",faq3_q:"Do you offer different formats?",faq3_a:"Yes: solo piano-voice, duo, trio or quartet.",faq4_q:"What repertoire do you play?",faq4_a:"Ashkenazi and Sephardic: liturgical, Jewish popular, klezmer, Israeli melodies and French songs.",faq5_q:"How do I book?",faq5_a:"Contact me by phone or via the form for a personalized quote.",
-  ct_eyebrow:"Contact",ct_title:"Let's talk about your event",ct_body:"For a personalized quote or any question, feel free to reach out.",ct_addr:"61 Rue de Lyon, 75012 Paris, France",ct_map:"View on map",ph_name:"Name",ph_email:"Email",ph_event:"Event type (bar mitzvah, chuppah…)",ph_msg:"Your message",ph_send:"Send",foot:"Jewish pianist & singer · Paris · since 1987"},
+  ct_eyebrow:"Contact",ct_title:"Let's talk about your event",ct_body:"For a personalized quote or any question, feel free to reach out.",ct_addr:"61 Rue de Lyon, 75012 Paris, France",ct_map:"View on map",ph_name:"Name",ph_email:"Email",ph_event:"Event type (bar mitzvah, chuppah…)",ph_msg:"Your message",ph_send:"Send",foot:"Jewish pianist & singer · Paris · since 1987",skip:"Skip to content"},
  he:{nav_about:"אודות",nav_services:"שירותים",nav_gallery:"גלריה",nav_faq:"שאלות",nav_contact:"צור קשר",
   hero_eyebrow:"פסנתרן וזמר · מאז 1987",hero_title:"הרגש הנכון, במוזיקה.",hero_sub:"פסנתרן וזמר יהודי בפריז. אני מלווה ומנחה את הטקסים היפים ביותר שלכם — בר מצווה, בת מצווה, חופה וחתונות — ומופיע בקונצרטים ובמופעים.",hero_cta1:"בקשת הצעת מחיר",hero_cta2:"להאזין ולצפות",scroll:"גלילה",
   about_eyebrow:"אודות",about_title:"יותר מ-35 שנה בשירות החגיגות שלכם",about_body:"מאז 1987 אני מביא מוזיקה לרגעים הגדולים של החיים היהודיים. כפסנתרן וזמר, אני מעמיד את ניסיוני לשירות החגיגות שלכם: הרגש של בת מצווה, השמחה של חופה, החום של רפרטואר אשכנזי וספרדי. אינני משמש חזן — אני מלווה, שר ומנחה, כדי שכל רגע יישמע נכון. לבד ליד הפסנתר, בדואט, בשלישייה או ברביעייה, אני מתאים את עצמי לטקס, לאולם ולרצונות שלכם.",stat1:"מאז",stat2:"שנות ניסיון",stat3:"פורמטים: סולו עד רביעייה",
@@ -382,26 +400,45 @@ const I18N={
   rep_eyebrow:"רפרטואר ופורמטים",tag1:"ליטורגי",tag2:"זמר יהודי",tag3:"כליזמר",tag4:"ישראלי",tag5:"אשכנזי",tag6:"ספרדי",tag7:"שאנסון צרפתי",tag8:"סולו · דואט · שלישייה · רביעייה",
   gal_eyebrow:"גלריה",gal_title:"תמונות",gal_sub:"טקסים, קונצרטים ואירועים.",vid_title:"סרטונים",
   faq_eyebrow:"שאלות נפוצות",faq_title:"שאלות נפוצות",faq1_q:"האם דוד מקייס הוא חזן?",faq1_a:"לא. דוד הוא פסנתרן וזמר. הוא מספק ליווי מוזיקלי לטקסים (בר/בת מצווה, חופה) ומנחה חגיגות, אך אינו מוביל תפילות.",faq2_q:"באילו אזורים אתה מופיע?",faq2_a:"בפריז, באזור איל-דה-פראנס ובכל צרפת.",faq3_q:"האם יש מספר פורמטים?",faq3_a:"כן: סולו פסנתר-שירה, דואט, שלישייה או רביעייה.",faq4_q:"איזה רפרטואר?",faq4_a:"אשכנזי וספרדי: ליטורגי, זמר יהודי, כליזמר, מנגינות ישראליות ושירים צרפתיים.",faq5_q:"איך מזמינים?",faq5_a:"צרו קשר בטלפון או דרך הטופס לקבלת הצעת מחיר.",
-  ct_eyebrow:"צור קשר",ct_title:"בואו נדבר על האירוע שלכם",ct_body:"להצעת מחיר אישית או לכל שאלה, אשמח שתפנו אליי.",ct_addr:"Rue de Lyon 61, 75012 פריז",ct_map:"צפייה במפה",ph_name:"שם",ph_email:"אימייל",ph_event:"סוג האירוע (בר מצווה, חופה…)",ph_msg:"ההודעה שלכם",ph_send:"שליחה",foot:"פסנתרן וזמר יהודי · פריז · מאז 1987"}
+  ct_eyebrow:"צור קשר",ct_title:"בואו נדבר על האירוע שלכם",ct_body:"להצעת מחיר אישית או לכל שאלה, אשמח שתפנו אליי.",ct_addr:"Rue de Lyon 61, 75012 פריז",ct_map:"צפייה במפה",ph_name:"שם",ph_email:"אימייל",ph_event:"סוג האירוע (בר מצווה, חופה…)",ph_msg:"ההודעה שלכם",ph_send:"שליחה",foot:"פסנתרן וזמר יהודי · פריז · מאז 1987",skip:"דלג לתוכן"}
 };
+/* Métadonnées (titre + description) par langue — pour le SEO et l'aperçu de l'onglet */
+const META={
+ fr:{title:"David Méquiès — Pianiste & Chanteur juif à Paris | Bar-mitsva, houppa, concerts",desc:"David Méquiès, pianiste et chanteur juif à Paris depuis 1987. Accompagnement musical des bar-mitsva et bat-mitsva, animation de houppa et de mariages, concerts et spectacles. Paris, Île-de-France et toute la France."},
+ en:{title:"David Méquiès — Jewish Pianist & Singer in Paris | Bar mitzvah, chuppah, concerts",desc:"David Méquiès, Jewish pianist and singer in Paris since 1987. Musical accompaniment for bar/bat mitzvah, chuppah and wedding hosting, concerts and shows. Paris, Île-de-France and across France."},
+ he:{title:"דוד מקייס — פסנתרן וזמר יהודי בפריז | בר מצווה, חופה, קונצרטים",desc:"דוד מקייס, פסנתרן וזמר יהודי בפריז מאז 1987. ליווי מוזיקלי לבר/בת מצווה, הנחיית חופות וחתונות, קונצרטים ומופעים. פריז, איל-דה-פראנס וכל צרפת."}
+};
+var metaDesc=document.querySelector('meta[name="description"]');
 function setLang(l){
  const d=I18N[l];if(!d)return;
  document.documentElement.lang=l;document.documentElement.dir=(l==='he')?'rtl':'ltr';
  document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(d[k]!=null)el.textContent=d[k];});
  document.querySelectorAll('[data-i18n-ph]').forEach(function(el){var k=el.getAttribute('data-i18n-ph');if(d[k]!=null)el.setAttribute('placeholder',d[k]);});
- document.querySelectorAll('.langs button').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-lang')===l);});
+ document.querySelectorAll('.langs button').forEach(function(b){var on=b.getAttribute('data-lang')===l;b.classList.toggle('active',on);b.setAttribute('aria-pressed',on?'true':'false');});
+ if(META[l]){document.title=META[l].title;if(metaDesc)metaDesc.setAttribute('content',META[l].desc);}
+ try{localStorage.setItem('lang',l);}catch(e){}
 }
 document.querySelectorAll('.langs button').forEach(function(b){b.addEventListener('click',function(){setLang(b.getAttribute('data-lang'));});});
+/* Langue initiale : choix mémorisé, sinon langue du navigateur, sinon FR */
+(function(){var saved;try{saved=localStorage.getItem('lang');}catch(e){}
+ var nav=(navigator.language||'fr').slice(0,2).toLowerCase();
+ var l=(saved&&I18N[saved])?saved:(I18N[nav]?nav:'fr');
+ setLang(l);})();
 /* FAQ */
-document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){q.parentElement.classList.toggle('open');});});
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){var open=q.parentElement.classList.toggle('open');q.setAttribute('aria-expanded',open?'true':'false');});});
 /* Burger */
-var bg=document.getElementById('burger');if(bg)bg.addEventListener('click',function(){document.getElementById('menu').classList.toggle('open');});
-document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('menu').classList.remove('open');});});
+var bg=document.getElementById('burger'),menu=document.getElementById('menu');
+function setMenu(open){if(!menu)return;menu.classList.toggle('open',open);if(bg)bg.setAttribute('aria-expanded',open?'true':'false');}
+if(bg)bg.addEventListener('click',function(){setMenu(!menu.classList.contains('open'));});
+document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
 /* Lightbox */
-var lb=document.getElementById('lb'),lbimg=document.getElementById('lbimg');
-document.addEventListener('click',function(e){if(e.target.matches('.gallery-grid img')){lbimg.src=e.target.src;lb.classList.add('show');}});
-document.getElementById('lbx').addEventListener('click',function(){lb.classList.remove('show');});
-lb.addEventListener('click',function(e){if(e.target===lb)lb.classList.remove('show');});
+var lb=document.getElementById('lb'),lbimg=document.getElementById('lbimg'),lbReturn=null;
+function closeLb(){lb.classList.remove('show');lbimg.removeAttribute('src');if(lbReturn&&lbReturn.focus){lbReturn.focus();}lbReturn=null;}
+document.addEventListener('click',function(e){if(e.target.matches('.gallery-grid img')){lbReturn=e.target;lbimg.src=e.target.src;if(e.target.alt)lbimg.alt=e.target.alt;lb.classList.add('show');document.getElementById('lbx').focus();}});
+document.getElementById('lbx').addEventListener('click',closeLb);
+lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
+/* Échap : ferme la lightbox ou le menu mobile */
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(lb.classList.contains('show'))closeLb();else if(menu&&menu.classList.contains('open'))setMenu(false);}});
 /* year */
 document.getElementById('yr').textContent=new Date().getFullYear();
 </script>
