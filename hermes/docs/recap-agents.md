@@ -10,16 +10,17 @@
 
 ---
 
-## Les 6 agents
+## Les 7 agents
 
 | Commande | Agent | Modèle | À quoi il sert |
 |---|---|---|---|
-| **/dg** | Direction Générale | OpenAI | Tableau de bord : Urgent · Finance · Clients · Juridique · Production · Stratégie. Priorise et propose des décisions. |
+| **/dg** | Direction Générale | Claude (+ OpenAI) | Tableau de bord : Urgent · Finance · Clients · Juridique · Production · Stratégie. Priorise et propose des décisions. |
 | **/paie** | Paie intermittents (SpectaGestion) | OpenAI (+ Gemini pour pièces jointes) | Analyse les dossiers, identifie artistes/techniciens, prépare DPAE/CDDU/bulletins/AEM/DSN, estime le coût employeur, détecte les risques. |
-| **/relance** | Relances / impayés | Copilot | Classe les impayés par urgence, rédige les relances (4 niveaux jusqu'à mise en demeure), e-mails prêts à valider. |
-| **/contrat** | Contrats spectacle / audiovisuel | Copilot | Choisit et rédige le bon contrat (cession, CDDU, coproduction, production déléguée…), signale risques et clauses à renforcer. |
+| **/relance** | Relances / impayés | Claude | Classe les impayés par urgence, rédige les relances (4 niveaux jusqu'à mise en demeure), e-mails prêts à valider. |
+| **/contrat** | Contrats spectacle / audiovisuel | Claude | Choisit et rédige le bon contrat (cession, CDDU, coproduction, production déléguée…), signale risques et clauses à renforcer. |
 | **/seo** | SEO / Marketing | Gemini | Audite et optimise les pages (titres, métas, mots-clés, FAQ SEO) de mdmprod.fr, paieintermittents.com, chanteursynagogue.art. |
 | **/com** | Communication | Copilot (+ Gemini idées) | Rédige posts réseaux, newsletters et annonces (concerts/cérémonies David Méquiès, événements Neshama/MDMProd). |
+| **/treso** | Trésorerie / Finance | Claude (+ OpenAI) | Soldes, entrées/sorties, projection 30/60/90 j, alertes de tension, actions cash prioritaires (s'appuie sur Qonto). |
 
 ---
 
@@ -28,16 +29,25 @@
 - **09h30** (chaque jour) → **/paie** : nouveaux dossiers + infos manquantes (sans déclaration).
 - **Lundi 10h00** → **/relance** : impayés par urgence + relances à valider.
 
-*(/contrat, /seo, /com s'utilisent à la demande.)*
+- **Lundi (matin)** → **/treso** : point cash + impayés prioritaires.
+
+*(/contrat, /seo, /com, /treso s'utilisent aussi à la demande.)*
 
 ---
 
 ## Modèles
-- **OpenAI** : raisonnement, calculs, structuration → /dg, /paie
-- **Copilot** : rédaction longue / juridique → /contrat, /relance, /com
-- **Gemini** : recherche, SEO, lecture de pièces jointes → /seo
-- Bascule automatique sur un modèle disponible si l'un est indisponible.
-- *(Claude/Anthropic : à ajouter plus tard si souhaité — clé API dans la config du Mac, idéal pour /contrat, /relance, /dg.)*
+- **Claude** : juridique, relances, synthèse DG/trésorerie → /contrat, /relance, /dg, /treso *(1er choix)*
+- **OpenAI** : calculs paie, structuration → /paie, /dg
+- **Gemini** : recherche, SEO, lecture de pièces jointes → /seo, /paie
+- **Copilot** : rédaction de secours → /com
+- Bascule automatique sur un modèle disponible si le 1er choix est indisponible.
+
+## Nouveautés (améliorations)
+- 📒 **Référentiel central** (`referentiel.md`) : faits stables réutilisés par tous les agents.
+- 🗂️ **Gabarits** (`templates/`) : relances (4 niveaux) + contrats prêts à remplir.
+- 💰 **Agent /treso** : pilotage de la trésorerie.
+- 🚩 **Règle anti-arnaque** : signalement des e-mails/factures suspects.
+- 🔌 **Branchements Mac** (`docs/connexions-mac.md`) : Qonto, Gmail, boutons Telegram, journal d'audit.
 
 ---
 

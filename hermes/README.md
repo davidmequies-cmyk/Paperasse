@@ -16,14 +16,17 @@ Aucune action externe ou irréversible (envoi d'e-mail, déclaration DPAE/AEM/DS
 
 | Commande | Agent | Modèle conseillé |
 |---|---|---|
-| `/dg` | [Direction Générale](prompts/agent-5-direction-generale.md) | OpenAI |
+| `/dg` | [Direction Générale](prompts/agent-5-direction-generale.md) | Claude + OpenAI |
 | `/paie` | [Paie intermittents (SpectaGestion)](prompts/agent-1-paie.md) | OpenAI + Gemini |
-| `/relance` | [Relances / impayés](prompts/agent-3-relances.md) | Copilot |
-| `/contrat` | [Contrats spectacle / audiovisuel](prompts/agent-2-contrats.md) | Copilot |
+| `/relance` | [Relances / impayés](prompts/agent-3-relances.md) | Claude |
+| `/contrat` | [Contrats spectacle / audiovisuel](prompts/agent-2-contrats.md) | Claude |
 | `/seo` | [SEO / Marketing](prompts/agent-4-seo.md) | Gemini |
 | `/com` | [Communication](prompts/agent-6-communication.md) | Copilot + Gemini |
+| `/treso` | [Trésorerie / Finance](prompts/agent-7-tresorerie.md) | Claude + OpenAI |
 
 Le **cadre commun** appliqué à tous les agents : [`prompts/00-preambule-commun.md`](prompts/00-preambule-commun.md).
+Les **faits stables** (SIREN, tarifs, taux, coordonnées) : [`referentiel.md`](referentiel.md).
+Les **gabarits** prêts à remplir (relances, contrats) : [`templates/`](templates/).
 
 ## Automatismes
 
@@ -36,19 +39,22 @@ Le **cadre commun** appliqué à tous les agents : [`prompts/00-preambule-commun
 ```
 hermes/
 ├── README.md
-├── prompts/        # le cadre commun + le prompt de chaque agent
-├── docs/           # fiche de démarrage pas-à-pas + récapitulatif
+├── referentiel.md  # source de vérité : SIREN, tarifs, taux paie, coordonnées
+├── prompts/        # le cadre commun + le prompt de chaque agent (1 à 7)
+├── templates/      # gabarits prêts à remplir (relances, contrats)
+├── docs/           # fiche de démarrage, récap, branchements Mac
 └── .gitignore
 ```
 
 ## Démarrage
 
-Voir [`docs/fiche-demarrage.md`](docs/fiche-demarrage.md) (étapes 0 à 6). Ordre conseillé :
+Voir [`docs/fiche-demarrage.md`](docs/fiche-demarrage.md). Ordre conseillé :
 **cadre commun → garde-fou de validation → création des agents → automatismes → tests.**
+Pour aller plus loin (Qonto, Gmail, boutons Telegram, journal d'audit…) : [`docs/connexions-mac.md`](docs/connexions-mac.md).
 
 ## Modèles
 
-OpenAI (raisonnement/calculs/paie), Copilot (rédaction longue/juridique), Gemini (recherche/SEO/lecture de pièces jointes), avec bascule automatique si l'un est indisponible. Claude/Anthropic peut être ajouté ultérieurement.
+**Claude** (juridique, relances, synthèse DG/trésorerie — 1er choix), **OpenAI** (calculs/paie/structuration), **Gemini** (recherche/SEO/lecture de pièces jointes), **Copilot** (rédaction de secours), avec bascule automatique si le 1er choix est indisponible.
 
 ---
 
