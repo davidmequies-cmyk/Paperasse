@@ -1,0 +1,25 @@
+# Secrets / clés API — JAMAIS dans le dépôt
+.env
+.env.*
+secrets/
+*.key
+*.pem
+
+# Documents sensibles (relevés bancaires, contrats signés, exports financiers)
+*.pdf
+*.dmg
+
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dépendances / build
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+build/
