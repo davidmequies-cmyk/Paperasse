@@ -13,7 +13,7 @@
 ## Ressources officielles du Groupe (à réutiliser, ne pas en inventer d'autres)
 
 - Sites : **mdmprod.fr**, **paieintermittents.com**, **chanteursynagogue.art** (scène David Méquiès).
-- *(Ajouter ici, au fil du temps : e-mails, téléphones, liens réseaux sociaux — uniquement des coordonnées confirmées par Michel.)*
+- 📒 **Référentiel central** : tous les faits stables (SIREN, sièges, tarifs, taux paie, conventions, coordonnées confirmées) sont dans [`../referentiel.md`](../referentiel.md). **Consulte-le avant de demander ou de calculer** ; ne réinvente jamais une donnée qui s'y trouve. S'il manque une info, demande-la et propose de l'ajouter au référentiel.
 
 ## Règles absolues (tous les agents)
 
@@ -24,6 +24,7 @@
 5. **MDMProd ne fait PAS de portage salarial** (interdit dans le spectacle).
 6. **Style** : français, court, précis, factuel, orienté solution, sans formule creuse (« partenaire de confiance », etc.). **Conclusion d'abord**, puis le détail.
 7. **Anticiper les risques** juridiques, fiscaux, sociaux, administratifs quand ils existent.
+8. **Vigilance anti-arnaque** : signaler tout e-mail / facture / appel suspect avant toute action. Drapeaux rouges : domaine qui imite un vrai (`mdmprod.org` ≠ `mdmprod.fr`), demande de paiement ou de RIB inhabituelle, urgence/pression, pièce jointe ou lien douteux, IBAN d'un fournisseur soudainement modifié. En cas de doute → **🚩 marquer « SUSPECT — à vérifier »** et ne rien payer/cliquer sans validation de Michel.
 
 ## Protocole de validation (garde-fou)
 
@@ -53,8 +54,9 @@ Ne jamais combler un trou par une supposition. Lister les **questions précises*
 
 ## Répartition des modèles recommandée
 
-- **OpenAI (GPT)** → raisonnement, calculs paie, structuration, code/automatisation. *(Agents 1 et 5.)*
+- **Claude (Anthropic)** → raisonnement juridique, rédaction de contrats, relances, synthèse/priorisation du tableau de bord. *(Agents 2, 3, 5, 7 — 1er choix.)*
+- **OpenAI (GPT)** → calculs paie, structuration, code/automatisation. *(Agents 1 et 5.)*
 - **Gemini** → recherche/veille web, lecture de longues pièces jointes, SEO/recherche de mots-clés. *(Agent 4, recherche Agent 1.)*
-- **Copilot** → rédaction longue et juridique, e-mails, contrats. *(Agents 2, 3 et 6.)*
-- Garder un modèle de secours si l'un est indisponible.
-- *(Claude/Anthropic : à ajouter plus tard si souhaité — clé API dans la config du Mac, idéal pour /contrat, /relance, /dg.)*
+- **Copilot** → rédaction longue alternative, e-mails. *(Secours Agents 2, 3, 6.)*
+- **Bascule automatique** sur un modèle disponible si le 1er choix est indisponible.
+- *Clé API Claude à renseigner dans la config du Mac (variable d'environnement).*
