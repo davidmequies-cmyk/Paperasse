@@ -54,10 +54,12 @@
 
 ## Nouveautés (améliorations)
 - 📒 **Référentiel central** (`referentiel.md`) : faits stables réutilisés par tous les agents.
-- 🗂️ **Gabarits** (`templates/`) : relances (4 niveaux) + contrats prêts à remplir.
+- 🗂️ **Gabarits** (`templates/`) : relances (4 niveaux) + contrats + e-mails/courriers types.
 - 💰 **Agent /treso** : pilotage de la trésorerie.
 - 🚩 **Règle anti-arnaque** : signalement des e-mails/factures suspects.
 - 🔌 **Branchements Mac** (`docs/connexions-mac.md`) : Qonto, Gmail, boutons Telegram, journal d'audit.
+- 🔗 **Procédures** (`docs/procedures.md`) : 8 runbooks qui enchaînent les agents (nouveau client paie, impayé, cycle de paie, clôture mensuelle, devis→presta, sinistre, immo, mail suspect).
+- 🛡️ **Sécurité** (`docs/securite.md`) : checklist anti-arnaque, arnaque au RIB, données à ne jamais exposer, outils de vérification.
 
 ---
 

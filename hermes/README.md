@@ -39,6 +39,8 @@ Le **routeur** (langage naturel → bon agent) : [`prompts/00-routeur.md`](promp
 Les **faits stables** (SIREN, tarifs, taux, coordonnées, rôle CPH, véhicule) : [`referentiel.md`](referentiel.md).
 Les **gabarits** prêts à remplir (relances, contrats, e-mails) : [`templates/`](templates/).
 Le **mode d'emploi** (phrases de déclenchement) : [`docs/mode-emploi.md`](docs/mode-emploi.md).
+Les **procédures** (chaînes d'agents pour les tâches récurrentes) : [`docs/procedures.md`](docs/procedures.md).
+La **sécurité** (anti-arnaque, protection des données) : [`docs/securite.md`](docs/securite.md).
 
 > ⚖️ **Fonction de conseiller prud'homal** (Michel est juge) : ce n'est **pas** un agent Hermès. Voir le dossier [`../prudhommes/`](../prudhommes/) (sources officielles, méthode de délibération) et le sous-agent `conseiller-prudhommes`.
 
