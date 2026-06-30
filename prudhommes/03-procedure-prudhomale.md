@@ -75,7 +75,11 @@ Voie de recours : **appel** devant la chambre sociale de la cour d'appel (si le 
 | **Rupture** du contrat (ex. contester un licenciement) | **12 mois** | notification de la rupture | `L1471-1` |
 | **Salaires** (rappels de salaire, heures sup) | **3 ans** | jour où le demandeur a connu/aurait dû connaître les faits ; porte sur les 3 dernières années (ou les 3 ans précédant la rupture) | `L3245-1` |
 | **Discrimination** | **5 ans** | révélation de la discrimination | `L1134-5` |
-| **Harcèlement** (dommages corporels, certaines actions) | régime propre — **ne relève pas** des délais courts de `L1471-1` | — | `L1471-1` *in fine* |
+| **Harcèlement** moral/sexuel (`L1152-1`/`L1153-1`) | **5 ans** | révélation : jour où le salarié a connu l'ensemble des faits permettant de se dire victime (en pratique souvent le **dernier acte** de harcèlement allégué) | art. **2224 du code civil** (exclu des délais courts par `L1471-1` *in fine*) |
+
+> 🔎 **Harcèlement — ne pas s'arrêter à « régime propre ».** L'action en réparation du préjudice de harcèlement est exclue des délais courts de `L1471-1`, mais un délai concret doit être retenu pour la recevabilité : c'est la **prescription quinquennale de droit commun (art. 2224 C. civ.)**. Pour une demande de **nullité de la rupture** fondée sur le harcèlement, la durée applicable dépend de la **nature exacte** de la demande — voir **Cass. soc., 4 sept. 2024, n° 22-22.860** (publié au bulletin).
+> 🔗 https://www.legifrance.gouv.fr/juri/id/JURITEXT000050192525/
+> *Réserve : régime distinct si la demande répare un **dommage corporel** (prescription spécifique, art. 2226 C. civ.). Qualifier la demande avant de retenir un délai.*
 
 🔗 `L1471-1` : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000036762126
 🔗 `L3245-1` : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000027566295
