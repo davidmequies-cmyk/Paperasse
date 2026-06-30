@@ -2,14 +2,23 @@
 
 Modèles prêts à remplir. Tout champ entre crochets `[CHAMP À COMPLÉTER]` doit être renseigné — **jamais inventé**. Rien n'est envoyé/signé sans validation de Michel (✅/✏️/❌).
 
-## Relances (agent `/relance`)
+## Relances (agent /relance)
 1. [Niveau 1 — Relance douce](relances/niveau-1-relance-douce.md)
 2. [Niveau 2 — Relance ferme](relances/niveau-2-relance-ferme.md)
-3. [Niveau 3 — Dernière relance avant mise en demeure](relances/niveau-3-derniere-relance.md)
+3. [Niveau 3 — Dernière relance](relances/niveau-3-derniere-relance.md)
 4. [Niveau 4 — Mise en demeure (RAR)](relances/niveau-4-mise-en-demeure.md)
 
-## Contrats (agent `/contrat`)
+## Contrats (agent /contrat)
 - [Contrat de cession](contrats/contrat-cession.md)
 - [CDDU artiste](contrats/cddu-artiste.md)
+- [CDDU technicien](contrats/cddu-technicien.md)
+- [Prestation audiovisuelle](contrats/prestation-audiovisuelle.md)
+- [Convention de coproduction](contrats/convention-coproduction.md)
 
-*(Compléter au fil du temps : CDDU technicien, prestation audiovisuelle, coproduction, production déléguée.)*
+## E-mails / courriers types
+- [Devis type](emails/devis-type.md) — /devis
+- [Déclaration de sinistre](emails/declaration-sinistre.md) — /assur
+- [Réclamation fiscale + sursis (L277)](emails/reclamation-fiscale-sursis.md) — /fiscal
+- [Réclamation / réponse juridique](emails/courrier-juridique-reclamation.md) — /juridique
+
+*(À compléter au fil du temps : contrat d'engagement artistique, production déléguée, fiche technique…)*
