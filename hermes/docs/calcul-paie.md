@@ -2,6 +2,7 @@
 
 > Outil de **simulation** pour l'agent /paie. Tu donnes le **brut**, il sort le **net** et le **coût employeur**.
 > ⚠️ **Estimation, pas un bulletin.** Barème CCNSVP (IDCC 3090) / annexe 8 / 2026, recoupé sur sources officielles. Les lignes **[À VÉRIFIER]** doivent être confirmées avant toute paie réelle. Ne jamais traiter un taux comme acquis (cf. `00-preambule-commun.md`).
+> 🎭 **Cas artiste (annexe 10), abattements (taux réduits 30 % + DFS), cadre légal complet : voir [`../referentiel-paie-spectacle.md`](../referentiel-paie-spectacle.md).** NB : pour le **chômage**, plus de distinction cachet isolé/groupé depuis 2016 → **1 cachet = 12 h** (la règle 12 h/8 h ne subsiste que côté URSSAF pour les plafonds).
 
 ## 1. Mode d'emploi
 1. Prendre le **brut** du cachet (ou salaire journalier).

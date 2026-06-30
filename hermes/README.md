@@ -37,6 +37,7 @@ Aucune action externe ou irréversible (envoi d'e-mail, déclaration DPAE/AEM/DS
 Le **cadre commun** appliqué à tous les agents : [`prompts/00-preambule-commun.md`](prompts/00-preambule-commun.md).
 Le **routeur** (langage naturel → bon agent) : [`prompts/00-routeur.md`](prompts/00-routeur.md).
 Les **faits stables** (SIREN, tarifs, taux, coordonnées, rôle CPH, véhicule) : [`referentiel.md`](referentiel.md).
+Le **référentiel paie du spectacle** (règles légales + barème + calculs 2026) : [`referentiel-paie-spectacle.md`](referentiel-paie-spectacle.md).
 Les **gabarits** prêts à remplir (relances, contrats, e-mails) : [`templates/`](templates/).
 Le **mode d'emploi** (phrases de déclenchement) : [`docs/mode-emploi.md`](docs/mode-emploi.md).
 Les **procédures** (chaînes d'agents pour les tâches récurrentes) : [`docs/procedures.md`](docs/procedures.md).
