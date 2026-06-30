@@ -84,8 +84,8 @@ Les deux **se cumulent**, dans cet ordre : **brut → abattement (DFS) → puis 
 | … | −3 pts/an | baisse jusqu'à 0 % |
 | 2032 | **0 %** | **0 %** |
 
-- **Réduit l'assiette de** : Sécu, CSA, FNAL, versement mobilité, **retraite complémentaire AGIRC-ARRCO**, AFDAS, **+ base CSG/CRDS**.
-- **NE réduit PAS** : **chômage** (exclu depuis 01/07/2017), **Congés Spectacles**.
+- **Réduit l'assiette de** : Sécu, CSA, FNAL, versement mobilité, **retraite complémentaire AGIRC-ARRCO**, AFDAS.
+- **NE réduit PAS** : **CSG/CRDS** (calculées sur le **brut avant DFS** × 98,25 % — la DFS et l'abattement d'assiette 1,75 % ne se cumulent pas ; source URSSAF/sécurité-sociale.fr), **chômage** (exclu depuis 01/07/2017), **AGS**, **Congés Spectacles**.
 - L'assiette ne peut jamais descendre **sous le SMIC**.
 - ✅ *Taux 2026 (18 % / 16 %) **confirmé** sur 6 sources concordantes : Exponens (éd. 02/2026), LégiSocial, Movinmotion, STECO, Pop Paye, cheque-intermittents. Le « 24 % / 2038 » parfois vu = régime **général** (autres professions), pas le spectacle.*
 
@@ -111,8 +111,8 @@ Les deux **se cumulent**, dans cet ordre : **brut → abattement (DFS) → puis 
 | CSA | 0,30 % | — | totalité | ✗ | ✔ |
 | FNAL (< 50 sal.) | 0,10 % | — | ≤ PMSS | ✔ | ✔ |
 | Versement mobilité | variable (si ≥ 11 sal. en zone AOM) | — | totalité | ✔ | ✔ |
-| CSG | — | 9,20 % (6,80 déd. + 2,40 non déd.) | 98,25 % du brut | ✗ | ✔ |
-| CRDS | — | 0,50 % (non déd.) | 98,25 % du brut | ✗ | ✔ |
+| CSG | — | 9,20 % (6,80 déd. + 2,40 non déd.) | 98,25 % du brut (**avant DFS**) | ✗ | ✗ |
+| CRDS | — | 0,50 % (non déd.) | 98,25 % du brut (**avant DFS**) | ✗ | ✗ |
 | **Chômage annexe 8/10** | **9,00 %** (4,00 + 5,00) → **9,50 % si CDDU ≤ 3 mois** | **2,40 %** | **brut plein** | ✗ | ✗ |
 | AGS | 0,25 %³ | — | brut plein | ✗ | ✗ |
 | Retraite AGIRC-ARRCO T1 | 4,72 % | 3,15 % | ≤ PMSS | ✗ | ✔ |
@@ -138,7 +138,7 @@ Les deux **se cumulent**, dans cet ordre : **brut → abattement (DFS) → puis 
 1. **Brut** = cachet ou salaire (≥ minimum conventionnel ≥ SMIC).
 2. **Si DFS (= l'abattement)** : assiette abattue = brut × (1 − taux DFS, ex. 18 % comédien) pour les lignes « DFS ✔ » ; chômage & Congés Spectacles restent sur **brut plein**.
 3. **Si artiste** : sur les lignes Sécu, appliquer le **taux × 70 %** (taux réduits — *pas* un abattement).
-4. **CSG/CRDS** : base = 98,25 % du brut (× (1−DFS) si DFS), **jamais** les taux réduits 70 %.
+4. **CSG/CRDS** : base = **98,25 % du brut AVANT DFS** (la DFS ne réduit pas la CSG/CRDS), **jamais** les taux réduits 70 %.
 5. **NET avant PAS** = brut − total charges salariales.
 6. **Net imposable** = net + CSG/CRDS non déductible (2,90 %).
 7. **PAS** : taux personnalisé ou neutre ; contrat court < 2 mois → abattement = 50 % du SMIC mensuel imposable [À VÉRIFIER montant 2026] (souvent PAS = 0 sur un cachet isolé).
@@ -156,7 +156,7 @@ Les deux **se cumulent**, dans cet ordre : **brut → abattement (DFS) → puis 
 *Maladie 7 % si rém. annuelle ≤ 2,5 SMIC, sinon 13 % (+12 € de coût). Détail dans `docs/calcul-paie.md`.*
 
 ### 7.2 Comédien (artiste, annexe 10, **avec abattement DFS 18 %** + taux réduits 70 %)
-Assiette Sécu = 200 × 0,82 (abattement DFS 18 %) × 0,70 (taux réduits artistes) ; chômage & Congés Spectacles sur 200 € plein ; CSG/CRDS sur 200 × 0,82 × 98,25 %.
+Assiette Sécu = 200 × 0,82 (abattement DFS 18 %) × 0,70 (taux réduits artistes) ; chômage & Congés Spectacles sur 200 € plein ; **CSG/CRDS sur 200 × 98,25 % = 196,50 € (brut avant DFS)**.
 
 | | AVEC abattement | SANS abattement |
 |---|---|---|
