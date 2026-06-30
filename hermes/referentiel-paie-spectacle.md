@@ -62,28 +62,35 @@
 
 ---
 
-## 4. Les DEUX abattements artistes (le cœur technique) ⚠️
-À ne pas confondre — ils **se cumulent**, dans cet ordre : **brut → DFS → puis taux réduits 70 %**.
+## 4. Les DEUX dispositifs propres à l'artiste (à ne pas confondre) ⚠️
+**Vocabulaire strict — c'est la source d'erreur n°1 :**
+- **« L'abattement » = la DFS** (frais professionnels), qui réduit l'**assiette**. Pour un comédien : **18 % en 2026** — **jamais 30 %**.
+- La **« réduction de 30 % »** existe aussi, mais c'est **autre chose** : ce sont les **taux réduits** (cotisations calculées à **70 % du taux**), et **ça ne s'appelle pas « abattement »**.
 
-### 4.1 Taux réduits « artistes » (= abattement de 30 %)
-- **Base : arrêté du 24 janvier 1975.** Les cotisations URSSAF de **Sécurité sociale** des **artistes** (pas les techniciens) sont calculées au **taux de droit commun × 70 %** (= taux plein sur 70 % de l'assiette). **Non plafonné.**
-- **Concerne** : maladie, vieillesse (plaf. + déplaf.), allocations familiales, AT/MP, FNAL, versement mobilité.
-- **NE concerne PAS** : CSG/CRDS, CSA, **chômage** (retiré depuis 01/07/2017), **retraite complémentaire**, **Congés Spectacles**.
+Les deux **se cumulent**, dans cet ordre : **brut → abattement (DFS) → puis taux réduits 70 %** sur les lignes Sécu.
 
-### 4.2 DFS (déduction forfaitaire spécifique, frais professionnels)
-- **Réduction d'assiette**, optionnelle (accord du salarié), **plafond 7 600 €/an/salarié**. **En extinction** (arrêté du 4 sept. 2025), **0 % au 01/01/2032**.
-- **Trajectoire (artistes dramatiques/lyriques/choré/ciné — dont comédien)** : 25 % (2023) → 23 % (2024) → 21 % (2025) → **18 % (2026)**.
-- **Musiciens/choristes/chefs d'orchestre/régisseurs** : **16 % en 2026**.
-- **Réduit l'assiette de** : Sécu, CSA, FNAL, versement mobilité, **retraite complémentaire AGIRC-ARRCO**, AFDAS. **Réduit aussi la base CSG/CRDS.**
+### 4.1 L'ABATTEMENT = la DFS (déduction forfaitaire spécifique, frais professionnels)
+- **Comédien (artiste dramatique/lyrique/choré/ciné) : 18 % en 2026** (taux initial 25 %, réduit de 3 points). **Musicien/choriste/chef d'orchestre/régisseur : 16 % en 2026** (initial 20 %).
+- ⚠️ **Le « 30 % » n'est PAS le taux du spectacle** : 30 % est le régime général d'autres professions (journalistes, VRP…). Ne jamais l'appliquer à un artiste du spectacle.
+- **Réduction d'assiette**, optionnelle (accord du salarié — spectacle : **sans justificatif de frais réels**), **plafond 7 600 €/an/salarié**. **En extinction → 0 % au 01/01/2032** (baisse chaque 1ᵉʳ janvier ; arrêté du 4 sept. 2025).
+- **Réduit l'assiette de** : Sécu, CSA, FNAL, versement mobilité, **retraite complémentaire AGIRC-ARRCO**, AFDAS, **+ base CSG/CRDS**.
 - **NE réduit PAS** : **chômage** (exclu depuis 01/07/2017), **Congés Spectacles**.
 - L'assiette ne peut jamais descendre **sous le SMIC**.
+- *Source : confirmé par 5 sources concordantes (Exponens 02/2026, STECO, LégiSocial, Pop Paye, Movinmotion). Taux GHS sPAIEctacle à confirmer directement (site bloqué en accès automatique).*
+
+### 4.2 Les TAUX RÉDUITS artistes (arrêté du 24 janvier 1975) — ce n'est PAS un « abattement »
+- **Base : arrêté du 24 janvier 1975 (toujours en vigueur).** Les cotisations **URSSAF de Sécurité sociale** des **artistes** (pas les techniciens) sont calculées au **taux de droit commun × 70 %** (= réduction de **30 % des taux**). **Non plafonné.**
+- **Concerne** : maladie, vieillesse (plaf. + déplaf.), allocations familiales, AT/MP, FNAL, versement mobilité.
+- **NE concerne PAS** : CSG/CRDS, CSA, **chômage** (retiré depuis 01/07/2017), **retraite complémentaire**, **Congés Spectacles**.
+- Si la DFS est appliquée, les taux réduits s'appliquent **sur la base déjà abattue par la DFS**.
+- *Articulation exacte avec la réforme RGDU 2026 à confirmer côté GHS* [À VÉRIFIER].
 
 ---
 
 ## 5. Barème des cotisations 2026
 **Repères 2026** : PMSS **4 005 €/mois**, PASS **48 060 €/an**, plafond journalier SS **220 €**.
 
-| Cotisation | Patronal | Salarial | Assiette | Abatt. 30 % (artistes) | DFS |
+| Cotisation | Patronal | Salarial | Assiette | Taux réduits 70 % (artistes) | DFS (abatt.) |
 |---|---|---|---|---|---|
 | Maladie | 13,00 %¹ | — | brut | ✔ (artistes) | ✔ |
 | Vieillesse plafonnée | 8,55 % | 6,90 % | ≤ PMSS | ✔ | ✔ |
@@ -118,9 +125,9 @@
 
 ## 6. Méthode de calcul (brut → net → coût)
 1. **Brut** = cachet ou salaire (≥ minimum conventionnel ≥ SMIC).
-2. **Si DFS** : assiette abattue = brut × (1 − taux DFS) pour les lignes « DFS ✔ » ; chômage & Congés Spectacles restent sur **brut plein**.
-3. **Si artiste** : sur les lignes Sécu, appliquer le **taux × 70 %** (abattement 30 %).
-4. **CSG/CRDS** : base = 98,25 % du brut (× (1−DFS) si DFS), **jamais** l'abattement 30 %.
+2. **Si DFS (= l'abattement)** : assiette abattue = brut × (1 − taux DFS, ex. 18 % comédien) pour les lignes « DFS ✔ » ; chômage & Congés Spectacles restent sur **brut plein**.
+3. **Si artiste** : sur les lignes Sécu, appliquer le **taux × 70 %** (taux réduits — *pas* un abattement).
+4. **CSG/CRDS** : base = 98,25 % du brut (× (1−DFS) si DFS), **jamais** les taux réduits 70 %.
 5. **NET avant PAS** = brut − total charges salariales.
 6. **Net imposable** = net + CSG/CRDS non déductible (2,90 %).
 7. **PAS** : taux personnalisé ou neutre ; contrat court < 2 mois → abattement = 50 % du SMIC mensuel imposable [À VÉRIFIER montant 2026] (souvent PAS = 0 sur un cachet isolé).
@@ -137,8 +144,8 @@
 | Coût employeur | **≈ 317 €** (charges patronales ≈ 59 %) |
 *Maladie 7 % si rém. annuelle ≤ 2,5 SMIC, sinon 13 % (+12 € de coût). Détail dans `docs/calcul-paie.md`.*
 
-### 7.2 Comédien (artiste, annexe 10, **avec abattement** DFS 18 % + taux réduits 70 %)
-Assiette Sécu = 200 × 0,82 (DFS) × 0,70 (artiste) ; chômage & Congés Spectacles sur 200 € plein ; CSG/CRDS sur 200 × 0,82 × 98,25 %.
+### 7.2 Comédien (artiste, annexe 10, **avec abattement DFS 18 %** + taux réduits 70 %)
+Assiette Sécu = 200 × 0,82 (abattement DFS 18 %) × 0,70 (taux réduits artistes) ; chômage & Congés Spectacles sur 200 € plein ; CSG/CRDS sur 200 × 0,82 × 98,25 %.
 
 | | AVEC abattement | SANS abattement |
 |---|---|---|
