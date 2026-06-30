@@ -10,7 +10,7 @@
 
 ---
 
-## Les 7 agents
+## Les 17 agents
 
 | Commande | Agent | Modèle | À quoi il sert |
 |---|---|---|---|
@@ -21,6 +21,16 @@
 | **/seo** | SEO / Marketing | Gemini | Audite et optimise les pages (titres, métas, mots-clés, FAQ SEO) de mdmprod.fr, paieintermittents.com, chanteursynagogue.art. |
 | **/com** | Communication | Copilot (+ Gemini idées) | Rédige posts réseaux, newsletters et annonces (concerts/cérémonies David Méquiès, événements Neshama/MDMProd). |
 | **/treso** | Trésorerie / Finance | Claude (+ OpenAI) | Soldes, entrées/sorties, projection 30/60/90 j, alertes de tension, actions cash prioritaires (s'appuie sur Qonto). |
+| **/fiscal** | Fiscalité & Comptabilité | Claude + OpenAI | TVA, IS, CFE, contrôle fiscal, liaison Pennylane/expert-comptable. |
+| **/juridique** | Juridique & Conformité | Claude | Litiges (prud'hommes, copro), RGPD, licences, veille — hors rédaction de contrats. |
+| **/rh** | RH & Social (permanents) | Claude + OpenAI | CDI/CDD hors intermittents, embauche, obligations employeur, ruptures. |
+| **/prod** | Production & Logistique | OpenAI + Gemini | Planning, plateau, prestataires, régie, budget de production, feuille de route. |
+| **/devis** | Commercial & Devis | Claude + OpenAI | Qualification, devis prêts à envoyer, suivi du pipeline commercial. |
+| **/immo** | Immobilier & Gestion locative | Claude + OpenAI | Financements (prêts/courtier), rentabilité locative, baux, échéances. |
+| **/assist** | Assistant perso & Admin | OpenAI | Agenda, courriers, démarches, rappels, mails courants. |
+| **/subv** | Subventions & Financements | Gemini + Claude | Veille appels à projets (CNM, CNC, DRAC…), éligibilité, montage de dossiers. |
+| **/assur** | Assurances & Sinistres | Claude | Contrats, échéances, déclaration/suivi de sinistres, contestation de refus. |
+| **/artiste** | Booking artiste David Méquiès | Claude + Gemini | Cérémonies (bar/bat-mitsva, houppa, mariages), devis cérémonie, agenda, répertoire. |
 
 ---
 
