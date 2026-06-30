@@ -41,6 +41,7 @@ Les **gabarits** prêts à remplir (relances, contrats, e-mails) : [`templates/`
 Le **mode d'emploi** (phrases de déclenchement) : [`docs/mode-emploi.md`](docs/mode-emploi.md).
 Les **procédures** (chaînes d'agents pour les tâches récurrentes) : [`docs/procedures.md`](docs/procedures.md).
 La **sécurité** (anti-arnaque, protection des données) : [`docs/securite.md`](docs/securite.md).
+Le **mini-outil de calcul paie** (coût d'un cachet intermittent, barème 2026) : [`docs/calcul-paie.md`](docs/calcul-paie.md).
 
 > ⚖️ **Fonction de conseiller prud'homal** (Michel est juge) : ce n'est **pas** un agent Hermès. Voir le dossier [`../prudhommes/`](../prudhommes/) (sources officielles, méthode de délibération) et le sous-agent `conseiller-prudhommes`.
 
