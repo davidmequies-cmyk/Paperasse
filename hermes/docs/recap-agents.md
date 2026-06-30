@@ -60,6 +60,7 @@
 - 🔌 **Branchements Mac** (`docs/connexions-mac.md`) : Qonto, Gmail, boutons Telegram, journal d'audit.
 - 🔗 **Procédures** (`docs/procedures.md`) : 8 runbooks qui enchaînent les agents (nouveau client paie, impayé, cycle de paie, clôture mensuelle, devis→presta, sinistre, immo, mail suspect).
 - 🛡️ **Sécurité** (`docs/securite.md`) : checklist anti-arnaque, arnaque au RIB, données à ne jamais exposer, outils de vérification.
+- 🧮 **Mini-outil calcul paie** (`docs/calcul-paie.md`) : coût d'un cachet intermittent (technicien annexe 8), barème 2026 recoupé sur sources officielles + exemple chiffré.
 
 ---
 
