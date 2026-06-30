@@ -48,5 +48,20 @@
 - **Immobilier Touques** : offre prêt SG ≈ 387 000 € / 3,10 % / 228 mois → **2 383 €/mois** [À VÉRIFIER]. Courtier : Pretto (Alban de Villele).
 - **Trésorerie** (à actualiser via Qonto) : voir agent /tresorerie.
 
+## 8. Fonctions & rôles de Michel
+- **Conseiller prud'homal** au **CPH de Paris** (Encadrement, Ch. 8). ⚠️ Dans cette fonction, Michel est **juge**, pas partie : indépendance, **secret du délibéré**, pas de mandat impératif. → ressource dédiée : dossier `prudhommes/` (sources officielles) + sous-agent `conseiller-prudhommes`. **Ne pas confondre** avec l'agent /juridique (où Michel serait partie à un litige).
+- Dirigeant du Groupe MDM (MDMProd, Neshama Music, SpectaGestion).
+
+## 9. Contacts & partenaires (à confirmer/compléter)
+- **Courtier crédit** : Pretto — Alban de Villele (alban@pretto.fr) [À VÉRIFIER].
+- **Banques sollicitées (prêt Touques)** : Société Générale, CCF ; **Fortuneo a refusé** (08/06/2026).
+- **Comptabilité** : Pennylane.
+- **Protection juridique** : Juridica (dossier MEQUIES / SCP Billaudel) [À VÉRIFIER].
+- **Expert-comptable** : [À COMPLÉTER].
+
+## 10. Véhicule
+- **Audi e-tron GT** — immat. **GX-370-ZS**, 1ʳᵉ immatriculation **29/06/2024**, ~26 000 km.
+- Extension de garantie : offre réf. **2ba249** via VWFS (vwfs-garantie.fr) — dossier en cours [À SUIVRE].
+
 ---
 *Dernière mise à jour : à dater à chaque modification. Toute donnée [À VÉRIFIER] reste à confirmer avant usage officiel.*

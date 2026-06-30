@@ -35,8 +35,12 @@ Aucune action externe ou irréversible (envoi d'e-mail, déclaration DPAE/AEM/DS
 | `/artiste` | [Booking artiste David Méquiès](prompts/agent-17-artiste.md) | Claude + Gemini |
 
 Le **cadre commun** appliqué à tous les agents : [`prompts/00-preambule-commun.md`](prompts/00-preambule-commun.md).
-Les **faits stables** (SIREN, tarifs, taux, coordonnées) : [`referentiel.md`](referentiel.md).
-Les **gabarits** prêts à remplir (relances, contrats) : [`templates/`](templates/).
+Le **routeur** (langage naturel → bon agent) : [`prompts/00-routeur.md`](prompts/00-routeur.md).
+Les **faits stables** (SIREN, tarifs, taux, coordonnées, rôle CPH, véhicule) : [`referentiel.md`](referentiel.md).
+Les **gabarits** prêts à remplir (relances, contrats, e-mails) : [`templates/`](templates/).
+Le **mode d'emploi** (phrases de déclenchement) : [`docs/mode-emploi.md`](docs/mode-emploi.md).
+
+> ⚖️ **Fonction de conseiller prud'homal** (Michel est juge) : ce n'est **pas** un agent Hermès. Voir le dossier [`../prudhommes/`](../prudhommes/) (sources officielles, méthode de délibération) et le sous-agent `conseiller-prudhommes`.
 
 ## Automatismes
 
