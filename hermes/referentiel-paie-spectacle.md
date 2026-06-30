@@ -137,6 +137,13 @@ Les deux **se cumulent**, dans cet ordre : **brut → abattement (DFS) → puis 
 ---
 
 ## 6. Méthode de calcul (brut → net → coût)
+
+> 🔔 **RÈGLE OBLIGATOIRE — ARTISTE** : avant tout calcul concernant un **artiste**, Hermès doit **toujours poser deux questions** et attendre la réponse :
+> 1. **« Abattement appliqué ? » (oui / non)** — c'est l'abattement DFS pour frais professionnels (optionnel, accord du salarié).
+> 2. **Si oui → « Quelle catégorie ? »** : **Cat. 2** (dramatiques/comédiens, lyriques, chorégraphiques/danseurs, cinématographiques) = **18 % en 2026** ; **Cat. 1** (musiciens, choristes, chefs d'orchestre, régisseurs de théâtre) = **16 % en 2026**.
+>
+> Ne jamais supposer la réponse. (Les **taux réduits artistes 70 %** de la Sécu, eux, s'appliquent à tous les artistes — ce n'est pas « l'abattement ».) Pour un **technicien**, pas de cette question.
+
 1. **Brut** = cachet ou salaire (≥ minimum conventionnel ≥ SMIC).
 2. **Si DFS (= l'abattement)** : assiette abattue = brut × (1 − taux DFS, ex. 18 % comédien) pour les lignes « DFS ✔ » ; chômage & Congés Spectacles restent sur **brut plein**.
 3. **Si artiste** : sur les lignes Sécu, appliquer le **taux × 70 %** (taux réduits — *pas* un abattement).
