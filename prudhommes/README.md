@@ -22,6 +22,28 @@ Objectif : juger juste, rédiger clair, et garder l'envie. **Fondée uniquement 
 
 ---
 
+## 🤖 L'agent « conseiller-prudhommes »
+
+Un sous-agent Claude Code dédié est défini dans
+[`.claude/agents/conseiller-prudhommes.md`](../.claude/agents/conseiller-prudhommes.md).
+Il **interroge en direct les sources officielles** (Légifrance, Cour de cassation,
+Justice.fr, Service-public.fr, code.travail.gouv.fr) et s'appuie sur les fiches
+ci-dessous.
+
+**Comment l'appeler** (dans Claude Code) :
+- « utilise l'agent conseiller-prudhommes pour… »
+- ou une question de droit du travail : l'agent peut être délégué automatiquement.
+
+Exemples : *« vérifie le délai de prescription pour des rappels de salaire »*,
+*« le barème L1235-3 s'applique-t-il si le licenciement est nul ? »*,
+*« rédige la motivation sur les heures supplémentaires »*,
+*« quelle est la jurisprudence actuelle de la chambre sociale sur le forfait-jours ? »*.
+
+Il respecte les mêmes garde-fous : sources officielles uniquement, vérification à
+la date des faits, secret du délibéré, indépendance.
+
+---
+
 ## 🧭 Comment utiliser cette ressource
 
 1. **Avant une audience** → relire `03` (procédure) et la fiche de fond `04` correspondant au litige.
