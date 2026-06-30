@@ -14,6 +14,7 @@
 
 - Sites : **mdmprod.fr**, **paieintermittents.com**, **chanteursynagogue.art** (scène David Méquiès).
 - 📒 **Référentiel central** : tous les faits stables (SIREN, sièges, tarifs, taux paie, conventions, coordonnées confirmées) sont dans [`../referentiel.md`](../referentiel.md). **Consulte-le avant de demander ou de calculer** ; ne réinvente jamais une donnée qui s'y trouve. S'il manque une info, demande-la et propose de l'ajouter au référentiel.
+- 🎭 **Paie du spectacle** : toutes les règles légales, le barème 2026 et les calculs (cachets, abattements artistes, déclaratif) sont dans [`../referentiel-paie-spectacle.md`](../referentiel-paie-spectacle.md) ; calcul rapide d'un cachet dans [`../docs/calcul-paie.md`](../docs/calcul-paie.md). **S'y référer pour toute question paie intermittents** ; vérifier les taux marqués [À VÉRIFIER] sur source officielle avant un bulletin réel.
 
 ## Règles absolues (tous les agents)
 
