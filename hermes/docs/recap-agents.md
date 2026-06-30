@@ -61,7 +61,8 @@
 - 🔗 **Procédures** (`docs/procedures.md`) : 8 runbooks qui enchaînent les agents (nouveau client paie, impayé, cycle de paie, clôture mensuelle, devis→presta, sinistre, immo, mail suspect).
 - 🛡️ **Sécurité** (`docs/securite.md`) : checklist anti-arnaque, arnaque au RIB, données à ne jamais exposer, outils de vérification.
 - 🧮 **Mini-outil calcul paie** (`docs/calcul-paie.md`) : coût d'un cachet intermittent (technicien annexe 8), barème 2026 recoupé sur sources officielles + exemple chiffré.
-- 🎭 **Référentiel paie du spectacle** (`referentiel-paie-spectacle.md`) : toutes les règles légales (CDDU, présomption de salariat, annexes 8/10, GUSO, licence), le barème 2026 complet, les deux abattements artistes (taux réduits 30 % + DFS), le déclaratif (DPAE/AEM/DSN) et des exemples chiffrés (technicien + comédien).
+- 🎭 **Référentiel paie du spectacle** (`referentiel-paie-spectacle.md`) : toutes les règles légales (CDDU, présomption de salariat, annexes 8/10, GUSO, licence), le barème 2026 complet, taux réduits 70 % + DFS par catégorie, le déclaratif (DPAE/AEM/DSN) et des exemples chiffrés. Calé sur les bulletins GHS réels.
+- 🎼 **Bulletin-modèle artiste** (`docs/bulletin-modele-artiste.md`) : simulation ligne par ligne (musicien DFS 16 % + comédien DFS 18 %), net fiable + coût encadré (RGDU/AT à caler sur GHS).
 
 ---
 
