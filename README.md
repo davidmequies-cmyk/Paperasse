@@ -8,6 +8,10 @@ Dépôt regroupant les projets et la documentation du **Groupe MDM** (dirigeant 
 Configuration de l'agent IA autonome **Hermès** (piloté par Telegram) : le cadre commun, les prompts des 6 agents (Direction Générale, Paie, Relances, Contrats, SEO, Communication) et la documentation de démarrage.
 → Voir [`hermes/README.md`](hermes/README.md)
 
+### ⚖️ `prudhommes/` — Conseiller prud'homme (CPH de Paris)
+Ressource d'aide à la fonction de conseiller prud'homme de David Méquiès au **Conseil de prud'hommes de Paris** : déontologie, procédure, repères de fond, méthode de délibération, trame de rédaction des jugements. **Fondée uniquement sur des sources officielles** (Légifrance, Cour de cassation, Justice.fr).
+→ Voir [`prudhommes/README.md`](prudhommes/README.md)
+
 ### 🎹 Refonte `chanteursynagogue.art`
 Site sur-mesure trilingue (FR / EN / HE) pour David Méquiès, pianiste & chanteur de cérémonie.
 - [`index.html`](index.html) — le site complet (design noir & blanc, responsive, SEO + données structurées)
