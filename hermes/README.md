@@ -23,6 +23,16 @@ Aucune action externe ou irréversible (envoi d'e-mail, déclaration DPAE/AEM/DS
 | `/seo` | [SEO / Marketing](prompts/agent-4-seo.md) | Gemini |
 | `/com` | [Communication](prompts/agent-6-communication.md) | Copilot + Gemini |
 | `/treso` | [Trésorerie / Finance](prompts/agent-7-tresorerie.md) | Claude + OpenAI |
+| `/fiscal` | [Fiscalité & Comptabilité](prompts/agent-8-fiscal.md) | Claude + OpenAI |
+| `/juridique` | [Juridique & Conformité](prompts/agent-9-juridique.md) | Claude |
+| `/rh` | [RH & Social (permanents)](prompts/agent-10-rh.md) | Claude + OpenAI |
+| `/prod` | [Production & Logistique](prompts/agent-11-production.md) | OpenAI + Gemini |
+| `/devis` | [Commercial & Devis](prompts/agent-12-devis.md) | Claude + OpenAI |
+| `/immo` | [Immobilier & Gestion locative](prompts/agent-13-immobilier.md) | Claude + OpenAI |
+| `/assist` | [Assistant personnel & Administratif](prompts/agent-14-assistant.md) | OpenAI |
+| `/subv` | [Subventions & Financements](prompts/agent-15-subventions.md) | Gemini + Claude |
+| `/assur` | [Assurances & Sinistres](prompts/agent-16-assurances.md) | Claude |
+| `/artiste` | [Booking artiste David Méquiès](prompts/agent-17-artiste.md) | Claude + Gemini |
 
 Le **cadre commun** appliqué à tous les agents : [`prompts/00-preambule-commun.md`](prompts/00-preambule-commun.md).
 Les **faits stables** (SIREN, tarifs, taux, coordonnées) : [`referentiel.md`](referentiel.md).
