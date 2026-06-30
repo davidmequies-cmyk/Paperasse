@@ -70,13 +70,24 @@
 Les deux **se cumulent**, dans cet ordre : **brut → abattement (DFS) → puis taux réduits 70 %** sur les lignes Sécu.
 
 ### 4.1 L'ABATTEMENT = la DFS (déduction forfaitaire spécifique, frais professionnels)
-- **Comédien (artiste dramatique/lyrique/choré/ciné) : 18 % en 2026** (taux initial 25 %, réduit de 3 points). **Musicien/choriste/chef d'orchestre/régisseur : 16 % en 2026** (initial 20 %).
 - ⚠️ **Le « 30 % » n'est PAS le taux du spectacle** : 30 % est le régime général d'autres professions (journalistes, VRP…). Ne jamais l'appliquer à un artiste du spectacle.
-- **Réduction d'assiette**, optionnelle (accord du salarié — spectacle : **sans justificatif de frais réels**), **plafond 7 600 €/an/salarié**. **En extinction → 0 % au 01/01/2032** (baisse chaque 1ᵉʳ janvier ; arrêté du 4 sept. 2025).
+- **Réduction d'assiette**, optionnelle (accord du salarié — spectacle : **sans justificatif de frais réels**), **plafond 7 600 €/an/salarié**. **En extinction → 0 % au 01/01/2032** (baisse chaque 1ᵉʳ janvier ; arrêté du 4 sept. 2025, intégré au BOSS le 04/02/2026).
+
+**Calendrier d'extinction (spectacle vivant & enregistré) :**
+| Année | Artistes dramatiques/lyriques/choré/ciné (**comédien**) | Musiciens/choristes/chefs d'orch./régisseurs |
+|---|---|---|
+| 2023 | 25 % | 20 % |
+| 2024 | 23 % | 19 % |
+| 2025 | 21 % | 18 % |
+| **2026** | **18 %** | **16 %** |
+| 2027 | 15 % | ~14 % |
+| … | −3 pts/an | baisse jusqu'à 0 % |
+| 2032 | **0 %** | **0 %** |
+
 - **Réduit l'assiette de** : Sécu, CSA, FNAL, versement mobilité, **retraite complémentaire AGIRC-ARRCO**, AFDAS, **+ base CSG/CRDS**.
 - **NE réduit PAS** : **chômage** (exclu depuis 01/07/2017), **Congés Spectacles**.
 - L'assiette ne peut jamais descendre **sous le SMIC**.
-- *Source : confirmé par 5 sources concordantes (Exponens 02/2026, STECO, LégiSocial, Pop Paye, Movinmotion). Taux GHS sPAIEctacle à confirmer directement (site bloqué en accès automatique).*
+- ✅ *Taux 2026 (18 % / 16 %) **confirmé** sur 6 sources concordantes : Exponens (éd. 02/2026), LégiSocial, Movinmotion, STECO, Pop Paye, cheque-intermittents. Le « 24 % / 2038 » parfois vu = régime **général** (autres professions), pas le spectacle.*
 
 ### 4.2 Les TAUX RÉDUITS artistes (arrêté du 24 janvier 1975) — ce n'est PAS un « abattement »
 - **Base : arrêté du 24 janvier 1975 (toujours en vigueur).** Les cotisations **URSSAF de Sécurité sociale** des **artistes** (pas les techniciens) sont calculées au **taux de droit commun × 70 %** (= réduction de **30 % des taux**). **Non plafonné.**
