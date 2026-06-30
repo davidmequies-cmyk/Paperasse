@@ -3,6 +3,7 @@
 > **Mémoire « paie » d'Hermès.** Toutes les règles légales et les **vrais calculs** de la paie des intermittents du spectacle, à jour 2026, avec bases légales et sources officielles.
 > ⚠️ **Aide à la décision, pas un logiciel de paie.** Les chiffres marqués **[À VÉRIFIER]** doivent être confirmés sur la source officielle avant tout bulletin réel. Ne jamais traiter un taux comme acquis (cf. `prompts/00-preambule-commun.md`).
 > 🔒 Limite technique : les sites officiels (urssaf.fr, audiens.org, unedic.org, legifrance, francetravail.fr) bloquent la lecture automatique (HTTP 403) ; les taux ont été **recoupés sur ≥ 3 sources concordantes**. Pour un dossier officiel, ouvrir les PDF cités dans un navigateur.
+> 🎯 **Calé sur le réel** : ce référentiel est aligné sur les **bulletins GHS/sPAIEctacle 2026 de Michel** et sur son **moteur de paie validé** (taux réduits 70 %, chômage 11,40/11,90 %, Congés Spectacles 15,5 %, AT abattu, retraite droit commun, CSG 98,25 %, plancher 12 h × SMIC). Référence de cohérence : Neshama mai 2026 = net 78,9 % / coût 1,543 × brut.
 
 ---
 
@@ -55,7 +56,7 @@
 
 - **Rattachement = activité principale de l'employeur**, pas le métier du salarié.
 - **Accords salaires 2026** : CCNSVP avenant NAO 21/07/2025, **étendu le 17/02/2026** (applicable à tous au 25/02/2026). Idem CCNEAC.
-- **SMIC 2026 (plancher absolu)** : **12,02 €/h**, **1 823,03 €/mois**. Aucun minimum conventionnel ne peut être inférieur.
+- **SMIC 2026 (plancher absolu)** : **12,02 €/h** au 01/01/2026, **12,31 €/h depuis le 01/06/2026**. Aucun minimum conventionnel ne peut être inférieur. **Plancher d'un cachet = 12 h × SMIC courant** (≈ 147,72 € depuis le 01/06/2026).
 - **Repères minima artistes 2026** (à confirmer sur les grilles datées) : cachet répétition musicien ≈ 107 € ; cachet musicien en bar ≈ 120 € ; cachet comédien CCNSVP ann. 4 ≈ 94 € **[À VÉRIFIER sur les grilles SYNPTAC/SFA/Légifrance]**.
 - **Notions** : *service* (3 h en CCNEAC, 4 h selon annexe CCNSVP, ≤ 2/jour) ; *représentation* (= 1 cachet) ; *répétition* ; *raccord* (≤ 1 h avant représentation ; balance + raccord ≤ 2 h).
 - **Défraiements** (barème ~09/2024, à réévaluer) : repas 20,70 € ; chambre+petit-déj 74,30 € ; forfait 1 nuit + 2 repas 115,70 €.
@@ -88,6 +89,7 @@ Les deux **se cumulent**, dans cet ordre : **brut → abattement (DFS) → puis 
 - **NE réduit PAS** : **CSG/CRDS** (calculées sur le **brut avant DFS** × 98,25 % — la DFS et l'abattement d'assiette 1,75 % ne se cumulent pas ; source URSSAF/sécurité-sociale.fr), **chômage** (exclu depuis 01/07/2017), **AGS**, **Congés Spectacles**.
 - L'assiette ne peut jamais descendre **sous le SMIC**.
 - ✅ *Taux 2026 (18 % / 16 %) **confirmé** sur 6 sources concordantes : Exponens (éd. 02/2026), LégiSocial, Movinmotion, STECO, Pop Paye, cheque-intermittents. Le « 24 % / 2038 » parfois vu = régime **général** (autres professions), pas le spectacle.*
+- ⚠️ **Paramétrage MDM** : la DFS **n'est pas activée** dans le moteur GHS de Michel (seuls les taux réduits 70 % s'appliquent). Ne l'ajouter que si Michel décide de l'activer (accord salarié requis).
 
 ### 4.2 Les TAUX RÉDUITS artistes (arrêté du 24 janvier 1975) — ce n'est PAS un « abattement »
 - **Base : arrêté du 24 janvier 1975 (toujours en vigueur).** Les cotisations **URSSAF de Sécurité sociale** des **artistes** (pas les techniciens) sont calculées au **taux de droit commun × 70 %** (= réduction de **30 % des taux**). **Non plafonné.**
@@ -155,17 +157,15 @@ Les deux **se cumulent**, dans cet ordre : **brut → abattement (DFS) → puis 
 | Coût employeur | **≈ 317 €** (charges patronales ≈ 59 %) |
 *Maladie 7 % si rém. annuelle ≤ 2,5 SMIC, sinon 13 % (+12 € de coût). Détail dans `docs/calcul-paie.md`.*
 
-### 7.2 Comédien (artiste, annexe 10, **avec abattement DFS 18 %** + taux réduits 70 %)
-Assiette Sécu = 200 × 0,82 (abattement DFS 18 %) × 0,70 (taux réduits artistes) ; chômage & Congés Spectacles sur 200 € plein ; **CSG/CRDS sur 200 × 98,25 % = 196,50 € (brut avant DFS)**.
+### 7.2 Comédien (artiste, annexe 10, cachet, CDDU ≤ 3 mois)
+**Base = paramétrage réel MDM/GHS : taux réduits artistes 70 % sur la Sécu, SANS DFS** (la DFS est optionnelle et n'est pas activée chez MDM). Sécu = taux × 0,70 sur 200 € ; retraite/CEG droit commun ; chômage & Congés Spectacles sur 200 € plein ; CSG/CRDS sur 200 × 98,25 % = 196,50 €.
 
-| | AVEC abattement | SANS abattement |
+| | Cachet 200 € | (variante AVEC DFS 18 %) |
 |---|---|---|
-| Charges salariales | ≈ 39,60 € | ≈ 47,44 € |
-| **NET avant PAS** | **≈ 160,40 €** | ≈ 152,56 € |
-| Charges patronales | ≈ 104,00 € | ≈ 132,90 € |
-| **COÛT EMPLOYEUR** | **≈ 304 €** | ≈ 332,90 € |
+| **NET avant PAS** | **≈ 158 €** (≈ 79 % du brut) | ≈ 160 € |
+| **COÛT EMPLOYEUR** | **≈ 309 €** (≈ 1,54 × brut) | ≈ 304 € |
 
-**L'abattement profite aux deux : +8 € de net, −29 € de coût employeur.** Postes patronaux non réduits qui pèsent : Congés Spectacles 31 € + chômage 19 € (sur brut plein).
+> ✅ **Calé sur les ratios réels GHS de Michel** (Neshama mai 2026 : net 78,9 % du brut, coût employeur 1,543 × brut). Postes patronaux lourds non réduits : **Congés Spectacles 31 €** + **chômage 19 €** (sur brut plein). La DFS, si elle était activée, baisserait le coût d'~5 € et monterait le net d'~2 €.
 
 ---
 
@@ -185,7 +185,7 @@ Assiette Sécu = 200 × 0,82 (abattement DFS 18 %) × 0,70 (taux réduits artist
 
 ## 9. Droits du salarié & caisses
 - **Congés Spectacles** (Audiens) : l'employeur cotise **15,50 %** (jamais d'ICP versée directement) ; le salarié est indemnisé par la caisse (**10 % du brut** de la période **1ᵉʳ avril → 31 mars**), demande dès mi-avril, versement dès le 1ᵉʳ mai N+1.
-- **Retraite Audiens** : AGIRC-ARRCO **taux majoré spectacle** ≈ **8,89 % en T1** (vs 7,87 % droit commun), répartition ~60/40.
+- **Retraite Audiens** : AGIRC-ARRCO **au taux de droit commun** (vérifié sur bulletins GHS MDM 2026 : ligne « Retraite compl. + CEG + CET T1 » = **4,010 % salarial / 6,01 % patronal**). *Pas de majoration spectacle dans le paramétrage MDM.*
 - **Thalie Santé** (ex-CMB) : **adhésion obligatoire** ; **VIP** sous 3 mois, renouvelée ≤ 5 ans ; **suivi mutualisé** (une attestation vaut pour tous les employeurs).
 - **AFDAS** : accès formation sous condition d'ancienneté (2 ans) + volume (**48 cachets** artistes / **88 j** techniciens SV / **130 j** ciné-audiovisuel) ; carences 8/12/24 mois ; abondement CPF jusqu'à 12 000 € via moncompteformation.
 
