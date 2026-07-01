@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculateur paie spectacle — Groupe MDM (2026)</title>
+<style>
+  :root{--mdm:#1f1d29;--acc:#d0417f;--ok:#0a7d3c;--bg:#f6f5f8;}
+  *{box-sizing:border-box;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  body{margin:0;background:var(--bg);color:#1a1a1a;line-height:1.45}
+  header{background:var(--mdm);color:#fff;padding:18px 20px}
+  header h1{margin:0;font-size:19px}
+  header p{margin:4px 0 0;font-size:12px;opacity:.8}
+  .wrap{max-width:860px;margin:0 auto;padding:18px}
+  .card{background:#fff;border-radius:12px;padding:18px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+  label{display:block;font-size:13px;font-weight:600;margin:10px 0 4px}
+  input,select{width:100%;padding:9px 10px;border:1px solid #ccc;border-radius:8px;font-size:15px}
+  .row{display:flex;gap:14px;flex-wrap:wrap}
+  .row>div{flex:1;min-width:150px}
+  .chk{display:flex;align-items:center;gap:8px;margin-top:12px}
+  .chk input{width:auto}
+  .chk label{margin:0}
+  button{background:var(--acc);color:#fff;border:0;padding:12px 18px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;margin-top:16px;width:100%}
+  button:hover{opacity:.92}
+  .res{display:none}
+  .big{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 4px}
+  .big div{flex:1;min-width:160px;background:var(--bg);border-radius:10px;padding:12px;text-align:center}
+  .big .v{font-size:24px;font-weight:700}
+  .big .l{font-size:12px;color:#555}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:12px}
+  th,td{padding:6px 8px;border-bottom:1px solid #eee;text-align:right}
+  th:first-child,td:first-child{text-align:left}
+  thead th{background:#faf7fb;color:var(--mdm)}
+  tfoot td{font-weight:700;border-top:2px solid #ddd}
+  .warn{background:#fff7e6;border:1px solid #f0d090;border-radius:8px;padding:10px 12px;font-size:12px;margin-top:14px}
+  .q{background:#eef3ff;border:1px solid #b9cdfb;border-radius:8px;padding:10px 12px;font-size:13px;margin-top:12px}
+  .err{color:#c0271a;font-weight:600;margin-top:10px}
+  footer{font-size:11px;color:#777;text-align:center;padding:10px 20px 30px}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎼 Calculateur paie spectacle — Groupe MDM</h1>
+  <p>Barème 2026 · calé sur les bulletins GHS/sPAIEctacle réels · <b>simulation, pas un bulletin légal</b></p>
+</header>
+<div class="wrap">
+  <div class="card">
+    <div class="row">
+      <div>
+        <label>Statut</label>
+        <select id="statut">
+          <option value="artiste">Artiste (annexe 10)</option>
+          <option value="technicien">Technicien (annexe 8)</option>
+        </select>
+      </div>
+      <div>
+        <label>Brut (€)</label>
+        <input id="brut" type="number" value="3207" min="0" step="0.01">
+      </div>
+      <div>
+        <label>Société (taux AT/MP)</label>
+        <select id="soc">
+          <option value="1.50">Neshama Music (1,50 %)</option>
+          <option value="1.07">MDMProd (1,07 %)</option>
+          <option value="custom">Autre…</option>
+        </select>
+      </div>
+    </div>
+    <div id="atCustomWrap" style="display:none">
+      <label>Taux AT/MP personnalisé (%)</label>
+      <input id="atCustom" type="number" value="2.00" step="0.01">
+    </div>
+
+    <!-- ARTISTE : questions obligatoires -->
+    <div id="artBloc">
+      <div class="q"><b>Règle artiste</b> — l'abattement (DFS) est optionnel et dépend de la catégorie.</div>
+      <div class="chk"><input type="checkbox" id="abattement"><label for="abattement">Appliquer l'abattement DFS (frais professionnels)</label></div>
+      <div id="catWrap" style="display:none">
+        <label>Catégorie d'artiste</label>
+        <select id="cat">
+          <option value="0.18">Cat. 2 — comédien / danseur / lyrique (DFS 18 %)</option>
+          <option value="0.16">Cat. 1 — musicien / choriste / chef d'orchestre / régisseur (DFS 16 %)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- TECHNICIEN : maladie 7/13 -->
+    <div id="techBloc" style="display:none">
+      <label>Taux maladie</label>
+      <select id="maladie">
+        <option value="7">7 % (rémunération annuelle ≤ 2,5 SMIC — cas usuel)</option>
+        <option value="13">13 % (au-delà de 2,5 SMIC)</option>
+      </select>
+    </div>
+
+    <div class="chk"><input type="checkbox" id="cddu" checked><label for="cddu">CDDU ≤ 3 mois (majoration chômage +0,5 pt)</label></div>
+
+    <button onclick="calc()">Calculer</button>
+    <div id="err" class="err"></div>
+  </div>
+
+  <div class="card res" id="res">
+    <div class="big">
+      <div><div class="v" id="vBrut"></div><div class="l">Brut</div></div>
+      <div><div class="v" id="vNet" style="color:var(--ok)"></div><div class="l">Net avant impôt</div></div>
+      <div><div class="v" id="vCout" style="color:var(--acc)"></div><div class="l">Coût employeur*</div></div>
+    </div>
+    <table>
+      <thead><tr><th>Cotisation</th><th>Base</th><th>Sal.</th><th>Pat.</th></tr></thead>
+      <tbody id="lignes"></tbody>
+      <tfoot>
+        <tr><td>Totaux</td><td></td><td id="tSal"></td><td id="tPat"></td></tr>
+      </tfoot>
+    </table>
+    <p style="font-size:13px;margin-top:10px">Net imposable ≈ <b id="vImp"></b> € · PAS selon ton taux (souvent 0 sur un cachet isolé).</p>
+    <div class="warn">
+      * <b>Coût employeur « avant réduction générale (RGDU) »</b> : ton logiciel (sPAIEctacle) applique en plus la RGDU qui réduit le coût sur les bas salaires.
+      Lignes <b>prévoyance</b> et <b>fonds santé</b> Audiens = estimées (à confirmer sur ta fiche de paramétrage DSN).
+      Le <b>net est fiable</b> ; le coût est un ordre de grandeur haut.
+    </div>
+  </div>
+  <footer>Groupe MDM · barème 2026 (SMIC 12,31 € au 01/06/2026, PMSS 4 005 €) · usage interne — vérifier avant tout bulletin officiel.</footer>
+</div>
+
+<script>
+const PMSS = 4005;
+// [label, baseType('dfs'|'brut'|'csg'), tauxSal, tauxPat, reduit70(art), plafonne(PMSS), artisteSeul]
+function lignes(p){
+  const at = p.tauxAT;
+  return [
+    ["Maladie",              "dfs","brut", 0,               p.maladiePat, true,  false, false],
+    ["Vieillesse plafonnée", "dfs", 6.90, 8.55,             true,  true,  false],
+    ["Vieillesse déplafonnée","dfs",0.40, 2.11,             true,  false, false],
+    ["Allocations familiales","dfs",0,    3.45,             true,  false, false],
+    ["AT/MP",                "dfs", 0,    at,               true,  false, false],
+    ["CSA",                  "dfs", 0,    0.30,             false, false, false],
+    ["FNAL",                 "dfs", 0,    0.10,             true,  true,  false],
+    ["CSG déductible",       "csg", 6.80, 0,                false, false, false],
+    ["CSG/CRDS non déd.",    "csg", 2.90, 0,                false, false, false],
+    ["Chômage",              "brut",2.40, p.chomPat,        false, false, false],
+    ["AGS",                  "brut",0,    0.25,             false, false, false],
+    ["Retraite + CEG T1",    "dfs", 4.01, 6.01,             false, true,  false],
+    ["Prévoyance (est.)",    "dfs", 0.12, 0.88,             false, false, false],
+    ["Fonds santé (est.)",   "dfs", 0,    0.77,             false, false, true ],
+    ["Congés Spectacles",    "brut",0,    15.50,            false, false, false],
+    ["AFDAS",                "dfs", 0,    2.10,             false, false, false],
+    ["Thalie Santé",         "dfs", 0,    0.35,             false, false, false],
+    ["CASC-SVP",             "dfs", 0,    0.50,             false, false, false],
+    ["FCAP-SVP",             "brut",0,    0.10,             false, false, false],
+  ];
+}
+function fmt(n){return n.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2});}
+
+function calc(){
+  const err=document.getElementById('err'); err.textContent='';
+  const statut=document.getElementById('statut').value;
+  const brut=parseFloat(document.getElementById('brut').value);
+  if(!brut||brut<=0){err.textContent="Entre un brut valide.";return;}
+  // plancher SMIC (cachet 12h ; indicatif)
+  if(brut < 12*12.31*0.99){/* avertissement doux, non bloquant pour salaire horaire */}
+
+  const socSel=document.getElementById('soc').value;
+  const tauxAT = socSel==='custom' ? parseFloat(document.getElementById('atCustom').value) : parseFloat(socSel);
+
+  let dfs=0, reduit=false, maladiePat=13;
+  if(statut==='artiste'){
+    reduit=true;
+    if(document.getElementById('abattement').checked){
+      dfs=parseFloat(document.getElementById('cat').value);
+    }
+  } else {
+    reduit=false;
+    maladiePat=parseFloat(document.getElementById('maladie').value);
+  }
+  const chomPat = document.getElementById('cddu').checked ? 9.50 : 9.00;
+
+  const baseDfs = brut*(1-dfs);
+  const baseCsg = brut*0.9825;
+  const p={tauxAT,maladiePat,chomPat};
+
+  let sumSal=0,sumPat=0,html='';
+  for(const L of lignes(p)){
+    const [lab,bt,tSal,tPat,red,plaf,artSeul]=L;
+    if(artSeul && statut!=='artiste') continue;
+    let base = bt==='dfs'?baseDfs : bt==='csg'?baseCsg : brut;
+    if(plaf) base=Math.min(base,PMSS);
+    const coef = (red && reduit)?0.70:1;   // taux réduits artistes
+    const mSal = base*(tSal/100)*coef;
+    const mPat = base*(tPat/100)*coef;
+    sumSal+=mSal; sumPat+=mPat;
+    if(mSal>0||mPat>0){
+      html+=`<tr><td>${lab}${(red&&reduit)?' ×0,70':''}</td><td>${fmt(base)}</td><td>${mSal>0?fmt(mSal):'—'}</td><td>${mPat>0?fmt(mPat):'—'}</td></tr>`;
+    }
+  }
+  const net=brut-sumSal, cout=brut+sumPat;
+  const csgNonDed=baseCsg*0.029; const imposable=net+csgNonDed;
+
+  document.getElementById('lignes').innerHTML=html;
+  document.getElementById('tSal').textContent=fmt(sumSal);
+  document.getElementById('tPat').textContent=fmt(sumPat);
+  document.getElementById('vBrut').textContent=fmt(brut)+' €';
+  document.getElementById('vNet').textContent=fmt(net)+' €';
+  document.getElementById('vCout').textContent=fmt(cout)+' €';
+  document.getElementById('vImp').textContent=fmt(imposable);
+  document.getElementById('res').style.display='block';
+}
+
+// UI toggles
+document.getElementById('statut').addEventListener('change',e=>{
+  const a=e.target.value==='artiste';
+  document.getElementById('artBloc').style.display=a?'block':'none';
+  document.getElementById('techBloc').style.display=a?'none':'block';
+});
+document.getElementById('abattement').addEventListener('change',e=>{
+  document.getElementById('catWrap').style.display=e.target.checked?'block':'none';
+});
+document.getElementById('soc').addEventListener('change',e=>{
+  document.getElementById('atCustomWrap').style.display=e.target.value==='custom'?'block':'none';
+});
+</script>
+</body>
+</html>
