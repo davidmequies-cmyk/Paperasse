@@ -89,7 +89,7 @@ Les deux **se cumulent**, dans cet ordre : **brut → abattement (DFS) → puis 
 - **NE réduit PAS** : **CSG/CRDS** (calculées sur le **brut avant DFS** × 98,25 % — la DFS et l'abattement d'assiette 1,75 % ne se cumulent pas ; source URSSAF/sécurité-sociale.fr), **chômage** (exclu depuis 01/07/2017), **AGS**, **Congés Spectacles**.
 - L'assiette ne peut jamais descendre **sous le SMIC**.
 - ✅ *Taux 2026 (18 % / 16 %) **confirmé** sur 6 sources concordantes : Exponens (éd. 02/2026), LégiSocial, Movinmotion, STECO, Pop Paye, cheque-intermittents. Le « 24 % / 2038 » parfois vu = régime **général** (autres professions), pas le spectacle.*
-- ⚠️ **Paramétrage MDM** : la DFS **n'est pas activée** dans le moteur GHS de Michel (seuls les taux réduits 70 % s'appliquent). Ne l'ajouter que si Michel décide de l'activer (accord salarié requis).
+- ✅ **Confirmé sur le livre de paie MDM mai 2026** : la DFS **est appliquée de façon sélective** — **16 %** aux musiciens (ex. BEMPF : 252,74 → 212,30) et **18 %** aux comédiens/danseurs (ex. SM : 1 505,16 → 1 234,22 ; SENDS : 796,61 → 653,22) ; **certaines troupes n'ont aucun abattement** (ex. PDACP cabaret : brut abattu = brut). **Base chômage = brut plein partout.** → D'où la règle : toujours demander abattement O/N + catégorie.
 
 ### 4.2 Les TAUX RÉDUITS artistes (arrêté du 24 janvier 1975) — ce n'est PAS un « abattement »
 - **Base : arrêté du 24 janvier 1975 (toujours en vigueur).** Les cotisations **URSSAF de Sécurité sociale** des **artistes** (pas les techniciens) sont calculées au **taux de droit commun × 70 %** (= réduction de **30 % des taux**). **Non plafonné.**
@@ -211,7 +211,7 @@ Les deux **se cumulent**, dans cet ordre : **brut → abattement (DFS) → puis 
 
 ## 11. Récapitulatif [À VÉRIFIER] avant un bulletin réel
 1. ~~Taux AT/MP~~ **✅ connu** (bulletins GHS) : **Neshama 1,50 %**, **MDMProd 1,07 %**. À revérifier chaque année (notification URSSAF).
-2. **Prévoyance & fonds collectif santé Audiens 2026** (taux exacts, PDF « Paramètres et taux 2026 »).
+2. **Prévoyance & fonds collectif santé Audiens 2026** (taux exacts) — introuvables dans les relevés/livres de paie synthétiques ; à extraire du **détail cotisations sPAIEctacle** ou d'un **bordereau Audiens**.
 3. **Répartition exacte de la retraite majorée 8,89 % T1** (PDF Audiens « FP-Taux retraite »).
 4. **Maladie 7 % vs 13 %** (technicien) selon cumul annuel ; survie d'un taux réduit artiste après RGDU.
 5. **Minima conventionnels 2026** ligne à ligne (grilles datées SYNPTAC/SFA/Légifrance).
