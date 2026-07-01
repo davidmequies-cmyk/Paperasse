@@ -75,7 +75,7 @@ Optimisation (coût/latence/fiabilité, recherché sur le net) : [`docs/optimisa
 
 ## Modèles
 
-**Claude uniquement**, via **Claude Code** connecté à l'abonnement **Claude Max** de Michel (aucune clé API — voir [`docs/connexion-claude-max.md`](docs/connexion-claude-max.md)). Si la fenêtre d'usage Max est épuisée : Hermès prévient sur Telegram, met en file d'attente et reprend à la recharge (priorité : sécurité → paie/déclaratif → relances/contrats → reste).
+**3 API actives** : **Claude/Anthropic** (1ᵉʳ choix — juridique, relances, contrats, /dg, /treso, paie expert ; via Claude Code + clé API, bascule possible sur l'abonnement Max : [`docs/connexion-claude-max.md`](docs/connexion-claude-max.md)), **OpenAI** (calculs/structuration), **Gemini** (recherche/pièces jointes/SEO). Bascule automatique si un modèle est indisponible. Clés dans le `.env` uniquement ; plafonds de dépense posés sur chaque console.
 
 ---
 

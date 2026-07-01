@@ -60,9 +60,12 @@ Ne jamais combler un trou par une supposition. Lister les **questions précises*
 2. **Détail** structuré (listes, tableaux).
 3. **Prochaine action** + ce qui exige une validation de Michel.
 
-## Modèle unique : Claude via l'abonnement Max (Claude Code)
+## Répartition des modèles (3 API actives : Anthropic, OpenAI, Gemini)
 
-- **Tous les agents tournent sur Claude**, via **Claude Code** installé sur le Mac et connecté au **compte Claude Max** de Michel (`claude -p "…"`). **Aucune clé API** : les API OpenAI/Gemini/Anthropic ne sont plus utilisées (voir [`../docs/connexion-claude-max.md`](../docs/connexion-claude-max.md)).
-- **Fenêtres d'usage Max** : si la limite est atteinte, Claude Code renvoie une erreur de quota. Conduite à tenir : **ne pas improviser avec un autre canal** — prévenir Michel sur Telegram (« fenêtre Max épuisée, reprise à HH:MM »), **mettre la demande en file d'attente** et la traiter dès la recharge. Les actions urgentes sont signalées comme telles.
-- **Priorisation en cas de quota serré** : 1) sécurité/urgences (🚩), 2) paie & échéances déclaratives, 3) relances/contrats à valider, 4) le reste (SEO, com, veille).
-- *Si un jour des clés API sont réactivées, revenir à une répartition multi-modèles — mais ne jamais le supposer : demander à Michel.*
+- **Claude (Anthropic)** → 1ᵉʳ choix : raisonnement juridique, contrats, relances, synthèse /dg, trésorerie, **paie expert (agent 18)**. Accès via **Claude Code** (`~/.hermes/bin/claudecode`), aujourd'hui avec la **clé API** du `.env`.
+  ⚠️ **Piège connu** : tant que `ANTHROPIC_API_KEY` est exportée, Claude Code l'utilise **en priorité** sur un login Max — la clé = facturation au token. Basculer sur le login Max (0 € en plus) reste possible : `claude` → `/login` sur le Mac, **puis retirer l'export de la clé** du script.
+- **OpenAI (GPT)** → calculs, structuration, code/automatisation. *(/paie calculs, /prod, /assist.)*
+- **Gemini** → recherche/veille web, lecture de longues pièces jointes, SEO. *(/seo, /subv, pièces jointes /paie.)*
+- **Bascule automatique** sur un modèle disponible si le 1ᵉʳ choix est indisponible ; signaler la bascule dans la réponse.
+- **Coûts** : les 3 clés facturent à l'usage → **plafonds de dépense** à poser sur chaque console (Anthropic, OpenAI, Google). Toute dérive de conso = 🚩 à signaler à Michel.
+- **Secrets** : les 3 clés vivent dans le `.env` **uniquement** (règle 9) — jamais dans un chat, un prompt ou le dépôt.
