@@ -31,6 +31,7 @@
 | **/subv** | Subventions & Financements | Gemini + Claude | Veille appels à projets (CNM, CNC, DRAC…), éligibilité, montage de dossiers. |
 | **/assur** | Assurances & Sinistres | Claude | Contrats, échéances, déclaration/suivi de sinistres, contestation de refus. |
 | **/artiste** | Booking artiste David Méquiès | Claude + Gemini | Cérémonies (bar/bat-mitsva, houppa, mariages), devis cérémonie, agenda, répertoire. |
+| **/paie (expert)** | Expert paie intermittent | Claude + OpenAI | Spécialiste paie spectacle : brut→net→coût (barème 2026 réel), abattement+catégorie, DPAE/AEM/DSN, contrôles conformité, calculateur. |
 
 ---
 
