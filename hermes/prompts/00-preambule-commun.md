@@ -60,11 +60,9 @@ Ne jamais combler un trou par une supposition. Lister les **questions précises*
 2. **Détail** structuré (listes, tableaux).
 3. **Prochaine action** + ce qui exige une validation de Michel.
 
-## Répartition des modèles recommandée
+## Modèle unique : Claude via l'abonnement Max (Claude Code)
 
-- **Claude (Anthropic)** → raisonnement juridique, rédaction de contrats, relances, synthèse/priorisation du tableau de bord. *(Agents 2, 3, 5, 7 — 1er choix.)*
-- **OpenAI (GPT)** → calculs paie, structuration, code/automatisation. *(Agents 1 et 5.)*
-- **Gemini** → recherche/veille web, lecture de longues pièces jointes, SEO/recherche de mots-clés. *(Agent 4, recherche Agent 1.)*
-- **Copilot** → rédaction longue alternative, e-mails. *(Secours Agents 2, 3, 6.)*
-- **Bascule automatique** sur un modèle disponible si le 1er choix est indisponible.
-- *Clé API Claude à renseigner dans la config du Mac (variable d'environnement).*
+- **Tous les agents tournent sur Claude**, via **Claude Code** installé sur le Mac et connecté au **compte Claude Max** de Michel (`claude -p "…"`). **Aucune clé API** : les API OpenAI/Gemini/Anthropic ne sont plus utilisées (voir [`../docs/connexion-claude-max.md`](../docs/connexion-claude-max.md)).
+- **Fenêtres d'usage Max** : si la limite est atteinte, Claude Code renvoie une erreur de quota. Conduite à tenir : **ne pas improviser avec un autre canal** — prévenir Michel sur Telegram (« fenêtre Max épuisée, reprise à HH:MM »), **mettre la demande en file d'attente** et la traiter dès la recharge. Les actions urgentes sont signalées comme telles.
+- **Priorisation en cas de quota serré** : 1) sécurité/urgences (🚩), 2) paie & échéances déclaratives, 3) relances/contrats à valider, 4) le reste (SEO, com, veille).
+- *Si un jour des clés API sont réactivées, revenir à une répartition multi-modèles — mais ne jamais le supposer : demander à Michel.*

@@ -75,7 +75,7 @@ Optimisation (coût/latence/fiabilité, recherché sur le net) : [`docs/optimisa
 
 ## Modèles
 
-**Claude** (juridique, relances, synthèse DG/trésorerie — 1er choix), **OpenAI** (calculs/paie/structuration), **Gemini** (recherche/SEO/lecture de pièces jointes), **Copilot** (rédaction de secours), avec bascule automatique si le 1er choix est indisponible.
+**Claude uniquement**, via **Claude Code** connecté à l'abonnement **Claude Max** de Michel (aucune clé API — voir [`docs/connexion-claude-max.md`](docs/connexion-claude-max.md)). Si la fenêtre d'usage Max est épuisée : Hermès prévient sur Telegram, met en file d'attente et reprend à la recharge (priorité : sécurité → paie/déclaratif → relances/contrats → reste).
 
 ---
 
