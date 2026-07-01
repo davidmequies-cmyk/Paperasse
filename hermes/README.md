@@ -33,6 +33,7 @@ Aucune action externe ou irréversible (envoi d'e-mail, déclaration DPAE/AEM/DS
 | `/subv` | [Subventions & Financements](prompts/agent-15-subventions.md) | Gemini + Claude |
 | `/assur` | [Assurances & Sinistres](prompts/agent-16-assurances.md) | Claude |
 | `/artiste` | [Booking artiste David Méquiès](prompts/agent-17-artiste.md) | Claude + Gemini |
+| `/paie` (expert) | [Expert paie intermittent du spectacle](prompts/agent-18-expert-paie-intermittent.md) | Claude + OpenAI |
 
 Le **cadre commun** appliqué à tous les agents : [`prompts/00-preambule-commun.md`](prompts/00-preambule-commun.md).
 Le **routeur** (langage naturel → bon agent) : [`prompts/00-routeur.md`](prompts/00-routeur.md).
