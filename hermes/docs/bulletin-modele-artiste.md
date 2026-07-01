@@ -17,7 +17,7 @@ Règle des bases : **Sécu** = base DFS **puis** taux × 0,70 (taux réduits art
 | Vieillesse plafonnée | 2 693,88 | 6,90/8,55 ×0,70 | 130,11 | 161,23 |
 | Vieillesse déplafonnée | 2 693,88 | 0,40/2,11 ×0,70 | 7,54 | 39,79 |
 | Allocations familiales | 2 693,88 | —/3,45 ×0,70 | — | 65,06 |
-| AT/MP *(2 % [À VÉRIFIER])* | 2 693,88 | —/2 ×0,70 | — | 37,71 |
+| AT/MP (Neshama **1,50 %** réel) | 2 693,88 | —/1,50 ×0,70 | — | 28,29 |
 | CSA | 2 693,88 | —/0,30 | — | 8,08 |
 | FNAL | 2 693,88 | —/0,10 ×0,70 | — | 1,89 |
 | Retraite compl. + CEG T1 | 2 693,88 | 4,01/6,01 | 108,02 | 161,90 |
@@ -30,9 +30,9 @@ Règle des bases : **Sécu** = base DFS **puis** taux × 0,70 (taux réduits art
 | Thalie Santé | 2 693,88 | —/0,35 | — | 9,43 |
 | CASC-SVP | 2 693,88 | —/0,50 | — | 13,47 |
 | FCAP-SVP | 3 207,00 | —/0,10 | — | 3,21 |
-| **TOTAUX** | | | **631,51** | **1 657,71** |
+| **TOTAUX** | | | **631,51** | **1 648,29** |
 
-- **NET avant impôt ≈ 2 575,49 €** · Net imposable ≈ 2 666,87 € · **Coût employeur avant RGDU ≈ 4 864,71 €**.
+- **NET avant impôt ≈ 2 575,49 €** · Net imposable ≈ 2 666,87 € · **Coût employeur avant RGDU ≈ 4 855,29 €**.
 
 ---
 
@@ -44,7 +44,7 @@ Règle des bases : **Sécu** = base DFS **puis** taux × 0,70 (taux réduits art
 | Vieillesse plafonnée | 2 629,74 | 6,90/8,55 ×0,70 | 127,02 | 157,39 |
 | Vieillesse déplafonnée | 2 629,74 | 0,40/2,11 ×0,70 | 7,36 | 38,84 |
 | Allocations familiales | 2 629,74 | —/3,45 ×0,70 | — | 63,51 |
-| AT/MP *(2 % [À VÉRIFIER])* | 2 629,74 | —/2 ×0,70 | — | 36,82 |
+| AT/MP (Neshama **1,50 %** réel) | 2 629,74 | —/1,50 ×0,70 | — | 27,61 |
 | CSA | 2 629,74 | —/0,30 | — | 7,89 |
 | FNAL | 2 629,74 | —/0,10 ×0,70 | — | 1,84 |
 | Retraite compl. + CEG T1 | 2 629,74 | 4,01/6,01 | 105,45 | 158,05 |
@@ -57,9 +57,9 @@ Règle des bases : **Sécu** = base DFS **puis** taux × 0,70 (taux réduits art
 | Thalie Santé | 2 629,74 | —/0,35 | — | 9,20 |
 | CASC-SVP | 2 629,74 | —/0,50 | — | 13,15 |
 | FCAP-SVP | 3 207,00 | —/0,10 | — | 3,21 |
-| **TOTAUX** | | | **625,60** | **1 637,60** |
+| **TOTAUX** | | | **625,60** | **1 628,39** |
 
-- **NET avant impôt ≈ 2 581,40 €** · Net imposable ≈ 2 672,78 € · **Coût employeur avant RGDU ≈ 4 844,60 €**.
+- **NET avant impôt ≈ 2 581,40 €** · Net imposable ≈ 2 672,78 € · **Coût employeur avant RGDU ≈ 4 835,39 €**.
 
 ---
 
@@ -67,16 +67,19 @@ Règle des bases : **Sécu** = base DFS **puis** taux × 0,70 (taux réduits art
 | | Musicien (DFS 16 %) | Comédien (DFS 18 %) |
 |---|---:|---:|
 | Net avant impôt | ≈ 2 575,49 € | ≈ 2 581,40 € |
-| Coût employeur (avant RGDU) | ≈ 4 864,71 € | ≈ 4 844,60 € |
+| Coût employeur (avant RGDU) | ≈ 4 855,29 € | ≈ 4 835,39 € |
 
 Plus la DFS est forte (18 % > 16 %), plus le **net monte** et le **coût baisse**.
 
 ## Adapter à un autre brut
 Multiplier chaque ligne par le nouveau brut / 3 207 (les bases DFS et CSG suivent). Si **brut > 4 005 €** : gérer la tranche 2 (retraite T2, CET) et le plafonnement de la vieillesse plafonnée. Si **artiste sans abattement** : retirer la DFS (base = brut) tout en gardant les taux réduits 70 %.
 
+## Taux AT/MP réels (extraits des bulletins GHS de Michel)
+- **Neshama Music** (spectacle vivant, 9001Z) : **1,50 %** · **MDMProd** (production audiovisuelle, 5911B) : **1,07 %**. Pour un artiste (via Neshama) : 1,50 % **abattu 30 % = 1,05 %**.
+
 ## Fiabilité (strict)
-- ✅ **Net = fiable** : charges salariales indépendantes de l'AT et de la RGDU.
-- ⚠️ **3 taux à caler sur l'établissement** : **AT/MP** (ici 2 %), **prévoyance** et **fonds collectif santé** Audiens → d'où « coût avant RGDU ».
+- ✅ **Net = fiable** ; **AT/MP désormais réel (1,50 % Neshama)**.
+- ⚠️ **2 taux restant à confirmer** : **prévoyance** et **fonds collectif santé** Audiens (impact faible).
 - ⚠️ **RGDU (réduction générale)** : fixe le coût employeur **final** ; calculée au centime par sPAIEctacle. À ~1,7 SMIC, elle retire encore plusieurs centaines d'€.
 - 📌 Pour le coût exact et la DSN : **le bulletin GHS fait foi**. Hermès calcule le net, contrôle la cohérence et explique chaque ligne.
 

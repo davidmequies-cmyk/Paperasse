@@ -59,6 +59,10 @@
 - **Protection juridique** : Juridica (dossier MEQUIES / SCP Billaudel) [À VÉRIFIER].
 - **Expert-comptable** : [À COMPLÉTER].
 
+## 9bis. Paramètres paie établissements (réels, bulletins GHS)
+- **Taux AT/MP** : **Neshama Music 1,50 %** (spectacle vivant, APE 9001Z) · **MDMProd 1,07 %** (production audiovisuelle, APE 5911B). À revérifier chaque année (notification URSSAF).
+- Logiciel de paie : **sPAIEctacle (GHS)**. Détails intermittents : `referentiel-paie-spectacle.md` + `docs/bulletin-modele-artiste.md`.
+
 ## 10. Véhicule
 - **Audi e-tron GT** — immat. **GX-370-ZS**, 1ʳᵉ immatriculation **29/06/2024**, ~26 000 km.
 - Extension de garantie : offre réf. **2ba249** via VWFS (vwfs-garantie.fr) — dossier en cours [À SUIVRE].

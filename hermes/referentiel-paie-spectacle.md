@@ -109,7 +109,7 @@ Les deux **se cumulent**, dans cet ordre : **brut → abattement (DFS) → puis 
 | Vieillesse plafonnée | 8,55 % | 6,90 % | ≤ PMSS | ✔ | ✔ |
 | Vieillesse déplafonnée | 2,11 %² | 0,40 % | totalité | ✔ | ✔ |
 | Allocations familiales | 3,45 %¹ (5,25 % si > 3,3 SMIC) | — | totalité | ✔ | ✔ |
-| AT/MP | **taux propre à l'établissement** [À VÉRIFIER] | — | totalité | ✔ (artistes) | ✔ |
+| AT/MP | **Neshama 1,50 % · MDMProd 1,07 %** (réel GHS) | — | totalité | ✔ (artistes) | ✔ |
 | CSA | 0,30 % | — | totalité | ✗ | ✔ |
 | FNAL (< 50 sal.) | 0,10 % | — | ≤ PMSS | ✔ | ✔ |
 | Versement mobilité | variable (si ≥ 11 sal. en zone AOM) | — | totalité | ✔ | ✔ |
@@ -210,7 +210,7 @@ Les deux **se cumulent**, dans cet ordre : **brut → abattement (DFS) → puis 
 ---
 
 ## 11. Récapitulatif [À VÉRIFIER] avant un bulletin réel
-1. **Taux AT/MP** propre à l'établissement (compte AT/MP URSSAF, code NAF 9001Z/9002Z).
+1. ~~Taux AT/MP~~ **✅ connu** (bulletins GHS) : **Neshama 1,50 %**, **MDMProd 1,07 %**. À revérifier chaque année (notification URSSAF).
 2. **Prévoyance & fonds collectif santé Audiens 2026** (taux exacts, PDF « Paramètres et taux 2026 »).
 3. **Répartition exacte de la retraite majorée 8,89 % T1** (PDF Audiens « FP-Taux retraite »).
 4. **Maladie 7 % vs 13 %** (technicien) selon cumul annuel ; survie d'un taux réduit artiste après RGDU.
