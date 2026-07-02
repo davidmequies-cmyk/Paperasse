@@ -43,3 +43,21 @@ SORTIE
 GARDE-FOU
 Consentement à l'enregistrement obligatoire ; secret du délibéré prud'homal = interdiction absolue ; RGPD ; ne rien inventer (citer/verbatim) ; aucun engagement ni envoi sans validation de Michel (✅/✏️/❌).
 ```
+
+## Canaux — fonctionne depuis iPhone / iPad
+Hermès s'exécute sur le **Mac** ; l'iPhone/iPad est la **télécommande**. Trois modes selon le type de réunion :
+
+**A. Réunion Zoom / Teams / Meet (le plus complet — live + après)**
+- Michel rejoint depuis l'iPhone/iPad ; **activer l'enregistrement cloud + la transcription** (Zoom : « Enregistrer dans le cloud »).
+- Hermès (Mac) **récupère la transcription via le connecteur Zoom** → prépa avant, débrief après. En cours de réunion, Michel lui écrit sur **Telegram** pour un argument/une vérif.
+- Idéal pour les RDV du type **ALTAF / banque / notaire en visio**.
+
+**B. Réunion physique — enregistrer sur l'iPhone/iPad**
+1. **Avant** : demander à Hermès *« prépare ma réunion avec X »* → il envoie la **fiche de prépa** (arguments, objections, questions) sur Telegram, consultable sur l'iPhone.
+2. **Pendant** : enregistrer avec **Dictaphone (Voice Memos)** ou un **Raccourci iOS** « Réunion » qui enregistre puis **dépose le fichier audio dans le Drive** (dossier `Hermes/reunions/`). *(⚠️ prévenir les participants qu'on enregistre.)*
+3. **Après** : *« débriefe la réunion »* → Hermès lit l'audio déposé, **retranscrit**, sort **CR + actions + analyse**. Quasi-live si le Raccourci envoie l'audio par tranches de quelques minutes qu'Hermès traite au fil de l'eau.
+
+**C. Live « souffleur » en réunion physique (avancé)**
+- Un **Raccourci iOS** capte l'audio par tranches → Drive → Hermès transcrit et **répond sur Telegram** (argument/relance) que Michel lit discrètement. Latence de l'ordre d'une minute (pas de l'instantané pur, faute d'agent permanent sur iOS).
+
+> **À préparer une fois (côté Mac/iPhone)** : (1) connecteur Zoom actif ; (2) dossier Drive `Hermes/reunions/` ; (3) un **Raccourci iOS « Réunion »** (Enregistrer l'audio → Enregistrer dans Fichiers/Drive `Hermes/reunions/` → notifier Hermès). Hermès peut fournir le pas-à-pas du Raccourci.
