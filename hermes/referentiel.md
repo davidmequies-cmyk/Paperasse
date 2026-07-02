@@ -12,7 +12,8 @@
 | **Neshama Music** | SARL | 807 857 719 (RCS Paris) | 61 rue de Lyon, 75012 Paris | Activités artistiques/musicales/événementielles — **titulaire licence entrepreneur de spectacles** |
 | **SpectaGestion / PaieIntermittents.com** | Marque de MDMProd | — | — | Paie des intermittents + déclarations (DPAE → DSN) ; **le client reste l'employeur** |
 
-- N° licence entrepreneur de spectacles (Neshama) : **[À COMPLÉTER]**
+- N° licence entrepreneur de spectacles (Neshama Music) : **PLATESV-R-2021-012818** *(confirmé par Michel le 02/07/2026)*.
+- TVA : **MDMProd 20 %** · **Neshama 5,5 %** (billetterie spectacle vivant) — CA3 **mensuelles** pour les deux *(confirmé par Michel le 02/07/2026)*.
 - TVA intracom MDMProd / Neshama : **[À COMPLÉTER]**
 
 ## 2. Identité & marques
