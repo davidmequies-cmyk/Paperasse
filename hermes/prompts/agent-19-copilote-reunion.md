@@ -61,3 +61,5 @@ Hermès s'exécute sur le **Mac** ; l'iPhone/iPad est la **télécommande**. Tro
 - Un **Raccourci iOS** capte l'audio par tranches → Drive → Hermès transcrit et **répond sur Telegram** (argument/relance) que Michel lit discrètement. Latence de l'ordre d'une minute (pas de l'instantané pur, faute d'agent permanent sur iOS).
 
 > **À préparer une fois (côté Mac/iPhone)** : (1) connecteur Zoom actif ; (2) dossier Drive `Hermes/reunions/` ; (3) un **Raccourci iOS « Réunion »** (Enregistrer l'audio → Enregistrer dans Fichiers/Drive `Hermes/reunions/` → notifier Hermès). Hermès peut fournir le pas-à-pas du Raccourci.
+>
+> 📄 **Pas-à-pas complet d'enregistrement iPhone/iPad** (Dictaphone, Raccourci 1 tap, visio) : [`../docs/reunion-enregistrement-iphone.md`](../docs/reunion-enregistrement-iphone.md). Transcription par Hermès via OpenAI Whisper (clé du `.env`).
