@@ -28,10 +28,13 @@ exec codex exec "$@"
 `chmod +x ~/.hermes/bin/codexcode`. Hermès appelle alors `~/.hermes/bin/codexcode "<tâche de code>"`.
 
 ## Répartition (qui fait quoi)
+> ⚠️ **Codex s'AJOUTE, il ne remplace PAS les autres.** Les **4 modèles coexistent** et gardent chacun leur rôle. Hermès **choisit le bon outil selon la tâche** ; la **bascule automatique** entre eux reste active si l'un est indisponible.
+
 - **Claude** (1ᵉʳ choix) : raisonnement, juridique, relances, contrats, /dg, /treso, **paie experte**, synthèse.
-- **Codex** : écrire/corriger du code, scripts (ex. `reunion-transcrire.sh`), automatisations, refactors, revue de PR.
-- **OpenAI (GPT)** : calculs, structuration, rédaction ; **Gemini** : recherche/PJ/SEO.
-- Hermès **délègue à Codex** dès qu'une tâche est « du code » ; il présente le résultat, **rien n'est poussé/exécuté sans validation de Michel** (✅/✏️/❌).
+- **OpenAI (GPT)** : calculs, structuration, rédaction, code léger.
+- **Gemini** : recherche/veille, longues pièces jointes, SEO.
+- **Codex** : code lourd — écrire/corriger du code, scripts (ex. `reunion-transcrire.sh`), automatisations, refactors, revue de PR.
+- Hermès **délègue à Codex** dès qu'une tâche est « du code » (sans débrancher les autres) ; il présente le résultat, **rien n'est poussé/exécuté sans validation de Michel** (✅/✏️/❌).
 
 ## Coûts & sécurité
 - Codex CLI facture sur ton **API OpenAI** (à l'usage) → **plafond de dépense** sur platform.openai.com. Toute dérive = 🚩.
