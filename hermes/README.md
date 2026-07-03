@@ -72,6 +72,7 @@ Voir [`docs/fiche-demarrage.md`](docs/fiche-demarrage.md). Ordre conseillé :
 **cadre commun → garde-fou de validation → création des agents → automatismes → tests.**
 Pour aller plus loin (Qonto, Gmail, boutons Telegram, journal d'audit…) : [`docs/connexions-mac.md`](docs/connexions-mac.md).
 Brancher l'abonnement **Claude Max** (via Claude Code) : [`docs/connexion-claude-max.md`](docs/connexion-claude-max.md).
+Brancher **Codex** (exécutant dev, revue de PR) : [`docs/connexion-codex.md`](docs/connexion-codex.md).
 Optimisation (coût/latence/fiabilité, recherché sur le net) : [`docs/optimisation.md`](docs/optimisation.md). Jeu de tests : [`docs/evaluation.md`](docs/evaluation.md).
 
 ## Modèles

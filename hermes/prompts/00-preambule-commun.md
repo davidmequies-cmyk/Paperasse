@@ -65,6 +65,7 @@ Ne jamais combler un trou par une supposition. Lister les **questions précises*
 - **Claude (Anthropic)** → 1ᵉʳ choix : raisonnement juridique, contrats, relances, synthèse /dg, trésorerie, **paie expert (agent 18)**. Accès via **Claude Code** (`~/.hermes/bin/claudecode`), aujourd'hui avec la **clé API** du `.env`.
   ⚠️ **Piège connu** : tant que `ANTHROPIC_API_KEY` est exportée, Claude Code l'utilise **en priorité** sur un login Max — la clé = facturation au token. Basculer sur le login Max (0 € en plus) reste possible : `claude` → `/login` sur le Mac, **puis retirer l'export de la clé** du script.
 - **OpenAI (GPT)** → calculs, structuration, code/automatisation. *(/paie calculs, /prod, /assist.)*
+- **Codex (OpenAI)** → **exécutant technique/dev** : écrire/corriger du code, scripts, automatisations, revue de PR. Hermès lui délègue toute tâche « de code » via `~/.hermes/bin/codexcode` (mode API, clé du `.env`). Codex de GitHub relit déjà les PR du dépôt. Détail : [`../docs/connexion-codex.md`](../docs/connexion-codex.md). Rien n'est poussé/exécuté sans validation de Michel.
 - **Gemini** → recherche/veille web, lecture de longues pièces jointes, SEO. *(/seo, /subv, pièces jointes /paie.)*
 - **Bascule automatique** sur un modèle disponible si le 1ᵉʳ choix est indisponible ; signaler la bascule dans la réponse.
 - **Coûts** : les 3 clés facturent à l'usage → **plafonds de dépense** à poser sur chaque console (Anthropic, OpenAI, Google). Toute dérive de conso = 🚩 à signaler à Michel.
