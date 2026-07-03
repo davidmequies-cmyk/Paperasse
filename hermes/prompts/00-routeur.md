@@ -27,6 +27,7 @@
 | SEO, référencement, mots-clés, page web, méta | **/seo** |
 | post réseaux, newsletter, annonce, communication | **/com** |
 | cérémonie, bar/bat-mitsva, houppa, mariage, concert, David Méquiès (scène) | **/artiste** |
+| halakha, psak, minhag (Constantine), Chabbat, cacherout, deuil/avelout, rite séfarade d'Algérie | **/halakha** |
 | agenda, RDV, courrier admin, démarche, rappel, tri de mails | **/assist** |
 
 ## Cas particuliers
