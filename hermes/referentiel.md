@@ -58,7 +58,7 @@
 - **Banques sollicitées (prêt Touques)** : Société Générale, CCF ; **Fortuneo a refusé** (08/06/2026).
 - **Comptabilité** : Pennylane.
 - **Protection juridique** : Juridica (dossier MEQUIES / SCP Billaudel) [À VÉRIFIER].
-- **Expert-comptable** : [À COMPLÉTER].
+- **Expert-comptable** : **Finalia EURL** — contact **Ashley Cohen** (`Ashley.cohen@finalia.fr`), 2 rue Saint Louis, 93250 Villemomble, SIREN 943 413 161, inscrite à l'OEC de Paris. Mission « présentation des comptes annuels » (lettre signée MDMPROD + Neshama). *(Ancien EC prélevé 180 €/mois via GoCardless : résilié.)* Tél. : [À COMPLÉTER] ; exercice de départ (2025-2026 ou 2026-2027) : [À VÉRIFIER].
 
 ## 9bis. Paramètres paie établissements (réels, bulletins GHS)
 - **Taux AT/MP** : **Neshama Music 1,50 %** (spectacle vivant, APE 9001Z) · **MDMProd 1,07 %** (production audiovisuelle, APE 5911B). À revérifier chaque année (notification URSSAF).
