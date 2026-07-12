@@ -1,0 +1,4 @@
+# Le paquet construit (binaire) n'est pas versionné : on le régénère avec build-zip.sh
+GO1_HERMES_MAC.zip
+app/__pycache__/
+*.pyc

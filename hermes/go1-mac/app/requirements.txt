@@ -1,0 +1,4 @@
+# Hermès GO1 — dépendances Python (Mac)
+# python-telegram-bot embarque httpx (utilisé pour OpenAI/Gemini).
+python-telegram-bot>=21,<22
+httpx>=0.27

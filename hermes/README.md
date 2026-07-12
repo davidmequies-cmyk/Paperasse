@@ -61,14 +61,24 @@ Le **mini-outil de calcul paie** (coût d'un cachet intermittent, barème 2026) 
 hermes/
 ├── README.md
 ├── referentiel.md  # source de vérité : SIREN, tarifs, taux paie, coordonnées
-├── prompts/        # le cadre commun + le prompt de chaque agent (1 à 7)
+├── prompts/        # le cadre commun + le prompt de chaque agent (1 à 20)
 ├── templates/      # gabarits prêts à remplir (relances, contrats)
+├── outils/         # calculateur paie, surveillance réunions
 ├── docs/           # fiche de démarrage, récap, branchements Mac
+├── go1-mac/        # 🚀 paquet « un clic » : le bot Telegram runnable (Mac)
 └── .gitignore
 ```
 
 ## Démarrage
 
+### ⚡ Lancement « un clic » sur le Mac (GO1)
+Le paquet [`go1-mac/`](go1-mac/) transforme cette config en un **bot Telegram** qui tourne sur le Mac (20 agents, cadre commun, routeur, référentiels, garde-fou ✅/✏️/❌, bascule Claude/OpenAI/Gemini). Construire le paquet : `bash go1-mac/build-zip.sh` → `GO1_HERMES_MAC.zip`. Puis sur le Mac :
+```bash
+cd ~/Downloads && unzip -o GO1_HERMES_MAC.zip && bash LANCER_GO1_HERMES.command
+```
+Le lanceur installe tout dans `~/Hermes`, crée les raccourcis `~/.hermes/bin/{claudecode,codexcode}`, ouvre le `.env` pour les secrets (token @BotFather + ton ID Telegram) et démarre Hermès. Guide : [`go1-mac/LISEZ-MOI.md`](go1-mac/LISEZ-MOI.md).
+
+### Configuration détaillée (Telegram existant)
 Voir [`docs/fiche-demarrage.md`](docs/fiche-demarrage.md). Ordre conseillé :
 **cadre commun → garde-fou de validation → création des agents → automatismes → tests.**
 Pour aller plus loin (Qonto, Gmail, boutons Telegram, journal d'audit…) : [`docs/connexions-mac.md`](docs/connexions-mac.md).
