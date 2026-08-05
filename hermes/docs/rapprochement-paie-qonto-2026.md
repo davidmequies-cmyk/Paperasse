@@ -289,3 +289,71 @@ Les libellés bancaires d'Audiens (`AUDEN78493638.23xxxxx`) **ne disent pas à q
 4. le **passage en cadence mensuelle**, qui supprimerait les à-coups de 40 à 70 k€.
 
 Les taux de la paie, eux, sont normaux : la retraite Audiens ressort à **11,21 % du brut en 2025** et **10,41 % en 2026** — cohérent avec Arrco-Agirc T1 + CEG + CET + APEC. **L'anomalie n'est pas dans le calcul de la paie.**
+
+---
+
+# 8. Audiens et la retraite en 2026 — le détail par institution
+
+> Source décisive ajoutée : **`RECAP MAI 26.pdf`** (sPAIEctacle, récapitulatif **mensuel** — *Mai 2026, date de règlement*, 95 paies, brut 76 252,77 €). Un récap mensuel permet ce que l'annuel ne permettait pas : **rattacher chaque prélèvement bancaire à une période et à une institution**.
+
+## 8.1 La preuve au centime
+
+Pour le mois de mai 2026, la paie dit :
+
+| Poste (paie mai 2026) | Montant |
+|---|---:|
+| Congés Spectacles (15,5 % sur 73 902,63) | **11 454,95** |
+| Chômage intermittents (France Travail) | **8 965,70** |
+| Audiens Retraite | 8 082,95 |
+| Audiens Prévoyance + Santé + AGEPRO | 1 353,94 |
+
+Et la banque dit :
+
+| Débit constaté | Montant |
+|---|---:|
+| 25/06/2026 — AUDIENS ENCAISSEMENTS `…2315813` | **11 454,95** |
+| 18/06/2026 — FRANCE TRAVAIL | **8 965,70** |
+
+**Exactement les montants de la DSN, au centime, ni plus ni moins.** Quand Audiens et France Travail prélèvent, ils prélèvent le montant déclaré. Le problème n'est pas le montant des prélèvements : c'est qu'il en **manque**.
+
+## 8.2 Reconstitution des prélèvements Audiens 2026 par institution
+
+En appliquant la même clé (montant = 15,5 % de la base, et concordance avec le prélèvement France Travail du même mois) :
+
+| Date du débit | Montant | Institution / période |
+|---|---:|---|
+| 23/01 (6 débits) + 02/02 (3 débits) | 51 636,35 | soldes **2025** (hors périmètre 2026) |
+| 25/03 | 3 656,93 | Congés Spectacles — janvier ou février 2026 |
+| 24/04 | 9 685,96 | Congés Spectacles — mars 2026 |
+| **28/04 — ALPRO RET « RETRAITE »** | **15 284,88** | **Retraite `202601M` 5 971,71 + `202602M` 2 322,26 + `202603M` 6 990,91** |
+| 30/04 (3 débits) | 2 814,78 | prévoyance / santé / médecine |
+| 22/05 | 12 329,23 | Congés Spectacles — avril 2026 |
+| 25/06 | 11 454,95 | **Congés Spectacles — mai 2026 (vérifié au centime)** |
+| 24/07 | 7 687,11 | Congés Spectacles — juin 2026 |
+| 31/07 | 1 412,14 | prévoyance / santé |
+| 03/06, 01/07, 03/08 (compte SG) | 3 × 721,62 | prévoyance / santé |
+
+## 8.3 Le verdict 2026, institution par institution
+
+| Institution Audiens | Dû 2026 (janv.→juil.) | Prélevé | Écart |
+|---|---:|---:|---:|
+| **Retraite (Arrco-Agirc)** | **40 415,02** | **15 284,88** | **−25 130,14** |
+| Congés Spectacles | 57 872,63 | 44 814,18 | −13 058,45 |
+| Prévoyance / Santé / AGEPRO | 6 975,87 | 6 391,78 | −584,09 |
+| **Total Audiens** | **105 263,52** | **66 490,84** | **−38 772,68** |
+
+**Réponse pour 2026 : la retraite est le poste le plus SOUS-payé de tout le dossier, pas sur-prélevé.** Audiens n'a prélevé la retraite que pour janvier, février et mars — **rien pour avril, mai, juin et juillet**, alors que la seule retraite de mai s'élève à 8 082,95 €. Il manque environ **25 130 €** de cotisations retraite, plus **13 058 €** de Congés Spectacles (dont janvier 2026, jamais prélevé).
+
+## 8.4 Ce que ça change
+
+Ce n'est pas une bonne nouvelle, c'est une **dette qui s'accumule sans appel de fonds visible** :
+- ces 38 773 € seront réclamés, avec le risque de **majorations de retard** ;
+- la retraite non versée est celle des **salariés** : des points Arrco-Agirc ne sont pas alimentés tant que la cotisation n'est pas payée ;
+- le silence d'Audiens depuis avril sur la retraite est anormal — soit les prélèvements ont été suspendus (protocole, rejet, changement de mandat), soit ils vont tomber d'un coup.
+
+**Question précise à poser à Audiens** (elle vaut mieux qu'une contestation) :
+> « Vos prélèvements de retraite s'arrêtent après les périodes 202601M à 202603M du 28/04/2026. Aucun prélèvement retraite n'apparaît pour avril, mai, juin et juillet 2026, alors que nos DSN ont été déposées. Merci de nous adresser la situation de compte Retraite au 31/07/2026 et de nous indiquer la date des prochains prélèvements. »
+
+En parallèle, **provisionner les 38 773 €** : ils sortiront.
+
+**Note de méthode utile pour la suite** : depuis 2026, la retraite Audiens est prélevée sous un libellé distinct (`ALPRO RET AUDIENS ENCAIST … RETRAITE … 202601M`) qui porte la période. Les Congés Spectacles restent sous `AUDIENS ENCAISSEMENTS` sans mention d'institution — mais leur montant est toujours **15,5 % de la base**, ce qui suffit à les identifier. Le contrôle est donc reproductible chaque mois avec le récap mensuel sPAIEctacle.
