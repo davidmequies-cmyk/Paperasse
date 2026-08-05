@@ -6,11 +6,11 @@
 > - `livrepaie 2026.pdf` — livre de paie 2026, centralisation par analytique
 > - Relevés Qonto **NESHAMA MUSIC** compte principal, 01/2026 → 07/2026 (7 relevés PDF) + opérations du 01 au 05/08/2026 (API)
 > - Comptes externes rattachés à Qonto : **Société Générale** (55 opérations 2026) et **BoursoBank** (132 opérations 2026)
-> - Pour le §6 : relevés Qonto **janvier → novembre 2025** (11 relevés) + courriels URSSAF, Audiens, France Travail, Thalie Santé
+> - Pour les §6 et §7 : les **12 relevés Qonto 2025**, le `RECAPITULATIF PAIE 2025.pdf` (sPAIEctacle, 1 065 paies) et les courriels URSSAF, Audiens, France Travail, Thalie Santé
 >
 > ✅ **Périmètre confirmé par Michel le 05/08/2026 : le rapprochement se fait bien avec Qonto.**
 >
-> **Contrôle de fiabilité de l'extraction** : sur chacun des 18 relevés, les lignes extraites recollent **au centime** avec les totaux Entrées/Sorties imprimés sur le relevé. Aucune ligne perdue.
+> **Contrôle de fiabilité de l'extraction** : sur chacun des 19 relevés, les lignes extraites recollent **au centime** avec les totaux Entrées/Sorties imprimés sur le relevé. Aucune ligne perdue.
 
 ---
 
