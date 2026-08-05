@@ -405,3 +405,68 @@ La réponse dépend du **montant réellement présenté en juillet**, que je ne 
 4. **Provisionner** : au total, 79 198,33 € restent à décaisser sur la paie 2026 (§3), dont 38 772,68 € pour Audiens.
 
 *(Le §8 reste valable sur les montants ; seule la cause des prélèvements manquants est corrigée ici.)*
+
+## 9.5 Un seul prélèvement au lieu de trois — et le précédent est chez Audiens
+
+> Précision de Michel : *« ils ont tout prélevé en une fois au lieu de trois. »*
+
+**Audiens a groupé plusieurs périodes DSN dans un prélèvement unique.** C'est ce regroupement qui a provoqué le rejet : une somme d'environ 22 000 € présentée d'un coup sur un compte dont le solde oscillait entre quelques centaines et quelques milliers d'euros ne pouvait pas passer. Trois prélèvements séparés, eux, avaient une chance.
+
+**Le précédent est imparable, et il est chez Audiens :** le **28/04/2026**, Audiens a prélevé exactement les mêmes trois périodes en **trois prélèvements distincts**, trois lignes séparées sur le relevé :
+
+| Période | Montant | Débit |
+|---|---:|---|
+| `202601M` | 5 971,71 | 28/04/2026 |
+| `202602M` | 2 322,26 | 28/04/2026 |
+| `202603M` | 6 990,91 | 28/04/2026 |
+| **Total** | **15 284,88** | *en trois opérations* |
+
+Audiens sait donc parfaitement fractionner par période — c'est sa pratique documentée trois mois plus tôt sur le même mandat, le même compte, le même créancier. **Le regroupement de juillet est un changement de pratique, pas une contrainte technique.**
+
+### Ordre de grandeur de ce qui a été présenté
+
+Les récapitulatifs mensuels d'avril et de juin ne sont pas dans le Drive (seul celui de mai y figure). En s'appuyant sur le rapport retraite / Congés Spectacles mesuré sur mai (8 082,95 / 11 454,95 = **0,7056**), appliqué aux Congés Spectacles réellement prélevés :
+
+| Période | Retraite | Base du calcul |
+|---|---:|---|
+| avril 2026 | ≈ 8 700 | estimé (CS avril 12 329,23) |
+| **mai 2026** | **8 082,95** | **exact — récap mensuel** |
+| juin 2026 | ≈ 5 420 | estimé (CS juin 7 687,11) |
+| **Total présenté en un seul prélèvement** | **≈ 22 200** | |
+| *(pour mémoire, solde retraite total non encaissé, juillet inclus)* | *25 130,14* | |
+
+⚠️ Seul le montant de mai est certain. **Le montant exact présenté se lit dans Qonto** sur l'opération refusée — c'est lui qu'il faut citer dans la réclamation.
+
+### Ce que ça ouvre comme demande
+
+Le rejet n'est pas dû à un refus de payer mais à un **mode de présentation choisi par le créancier**, contraire à sa propre pratique d'avril. Cela justifie de demander, dans le même courrier :
+
+1. la **remise des frais de rejet et des majorations de retard** générés par ce prélèvement groupé ;
+2. la **représentation en trois prélèvements distincts**, une par période DSN, comme le 28/04/2026 ;
+3. à défaut, un **protocole de délai de paiement Retraite**, identique à celui déjà signé pour les Congés Spectacles en avril 2026.
+
+---
+
+## 9.6 Projet de courriel à Audiens (à relire et à envoyer par Michel)
+
+> **Objet : NESHAMA MUSIC 80785771.9-0002.3 — prélèvement Retraite de juillet 2026 rejeté : demande de représentation fractionnée**
+>
+> Madame, Monsieur,
+>
+> Notre banque a rejeté le prélèvement de cotisations Retraite présenté en juillet 2026.
+>
+> Ce rejet tient au **mode de présentation** : plusieurs périodes DSN ont été regroupées dans un prélèvement unique, alors que le **28 avril 2026**, vous aviez prélevé les périodes 202601M (5 971,71 €), 202602M (2 322,26 €) et 202603M (6 990,91 €) en **trois opérations distinctes**, sur le même mandat et le même compte. Ce fractionnement, que vous pratiquiez il y a trois mois, permettait le règlement ; le regroupement l'a rendu impossible.
+>
+> En conséquence, nous vous demandons :
+>
+> 1. de **représenter les cotisations Retraite en prélèvements distincts, une opération par période DSN**, comme le 28 avril 2026 ;
+> 2. la **remise des frais de rejet et des majorations de retard** liés à ce prélèvement groupé, qui découlent de ce changement de présentation et non d'un défaut de déclaration : nos DSN ont toutes été déposées dans les délais ;
+> 3. la **situation de compte Retraite au 31 juillet 2026**, période par période, afin que nous puissions rapprocher vos appels de nos déclarations ;
+> 4. à défaut d'accord sur le point 1, la mise en place d'un **protocole de délai de paiement** pour les cotisations Retraite, dans les mêmes termes que celui conclu pour les Congés Spectacles en avril 2026.
+>
+> Nous vous confirmons notre volonté de régler l'intégralité des cotisations dues et restons à votre disposition pour convenir d'un calendrier.
+>
+> Cordialement,
+> Michel MEQUIES — Gérant, NESHAMA MUSIC
+
+**Avant l'envoi**, deux compléments à récupérer dans Qonto : le **montant exact présenté** et la **date du rejet**, à insérer au premier paragraphe. Ils rendent la demande incontestable.
