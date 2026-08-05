@@ -342,7 +342,7 @@ En appliquant la même clé (montant = 15,5 % de la base, et concordance avec le
 | Prévoyance / Santé / AGEPRO | 6 975,87 | 6 391,78 | −584,09 |
 | **Total Audiens** | **105 263,52** | **66 490,84** | **−38 772,68** |
 
-**Réponse pour 2026 : la retraite est le poste le plus SOUS-payé de tout le dossier, pas sur-prélevé.** Audiens n'a prélevé la retraite que pour janvier, février et mars — **rien pour avril, mai, juin et juillet**, alors que la seule retraite de mai s'élève à 8 082,95 €. Il manque environ **25 130 €** de cotisations retraite, plus **13 058 €** de Congés Spectacles (dont janvier 2026, jamais prélevé).
+**Réponse pour 2026 : la retraite est le poste le plus SOUS-encaissé de tout le dossier.** Seules les périodes de janvier, février et mars ont été encaissées — **rien pour avril, mai, juin et juillet** (prélèvements présentés puis rejetés, voir §9), alors que la seule retraite de mai s'élève à 8 082,95 €. Il manque environ **25 130 €** de cotisations retraite, plus **13 058 €** de Congés Spectacles (dont janvier 2026, jamais prélevé).
 
 ## 8.4 Ce que ça change
 
@@ -357,3 +357,51 @@ Ce n'est pas une bonne nouvelle, c'est une **dette qui s'accumule sans appel de 
 En parallèle, **provisionner les 38 773 €** : ils sortiront.
 
 **Note de méthode utile pour la suite** : depuis 2026, la retraite Audiens est prélevée sous un libellé distinct (`ALPRO RET AUDIENS ENCAIST … RETRAITE … 202601M`) qui porte la période. Les Congés Spectacles restent sous `AUDIENS ENCAISSEMENTS` sans mention d'institution — mais leur montant est toujours **15,5 % de la base**, ce qui suffit à les identifier. Le contrôle est donc reproductible chaque mois avec le récap mensuel sPAIEctacle.
+
+---
+
+# 9. Rectificatif — les prélèvements Audiens ont été présentés puis rejetés
+
+> **Information donnée par Michel le 05/08/2026 :** *« elles ont voulu prélever plus en juillet, Qonto a refusé les prélèvements. »*
+
+## 9.1 Pourquoi je ne pouvais pas le voir
+
+**Un prélèvement rejeté ne laisse aucune trace sur un relevé bancaire** : il n'est jamais débité, donc jamais imprimé. Et l'API Qonto utilisée ici ne renvoie que les opérations **abouties** (`completed`) — les opérations refusées ne sont pas exposées. Vérifié sur le relevé de juillet 2026 : aucune ligne de rejet, de retour ou d'impayé, ce qui est le comportement normal.
+
+Le §8 disait donc « Audiens n'a pas prélevé la retraite d'avril à juillet ». La formulation exacte est : **Audiens a présenté les prélèvements, la banque les a refusés.** Le chiffrage, lui, ne change pas — c'est même la confirmation qu'il est juste : **les 38 772,68 € manquants correspondent à ce qui a été présenté et rejeté**, dont **25 130,14 € de retraite** (avril → juillet).
+
+## 9.2 Ce que ça coûte, et c'est le vrai sujet
+
+Un rejet n'est pas neutre, il coûte trois fois :
+
+1. **Frais de rejet** — côté banque, et souvent refacturés par le créancier.
+2. **Majorations de retard Agirc-Arrco** — elles courent tant que la cotisation n'est pas encaissée, indépendamment du fait que le prélèvement ait été présenté.
+3. **Bascule en recouvrement** — c'est déjà arrivé : relance Audiens Retraite du 08/07/2025 pour un solde de 8 509,22 €, annonçant *« la procédure de précontentieux »*. Et côté France Travail, la période d'octobre 2025 est **chez un huissier** (§6.5).
+
+S'y ajoute le fait que **les points de retraite des salariés ne sont pas alimentés** tant que la cotisation n'est pas encaissée — c'est le point le plus sensible vis-à-vis des artistes et techniciens.
+
+## 9.3 « Ont-ils voulu prélever plus ? » — comment le vérifier, chiffres en main
+
+La réponse dépend du **montant réellement présenté en juillet**, que je ne peux pas lire (opérations refusées non exposées par l'API). Le repère pour le juger :
+
+| Retraite Audiens 2026 | Montant |
+|---|---:|
+| Dû janvier → juillet | 40 415,02 |
+| Encaissé (périodes `202601M`, `202602M`, `202603M`, le 28/04) | 15 284,88 |
+| **Solde de retraite non encaissé à fin juillet** | **25 130,14** |
+| *dont mai 2026, vérifié au centime sur le récap mensuel* | *8 082,95* |
+
+**La règle de lecture :**
+- prélèvement présenté **≤ 25 130,14 €** → c'est du **rattrapage légitime** (Audiens représente les périodes impayées d'avril à juillet), pas un excès. Le problème est alors de trésorerie, pas de facturation ;
+- prélèvement présenté **> 25 130,14 €** → il y a un **excès à contester**, et c'est chiffrable au centime en comparant avec les DSN déposées.
+
+**Où lire le montant exact :** dans l'application Qonto, les prélèvements refusés restent visibles avec le montant présenté, le créancier et le motif de rejet. Deux minutes suffisent, et c'est le seul chiffre qui permet de trancher.
+
+## 9.4 Ce qu'il faut faire, dans cet ordre
+
+1. **Relever dans Qonto** le montant exact présenté par Audiens en juillet, la date et le motif de rejet. Le comparer aux 25 130,14 €.
+2. **Ne pas laisser les prélèvements se représenter à l'aveugle** : un rejet de plus, ce sont des frais de plus et un mandat qui peut être suspendu.
+3. **Demander un protocole de délai de paiement pour la Retraite**, exactement comme celui déjà signé pour les Congés Spectacles en avril 2026 (§6.7). Un échéancier négocié coûte moins cher qu'une série de rejets, et il stoppe la spirale.
+4. **Provisionner** : au total, 79 198,33 € restent à décaisser sur la paie 2026 (§3), dont 38 772,68 € pour Audiens.
+
+*(Le §8 reste valable sur les montants ; seule la cause des prélèvements manquants est corrigée ici.)*
