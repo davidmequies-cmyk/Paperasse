@@ -208,3 +208,84 @@ C'est ce qui explique les à-coups (janvier, avril, juillet, octobre : 40 à 50 
 ---
 
 *Méthode reproductible : extraction des relevés PDF Qonto (janvier 2025 → juillet 2026) → contrôle de bouclage sur les totaux imprimés de chaque relevé → classement par organisme et par période déclarée dans les libellés → confrontation au récapitulatif sPAIEctacle et aux courriels des caisses. Tous les montants cités sont vérifiables ligne à ligne dans les relevés ou dans les courriels datés.*
+
+---
+
+# 7. Audiens prélève-t-il plus que dû ? — contrôle sur l'année pleine 2025
+
+> Demande de Michel le 05/08/2026 : *« surtout Audiens et la retraite, je pense qu'il prélève plus »*.
+> Source décisive ajoutée : **`RECAPITULATIF PAIE 2025.pdf`** (sPAIEctacle 7.18.1, exercice 2025 complet, Neshama, **1 065 paies**, brut 828 565,35 €), retrouvé dans le Drive — plus les **12 relevés Qonto 2025**, tous bouclés au centime.
+
+## 7.1 Ce que la paie 2025 doit à Audiens
+
+| Institution | Dû 2025 |
+|---|---:|
+| **Audiens Retraite (Arrco-Agirc)** | **92 893,59** |
+| Audiens Prévoyance + Santé + AGEPRO | 9 033,55 |
+| Congés Spectacles | 124 339,33 |
+| **Total Audiens 2025** | **226 266,47** |
+
+## 7.2 Ce qu'Audiens a réellement prélevé en 2025
+
+| Mois | Prélevé |
+|---|---:|
+| janvier | **71 960,78** |
+| février | 1 744,75 |
+| mars | 686,36 *(net du remboursement de 771,35 reçu le 07/03)* |
+| avril | **68 144,90** |
+| mai | 782,39 |
+| juin | 2 026,07 |
+| juillet | **43 832,92** |
+| août | 1 565,89 |
+| septembre | 3 778,57 |
+| octobre | **41 036,49** |
+| novembre | 0,00 |
+| décembre | 0,00 |
+| **Total encaissé en 2025** | **235 559,12** |
+
+**Quatre appels trimestriels (janvier, avril, juillet, octobre) représentent 225 000 € des 235 559 € de l'année.** C'est la cadence trimestrielle confirmée par Audiens le 14/11/2025 — et c'est très exactement ce qui donne la sensation d'un sur-prélèvement : on ne paie pas trop, on paie **quatre fois par an, très gros**.
+
+## 7.3 Le verdict, une fois le décalage neutralisé
+
+Le total encaissé en 2025 (235 559 €) dépasse le dû 2025 (226 266 €) de 9 293 € — **mais c'est un artefact de calendrier** : le prélèvement de janvier 2025 (71 961 €) couvre le 4ᵉ trimestre **2024**, et le 4ᵉ trimestre **2025** n'a rien été prélevé en novembre-décembre : il est parti en janvier-février 2026 (49 145,91 + 2 490,44 = 51 636,35).
+
+| Audiens, au titre des périodes 2025 | Montant |
+|---|---:|
+| Encaissé en 2025 | 235 559,12 |
+| − prélèvement de janvier 2025 (périodes 2024) | −71 960,78 |
+| + encaissé en janvier-février 2026 au titre de 2025 | +51 636,35 |
+| **= encaissé au titre de 2025** | **≈ 215 234,69** |
+| Dû 2025 (§7.1) | 226 266,47 |
+| **Écart** | **≈ −11 032 (sous-payé)** |
+
+**Réponse : sur l'année pleine, Audiens n'a pas prélevé plus que dû — il a prélevé environ 11 000 € de moins.** Le même contrôle sur les deux autres caisses donne le même sens :
+
+| Caisse | Dû 2025 | Encaissé au titre de 2025 | Écart |
+|---|---:|---:|---:|
+| Audiens (3 institutions) | 226 266,47 | ≈ 215 235 | ≈ −11 032 |
+| URSSAF employeur | 277 293,56 | ≈ 248 239 | ≈ −29 055 |
+| France Travail (chômage int.) | 96 432,03 | 92 596 | ≈ −3 836 |
+
+*(URSSAF : sur les 330 132 € décaissés en 2025, **109 457 € portent des périodes 2024** — les libellés donnent le mois, le calcul est vérifiable ligne à ligne.)*
+
+## 7.4 Mais l'intuition n'est pas fausse : ponctuellement, si
+
+Trois faits établis, tous écrits par les caisses elles-mêmes :
+
+1. **10 808,35 € de trop payé à Audiens Retraite, reconnu par écrit le 03/07/2025** — *« votre compte présente un solde créditeur de 10 808,35 euros »*. Donc oui : **à ce moment-là, Audiens Retraite avait bien encaissé plus que dû.** Reste à savoir si le crédit a été imputé sur la DSN de juin 2025 comme ils le proposaient — aucun remboursement n'apparaît sur le compte.
+2. **771,35 € de cotisations prévoyance trop prélevées, remboursées** — crédit visible sur le relevé du 07/03/2025.
+3. **La cadence trimestrielle n'a jamais été changée** alors qu'Audiens proposait le mensuel au 01/01/2026.
+
+## 7.5 Ce que je ne peux pas prouver depuis la banque, et comment l'obtenir
+
+Les libellés bancaires d'Audiens (`AUDEN78493638.23xxxxx`) **ne disent pas à quelle institution** se rattache chaque prélèvement : impossible d'isoler la retraite du reste sur les seuls relevés. Le courriel Audiens du 14/11/2025 donne la clé pour six d'entre eux seulement (retraite 07/2025 = 10 555,27 · 08/2025 = 3 753,10 · 09/2025 = 4 683,46 ; Congés Spectacles 07/2025 = 12 648,17 · 08/2025 = 4 104,16 · 09/2025 = 4 795,22).
+
+**Le seul moyen de trancher institution par institution est la situation de compte** — et Audiens l'a déjà proposée le 14/11/2025 : *« Nous avons demandé aux collègues des services Prévoyance et Congés Spectacles de vous faire parvenir une situation de compte par institution. Pour la Retraite, une situation est déjà envoyée. »*
+
+**À demander à Audiens, en une seule fois :**
+1. la **situation de compte Retraite** au 31/07/2026, avec le détail par période DSN ;
+2. le **sort du solde créditeur de 10 808,35 €** annoncé le 03/07/2025 ;
+3. la **correspondance référence de prélèvement → institution** pour tous les débits depuis janvier 2025 ;
+4. le **passage en cadence mensuelle**, qui supprimerait les à-coups de 40 à 70 k€.
+
+Les taux de la paie, eux, sont normaux : la retraite Audiens ressort à **11,21 % du brut en 2025** et **10,41 % en 2026** — cohérent avec Arrco-Agirc T1 + CEG + CET + APEC. **L'anomalie n'est pas dans le calcul de la paie.**
