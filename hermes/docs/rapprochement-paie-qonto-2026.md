@@ -108,8 +108,8 @@ Ce reste se décompose exactement en : Audiens 38 772,68 + URSSAF 17 749,25 + sa
 ## 4. Points à vérifier (par ordre d'enjeu)
 
 ### 🔴 1. Audiens — ~38 800 € d'écart, ce n'est pas seulement du décalage
-Détail des paiements 2026 : retraite `202601M` (5 971,71), `202602M` (2 322,26), `202603M` (6 990,91) prélevés le **28/04** — puis **plus aucun prélèvement retraite identifié pour avril à juillet**. Côté Congés Spectacles, les prélèvements de mai (12 329,23), juin (11 454,95) et juillet (7 687,11 + 1 412,14) sont trop faibles pour couvrir un trimestre de CS (15,5 % sur ~370 k€ de base annuelle).
-→ **À rapprocher des avis Audiens** (les libellés `AUDEN78493638.23158xx` ne disent pas à quel contrat ils se rattachent) : retraite avril→juillet et Congés Spectacles T2 semblent non réglés.
+Retraite `202601M` (5 971,71), `202602M` (2 322,26), `202603M` (6 990,91) prélevées le **28/04** — puis **plus aucun prélèvement retraite pour avril à juillet**.
+→ **Ventilation complète par institution et explication : voir §8.** En résumé : retraite −25 130 €, Congés Spectacles −13 058 €, prévoyance −584 €.
 
 ### 🟠 2. Retenue à la source artistes fiscalement étrangers — 3 454,36 € non identifiée
 15 % sur 23 028,97 € (4 paies). Aucun versement DGFiP correspondant sur les trois comptes : les débits DGFiP/SIE sont uniquement TVA, IS et PAS.
