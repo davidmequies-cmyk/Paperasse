@@ -6,10 +6,11 @@
 > - `livrepaie 2026.pdf` — livre de paie 2026, centralisation par analytique
 > - Relevés Qonto **NESHAMA MUSIC** compte principal, 01/2026 → 07/2026 (7 relevés PDF) + opérations du 01 au 05/08/2026 (API)
 > - Comptes externes rattachés à Qonto : **Société Générale** (55 opérations 2026) et **BoursoBank** (132 opérations 2026)
+> - Pour le §6 : relevés Qonto **janvier → novembre 2025** (11 relevés) + courriels URSSAF, Audiens, France Travail, Thalie Santé
 >
-> ⚠️ **Hypothèse de lecture** : « contour » a été compris comme **Qonto** (aucun fichier, mail ou outil nommé « Contour » n'existe dans le Drive, la messagerie ou le dépôt). Le rapprochement est donc **paie ↔ trésorerie bancaire**. Si « contour » désigne autre chose (portail expert-comptable, autre logiciel), le travail est à refaire sur cette source.
+> ✅ **Périmètre confirmé par Michel le 05/08/2026 : le rapprochement se fait bien avec Qonto.**
 >
-> **Contrôle de fiabilité de l'extraction** : les 562 lignes extraites des relevés recollent **au centime** avec les totaux Entrées/Sorties imprimés sur chacun des 7 relevés. Aucune ligne perdue.
+> **Contrôle de fiabilité de l'extraction** : sur chacun des 18 relevés, les lignes extraites recollent **au centime** avec les totaux Entrées/Sorties imprimés sur le relevé. Aucune ligne perdue.
 
 ---
 
@@ -82,7 +83,7 @@ Les paiements aux organismes sont décalés d'un à deux mois sur la paie. Le ta
 
 | Organisme | Dû 2026 | Décaissé (périodes 2026) | Écart |
 |---|---:|---:|---:|
-| URSSAF | 135 970,25 | 128 882,00 | **7 088,25** |
+| URSSAF *(compte employeur `…1551738253` seul — voir §6.4)* | 135 970,25 | 118 221,00 | **17 749,25** |
 | France Travail (chômage int.) | 44 795,88 | 42 204,44 | **2 591,44** |
 | Audiens (retraite + prévoyance + Congés Spectacles) | 105 263,52 | 66 490,84 | **38 772,68** |
 | AFDAS | 467,50 | 0,00 | **467,50** |
@@ -90,17 +91,17 @@ Les paiements aux organismes sont décalés d'un à deux mois sur la paie. Le ta
 | DGFiP — retenue à la source artistes étrangers | 3 454,36 | 0,00 | **3 454,36** |
 | DGFiP — PAS | 5 083,80 | 4 495,00 (janv.→juin) | **588,80** |
 
-Décaissements totaux constatés toutes périodes confondues (2025 incluses) : URSSAF 162 018,00 · France Travail 60 293,30 · Audiens 118 127,19 · PAS 5 600,00.
+Décaissements totaux constatés toutes périodes confondues (2025 incluses) : URSSAF 162 018,00 — dont 33 136,00 sur périodes 2025 et **10 661,00 sur le compte URSSAF personnel de Michel (§6.4)** — · France Travail 60 293,30 · Audiens 118 127,19 · PAS 5 600,00.
 
 ### Contre-vérification globale
 
 | | Montant |
 |---|---:|
 | Coût de trésorerie de la paie 2026 (§1) | 596 055,30 |
-| Décaissé au 05/08 pour les périodes 2026 (salaires + organismes) | 527 517,97 |
-| **Reste à décaisser** | **68 537,33** |
+| Décaissé au 05/08 pour les périodes 2026 (salaires + organismes) | 516 856,97 |
+| **Reste à décaisser** | **79 198,33** |
 
-Ce reste se décompose exactement en : salaires de juillet 15 545,69 + Audiens 38 772,68 + URSSAF 7 088,25 + France Travail 2 591,44 + RAS artistes 3 454,36 + PAS juillet 588,80 + AFDAS 467,50 + médecine 28,61. **Les deux méthodes concordent : la paie et la banque se recollent, il n'y a pas de trou inexpliqué.**
+Ce reste se décompose exactement en : Audiens 38 772,68 + URSSAF 17 749,25 + salaires de juillet 15 545,69 + RAS artistes 3 454,36 + France Travail 2 591,44 + PAS juillet 588,80 + AFDAS 467,50 + médecine 28,61. **Les deux méthodes concordent : la paie et la banque se recollent, il n'y a pas de trou inexpliqué.**
 
 ---
 
@@ -119,8 +120,8 @@ Virements identifiés : janvier (09/02), février (03/03), mai (29/05), juin (12
 → Soit versement par un autre canal, soit deux mois de salaire non versés.
 
 ### 🟠 4. URSSAF — échéancier et paiements fractionnés
-Chaque mois est réglé en deux fois, à un mois d'écart (ex. février 26 : 8 350 € le 17/03 puis 19 684 € le 17/04). S'y ajoutent des paiements sur **périodes anciennes** — avril 2025 (1 723 € le 20/05), mai 2025 (1 723 € le 22/06), janvier 2026 (1 723 € le 21/07) — et un second compte URSSAF (réf. `…1549719944`) prélevé de **814 € tous les 20 du mois**.
-→ Confirmer qu'il s'agit d'un **plan d'apurement** et vérifier s'il court des **majorations de retard**. 7 015,34 € de versements URSSAF ne portent aucune période (4 677 € le 25/03, 2 338,34 € le 20/02) : à identifier (cotisations ou majorations ?).
+Chaque mois est réglé en deux fois, à un mois d'écart (ex. février 26 : 8 350 € le 17/03 puis 19 684 € le 17/04). S'y ajoutent des paiements sur **périodes anciennes** — avril 2025 (1 723 € le 20/05), mai 2025 (1 723 € le 22/06), janvier 2026 (1 723 € le 21/07).
+→ Confirmer qu'il s'agit d'un **plan d'apurement** et vérifier s'il court des **majorations de retard**. 4 677 € versés le 25/03 ne portent aucune période : à identifier (cotisations ou majorations ?).
 
 ### 🟡 5. AFDAS 467,50 € — aucun paiement 2026
 Peut être appelé annuellement ; à confirmer auprès de l'AFDAS.
@@ -137,14 +138,73 @@ Le livre de paie 2026 contient des analytiques **NOV25** (870 € brut) et **DEC
 
 ---
 
-## 5. Conclusion
+## 5. Conclusion du rapprochement
 
-**La paie et la banque se recollent.** Aucun doublon, aucun virement de paie non identifiable, aucune sortie de trésorerie inexpliquée : les 596 055 € de coût de la paie 2026 se retrouvent intégralement, à 68 537 € près qui correspondent à des échéances non encore réglées au 05/08.
+**La paie et la banque se recollent.** Aucun doublon, aucun virement de paie non identifiable, aucune sortie de trésorerie inexpliquée : les 596 055 € de coût de la paie 2026 se retrouvent intégralement, à 79 198 € près qui correspondent à des échéances non encore réglées au 05/08.
 
-**Le vrai sujet n'est pas une erreur de paie, c'est un retard de règlement**, et il est concentré sur **Audiens (~38 800 €)**, avec en second rang la retenue à la source artistes étrangers (3 454 €) et deux mois de salaire d'une permanente à éclaircir.
+**Le vrai sujet n'est pas une erreur de paie, c'est un retard de règlement**, concentré sur **Audiens (~38 800 €)** et **l'URSSAF (~17 700 €)**, avec en second rang la retenue à la source artistes étrangers (3 454 €) et deux mois de salaire d'une permanente à éclaircir.
 
 Contexte de trésorerie à garder en tête : le solde du compte principal est descendu à **580,98 €** le 04/08 avant l'acompte Ponthieu de 30 000 €, et le lot des artistes de juillet n'est pas encore passé.
 
 ---
 
-*Méthode reproductible : extraction des relevés PDF Qonto → contrôle de bouclage sur les totaux imprimés → classement par organisme et par période déclarée dans les libellés → confrontation au récapitulatif sPAIEctacle. Tous les montants cités sont vérifiables ligne à ligne dans les relevés.*
+# 6. Les caisses ont-elles trop prélevé ?
+
+> Contrôle complémentaire demandé le 05/08/2026. Sources ajoutées : **relevés Qonto janvier→novembre 2025** (11 relevés, tous bouclés au centime sur leurs totaux imprimés) et **la messagerie** (URSSAF, Audiens, France Travail, Thalie Santé).
+
+**Réponse courte : non, pas en 2026 — c'est l'inverse.** Sur les périodes 2026, les caisses ont encaissé **moins** que ce que la paie leur doit (−17 749 € URSSAF, −38 773 € Audiens, −2 591 € France Travail). Le risque financier n'est pas le trop-prélevé, ce sont les **majorations de retard et le recouvrement forcé**.
+
+**En revanche, six anomalies réelles ressortent, dont une somme à récupérer.**
+
+### 6.1 🔴 Audiens — solde créditeur de 10 808,35 € jamais revu
+Courriel Audiens (Imane Mesloub) du **03/07/2025** : *« votre compte présente un solde créditeur de 10 808,35 euros. Ce solde créditeur est positionné sur la DSN de juin 2025, nous vous demandons de bien vouloir déduire ce montant de la DSN de juin 2025. Si vous optez pour un remboursement, merci de nous faire parvenir votre RIB. »*
+**Aucun virement d'Audiens de ce montant n'apparaît sur le compte Qonto**, ni en 2025 ni en 2026. Deux possibilités : il a été imputé sur la DSN de juin 2025 (alors il faut le tracer dans sPAIEctacle), ou il dort encore chez Audiens.
+→ **À réclamer par écrit avec la référence de ce courriel.** C'est le montant le plus directement récupérable du dossier.
+
+### 6.2 🟠 Audiens a déjà trop prélevé une fois — et remboursé
+Trop-perçu de cotisations prévoyance sur le personnel intermittent, **771,35 € remboursés — crédit constaté sur le compte le 07/03/2025** (« AUDIENS ENCAISSEMENTS – Virement »). Cause donnée par Audiens : personnel non déclaré dans la DSN de janvier 2025 mais dans celle de février.
+→ Le mécanisme (décalage de DSN → cotisation appelée deux fois) **peut se reproduire**. Audiens a envoyé un *tableau d'écart des cotisations prévoyance et santé 2025* (fichier `NESHAMA TABLEAU ECART SANTE PREV 2025.xlsx`, courriel du 03/09/2025) : ce tableau n'a pas été exploité, c'est exactement l'outil pour vérifier les écarts.
+
+### 6.3 🟠 L'alerte du 24/10/2025 reposait sur un chiffre faux
+Dans son courriel à Audiens, Michel liste les prélèvements de juillet 2025 dont **« 195 888,65 € »**, pour un **« total juillet : 219 571,67 € »**.
+Le relevé Qonto de juillet 2025 dit autre chose : le prélèvement du 25/07 est de **19 588,65 €** (un chiffre de trop dans le courriel), et le **total réel Audiens de juillet 2025 est de 43 832,92 €**. Audiens n'a d'ailleurs répondu que sur octobre et n'a jamais traité la question de juillet.
+→ Si on veut une réponse, il faut **reposer la question sur les bons montants**.
+
+### 6.4 🟠 10 661 € de cotisations personnelles payées par Neshama en 2026
+Les prélèvements URSSAF portant la référence **`117000001549719944`** ne sont pas des cotisations de paie : ce compte est celui de **MEQUIES MICHEL, travailleur indépendant, SIRET 390 622 454 00036** (confirmé par le courriel URSSAF du 19/03/2026, « votre déclaration de revenus 2025 »).
+Payés depuis le compte Neshama : **2026** — 814 € les 20/02, 20/03, 20/05, 20/06, 813,66 € le 20/04, 2 338,34 € le 20/02 et 4 253 € le 20/07 = **10 661,00 €** ; **2025** — 714 € (1ᵉʳ trim.), 714 € (2ᵉ trim.), 6 907 € (3ᵉ trim.) = **8 335,00 €**.
+→ Ce n'est ni un trop-prélevé ni une charge de paie : c'est un **compte courant d'associé**. À sortir du rapprochement paie et à faire valider par l'expert-comptable.
+
+### 6.5 🟠 France Travail — deux erreurs reconnues, et un dossier chez l'huissier
+- 29/08/2025, la conseillère France Travail : *« non ne réglez pas, cela vient d'une erreur technique de notre système informatique. J'ai supprimé les majorations. »*
+- 06/10/2025 : *« j'ai effectué une remise gracieuse des majorations de retard. Votre compte est à jour. »*
+- 05/03/2026 : un règlement de **589,57 € est revenu impayé le 28/11/2025** (provision insuffisante) et **la période d'octobre 2025 a été transmise à un huissier** après une mise en demeure restée sans réponse (tél. 01 53 01 89 10, référence de recouvrement **CS00012499**).
+→ France Travail s'est déjà trompé deux fois à son profit : **toute majoration doit être contestée avant paiement**. Et le dossier huissier doit être traité maintenant, c'est là que ça coûte.
+
+### 6.6 🟠 Thalie Santé — risque de double facturation
+Courriel Audiens du 17/11/2025 : *« THALIE SANTE INTERMITTENTS en DSN dès janvier 2026 »* — la cotisation est donc désormais collectée **via la DSN**. Or un prélèvement direct **Thalie Santé de 2 942,41 €** a été passé le **06/07/2026** sur le compte Société Générale, alors que la paie 2026 ne porte que 1 470,12 € de médecine du travail (bloc AGEPRO) + 28,61 €.
+→ Vérifier que ce prélèvement couvre bien un **arriéré 2025** et non une période déjà cotisée en DSN 2026 : sinon, c'est payé deux fois.
+
+### 6.7 ⚪ Congés Spectacles : l'écart de 38 800 € est un échéancier, pas un oubli
+Courriel Audiens du **27/04/2026** (Hacina Diez-Soto, Gestion Congés Spectacles) : envoi d'un **protocole d'accord pour le règlement des cotisations Congés Spectacles**, à retourner signé avec RIB **avant le 04/05/2026** (pièce jointe `PROTOCOLE DLP CCS NESHAMA MUSIC.pdf`, non lisible depuis ici). Un protocole identique a été envoyé à **MDMPROD le 12/03/2026**.
+→ L'écart Audiens du §3 s'explique donc largement. **À récupérer : le montant et l'échéancier du protocole**, pour vérifier que les prélèvements suivent bien le plan signé.
+
+### 6.8 ⚪ Cadence trimestrielle Audiens — décision en attente depuis novembre 2025
+Audiens, 14/11/2025 : *« vous êtes en cadence de paiement trimestrielle […] vous avez la possibilité de passer en paiement mensuel à compter du 1er janvier 2026. Si vous êtes d'accord, merci de nous le confirmer par retour de courriel. »*
+C'est ce qui explique les à-coups (janvier, avril, juillet, octobre : 40 à 50 k€ d'un coup). Rien n'indique qu'une réponse ait été donnée.
+→ **Passer en mensuel lisserait la trésorerie** — décision à prendre.
+
+### Ce qu'il faut réclamer / vérifier, par ordre d'enjeu
+
+| # | Sujet | Montant | Action |
+|---|---|---:|---|
+| 1 | Solde créditeur Audiens Retraite du 03/07/2025 | 10 808,35 | Réclamer ou tracer l'imputation DSN juin 2025 |
+| 2 | Tableau d'écart santé/prévoyance 2025 (Audiens) | à chiffrer | Exploiter le fichier envoyé le 03/09/2025 |
+| 3 | Prélèvement Thalie Santé du 06/07/2026 | 2 942,41 | Vérifier le doublon DSN 2026 |
+| 4 | Majorations France Travail + dossier huissier | à chiffrer | Contester puis régulariser CS00012499 |
+| 5 | URSSAF personnelle payée par Neshama (2025+2026) | 18 996,00 | Reclasser en compte courant d'associé |
+| 6 | Protocole Congés Spectacles | à obtenir | Récupérer l'échéancier signé |
+
+---
+
+*Méthode reproductible : extraction des relevés PDF Qonto (janvier 2025 → juillet 2026) → contrôle de bouclage sur les totaux imprimés de chaque relevé → classement par organisme et par période déclarée dans les libellés → confrontation au récapitulatif sPAIEctacle et aux courriels des caisses. Tous les montants cités sont vérifiables ligne à ligne dans les relevés ou dans les courriels datés.*
