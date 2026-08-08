@@ -49,6 +49,14 @@ Le **mini-outil de calcul paie** (coût d'un cachet intermittent, barème 2026) 
 
 > ⚖️ **Fonction de conseiller prud'homal** (Michel est juge) : ce n'est **pas** un agent Hermès. Voir le dossier [`../prudhommes/`](../prudhommes/) (sources officielles, méthode de délibération) et le sous-agent `conseiller-prudhommes`.
 
+## 🗼 Tour de contrôle (console Tower)
+
+L'onglet **🛰️ Hermès** de la console [`../tower/`](../tower/README.md) est le cockpit de tout ce qui
+est décrit ici : routeur langage naturel → bon agent, les 20 agents filtrables, les 8 procédures
+étape par étape avec leurs **⏸️ validations**, le générateur du bloc `🔔 VALIDATION REQUISE`, la
+checklist anti-arnaque et les faits du référentiel. Un fichier HTML à ouvrir d'un double-clic
+(`tower/index.html`), hors ligne, rien qui sorte du poste. Il **prépare** — il ne déclenche rien.
+
 ## Automatismes
 
 - **09h00** chaque jour → `/dg` (tableau de bord)

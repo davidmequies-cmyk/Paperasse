@@ -7,12 +7,34 @@ hors ligne. Aucune dépendance, aucun appel réseau, aucune donnée qui sort du 
 tower/
 ├── index.html            # la coquille : barre d'onglets, routage, utilitaires
 └── onglets/
+    ├── hermes.js         # 🛰️ onglet « Hermès » — tour de contrôle de l'agent IA
     └── prudhommes.js     # ⚖️ onglet « Prud'hommes » (conseiller au CPH de Paris)
 ```
 
 Ouvrir : `tower/index.html` (ou `open tower/index.html` sur Mac).
 Raccourcis : `alt+1` … `alt+9` pour passer d'un onglet à l'autre. L'URL retient l'onglet
 courant (`#/prudhommes`), les saisies sont conservées dans le navigateur (`localStorage`).
+
+---
+
+## 🛰️ L'onglet « Hermès » — tour de contrôle
+
+Cockpit de l'agent IA du Groupe MDM. Il **prépare**, il ne déclenche rien : la règle
+*Hermès prépare → Michel valide ✅ / ✏️ / ❌ → Hermès exécute* vaut aussi pour la console.
+
+| Section | Ce qu'elle fait |
+|---------|-----------------|
+| 🛰️ **Pilotage** | Compteurs (agents, procédures, automatismes, procédures en cours), les 3 automatismes, la répartition des modèles, le rappel du cloisonnement prud'homal |
+| 🎯 **Routeur** | Écrivez la demande en langage naturel → l'agent le plus spécifique, avec les mots reconnus ; détecte aussi les **signaux d'arnaque** et les sujets **hors périmètre** (fonction de juge). Puis compose le message prêt à coller, avec les rappels du préambule |
+| 🤖 **Agents** | Les 20 agents filtrables : commande, rôle, modèle conseillé, phrase de déclenchement, lien vers le prompt |
+| 🔗 **Procédures** | Les 8 runbooks (P1–P8) étape par étape, avec les **⏸️ validations** signalées et l'avancement mémorisé |
+| 🔔 **Validation** | Génère le bloc `🔔 VALIDATION REQUISE` au format imposé, prêt à coller dans Telegram |
+| 🛡️ **Sécurité** | Checklist e-mail / facture suspect : cochez les signaux, l'outil rend un verdict (STOP, signal majeur, suite à donner) ; règle du double canal, données interdites |
+| 📒 **Référentiel** | Faits stables du Groupe (entités, SIREN, sièges, TVA, AT/MP, tarifs SpectaGestion, repères paie) avec bouton copier — les `[À VÉRIFIER]` restent marqués |
+
+Tout est repris des fichiers de [`../hermes/`](../hermes/README.md) : prompts, `docs/procedures.md`,
+`docs/securite.md`, `docs/mode-emploi.md`, `referentiel.md`. Rien n'y est inventé — si le
+référentiel marque une valeur `[À VÉRIFIER]`, l'onglet la marque aussi.
 
 ---
 

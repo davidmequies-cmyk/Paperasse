@@ -9,7 +9,9 @@ Configuration de l'agent IA autonome **Hermès** (piloté par Telegram) : le cad
 → Voir [`hermes/README.md`](hermes/README.md)
 
 ### 🗼 `tower/` — Console Tower
-Console locale à onglets (un fichier HTML autonome, hors ligne, sans dépendance). Onglet **⚖️ Prud'hommes** : préparation d'audience, calcul de prescription, charge de la preuve, grille de délibéré, chiffrage (L1235-3 saisi et vérifié par le conseiller), génération de la trame de jugement.
+Console locale à onglets (un fichier HTML autonome, hors ligne, sans dépendance).
+- **🛰️ Hermès** — tour de contrôle : routeur langage naturel → bon agent, les 20 agents, les 8 procédures avec leurs ⏸️ validations, générateur de demande de validation, checklist anti-arnaque, référentiel.
+- **⚖️ Prud'hommes** — préparation d'audience, calcul de prescription, charge de la preuve, grille de délibéré, chiffrage (L1235-3 saisi et vérifié par le conseiller), génération de la trame de jugement.
 → Voir [`tower/README.md`](tower/README.md)
 
 ### ⚖️ `prudhommes/` — Conseiller prud'homme (CPH de Paris)
