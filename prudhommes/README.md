@@ -44,6 +44,22 @@ la date des faits, secret du délibéré, indépendance.
 
 ---
 
+## 🗼 L'onglet « Prud'hommes » de la console Tower
+
+Ces fiches ont un **poste de travail** : l'onglet ⚖️ Prud'hommes de la console
+[`../tower/`](../tower/README.md) — un fichier HTML autonome à ouvrir d'un double-clic
+(`tower/index.html`), hors ligne, sans rien qui sorte du poste.
+
+Préparation d'audience · calcul de la prescription · charge de la preuve · grille de délibéré
+en 8 temps · chiffrage (ancienneté, salaire de référence, fourchette `L1235-3`, plancher du
+licenciement nul) · chefs de demande avec contrôle *ultra / infra petita* · génération de la
+trame de motivation et du « PAR CES MOTIFS ».
+
+L'outil **ne contient aucun chiffre de droit** : les fourchettes du barème se lisent sur
+Légifrance, se saisissent, et l'outil mémorise la ligne **vérifiée et datée** par le conseiller.
+
+---
+
 ## 🧭 Comment utiliser cette ressource
 
 1. **Avant une audience** → relire `03` (procédure) et la fiche de fond `04` correspondant au litige.

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tower — console Groupe MDM</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#151b23; --panel2:#1b222c; --line:#2a323d;
+    --txt:#e6edf3; --txt2:#9aa7b4; --acc:#d0417f; --gold:#c9a227;
+    --ok:#2ea043; --warn:#d29922; --err:#f85149;
+    --radius:12px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{
+    background:var(--bg); color:var(--txt); line-height:1.5;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:15px;
+  }
+  a{color:#79c0ff}
+  a:hover{color:#a5d6ff}
+
+  /* ---------- barre de titre ---------- */
+  .topbar{
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+    padding:10px 18px; background:var(--panel); border-bottom:1px solid var(--line);
+  }
+  .brand{display:flex; align-items:baseline; gap:9px; margin-right:6px}
+  .brand b{font-size:17px; letter-spacing:.5px}
+  .brand span{font-size:11px; color:var(--txt2); text-transform:uppercase; letter-spacing:.14em}
+
+  /* ---------- onglets ---------- */
+  nav.tabs{display:flex; gap:6px; flex-wrap:wrap; flex:1}
+  nav.tabs button{
+    background:transparent; color:var(--txt2); border:1px solid transparent;
+    padding:7px 14px; border-radius:999px; cursor:pointer; font-size:14px; font-weight:600;
+    display:flex; align-items:center; gap:7px; font-family:inherit;
+  }
+  nav.tabs button:hover{background:var(--panel2); color:var(--txt)}
+  nav.tabs button[aria-selected="true"]{
+    background:var(--panel2); color:var(--txt); border-color:var(--line);
+    box-shadow:inset 0 -2px 0 var(--tab-accent, var(--acc));
+  }
+  nav.tabs kbd{
+    font-size:10px; color:var(--txt2); border:1px solid var(--line);
+    border-radius:4px; padding:0 4px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+
+  main{padding:0}
+  .empty{max-width:640px; margin:60px auto; padding:0 20px; color:var(--txt2)}
+  .empty code{background:var(--panel2); padding:2px 6px; border-radius:5px; color:var(--txt)}
+
+  /* ---------- primitives réutilisables par les onglets ---------- */
+  .wrap{max-width:1080px; margin:0 auto; padding:20px 18px 60px}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:18px; margin-bottom:16px}
+  .card h2{margin:0 0 4px; font-size:17px}
+  .card h3{margin:18px 0 6px; font-size:14px; text-transform:uppercase; letter-spacing:.08em; color:var(--txt2)}
+  .card p.lead{margin:0 0 14px; color:var(--txt2); font-size:14px}
+  .row{display:flex; gap:14px; flex-wrap:wrap; align-items:flex-end}
+  .row>div{flex:1; min-width:170px}
+  label{display:block; font-size:12px; font-weight:700; color:var(--txt2); margin:0 0 5px; text-transform:uppercase; letter-spacing:.05em}
+  input,select,textarea{
+    width:100%; padding:9px 11px; background:var(--panel2); color:var(--txt);
+    border:1px solid var(--line); border-radius:8px; font-size:15px; font-family:inherit;
+  }
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--gold); outline-offset:-1px}
+  textarea{min-height:90px; resize:vertical; line-height:1.5}
+  .btn{
+    background:var(--panel2); color:var(--txt); border:1px solid var(--line);
+    padding:9px 15px; border-radius:8px; font-size:14px; font-weight:600; cursor:pointer; font-family:inherit;
+  }
+  .btn:hover{border-color:var(--gold)}
+  .btn.primary{background:var(--gold); border-color:var(--gold); color:#1a1400}
+  .btn.primary:hover{opacity:.9}
+  .btn.ghost{background:transparent}
+  .btn.danger{color:var(--err)}
+  .btn.danger:hover{border-color:var(--err)}
+  .btns{display:flex; gap:8px; flex-wrap:wrap; margin-top:14px}
+  table{width:100%; border-collapse:collapse; font-size:14px; margin-top:10px}
+  th,td{padding:8px 10px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top}
+  thead th{color:var(--txt2); font-size:11px; text-transform:uppercase; letter-spacing:.07em}
+  .note{border-left:3px solid var(--gold); background:var(--panel2); padding:11px 14px; border-radius:0 8px 8px 0; font-size:14px; margin:14px 0}
+  .note.warn{border-color:var(--warn)}
+  .note.err{border-color:var(--err)}
+  .note.ok{border-color:var(--ok)}
+  .pill{display:inline-block; font-size:11px; font-weight:700; padding:2px 9px; border-radius:999px; border:1px solid var(--line); color:var(--txt2)}
+  .pill.ok{color:var(--ok); border-color:var(--ok)}
+  .pill.err{color:var(--err); border-color:var(--err)}
+  .pill.warn{color:var(--warn); border-color:var(--warn)}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .muted{color:var(--txt2); font-size:13px}
+  ul.clean{list-style:none; padding:0; margin:0}
+  ul.clean li{padding:7px 0; border-bottom:1px solid var(--line)}
+  ul.clean li:last-child{border-bottom:0}
+  .check{display:flex; gap:10px; align-items:flex-start; cursor:pointer}
+  .check input{width:auto; margin-top:3px; accent-color:var(--gold)}
+  .check.done span{color:var(--txt2); text-decoration:line-through}
+  .kpi{display:flex; gap:12px; flex-wrap:wrap; margin:12px 0}
+  .kpi>div{flex:1; min-width:150px; background:var(--panel2); border:1px solid var(--line); border-radius:10px; padding:12px; text-align:center}
+  .kpi .v{font-size:22px; font-weight:700}
+  .kpi .l{font-size:11px; color:var(--txt2); text-transform:uppercase; letter-spacing:.05em; margin-top:2px}
+  @media print{ .topbar,.btns,.no-print{display:none!important} body{background:#fff;color:#000} .card{border-color:#ccc;background:#fff} }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><b>🗼 Tower</b><span>console MDM</span></div>
+  <nav class="tabs" id="tabs" role="tablist"></nav>
+</div>
+
+<main id="view" role="tabpanel"></main>
+
+<script>
+/* ============================================================
+   Tower — coquille de console à onglets.
+   Un onglet = un fichier de onglets/ qui s'enregistre ici :
+
+     TOWER.registerTab({
+       id: 'mon-onglet',            // identifiant d'URL (#/mon-onglet)
+       label: 'Mon onglet',         // texte de l'onglet
+       icon: '⚙️',                  // optionnel
+       accent: '#c9a227',           // optionnel : couleur du soulignement
+       render(el) { ... }           // dessine le contenu dans el
+     });
+
+   Aucune dépendance, aucun réseau : le fichier s'ouvre directement
+   dans un navigateur (double-clic), y compris hors ligne.
+   ============================================================ */
+(function () {
+  const tabs = [];
+  const nav = document.getElementById('tabs');
+  const view = document.getElementById('view');
+  let current = null;
+
+  const TOWER = {
+    registerTab(tab) {
+      if (!tab || !tab.id || typeof tab.render !== 'function') {
+        console.error('Tower : onglet invalide', tab); return;
+      }
+      if (tabs.some(t => t.id === tab.id)) {
+        console.warn('Tower : onglet déjà enregistré —', tab.id); return;
+      }
+      tabs.push(tab);
+      draw();
+    },
+    /* Petits utilitaires partagés par les onglets. */
+    store(key) {
+      const k = 'tower.' + key;
+      return {
+        read(fallback) {
+          try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fallback; }
+          catch (e) { return fallback; }
+        },
+        write(value) {
+          try { localStorage.setItem(k, JSON.stringify(value)); } catch (e) {}
+        },
+        clear() { try { localStorage.removeItem(k); } catch (e) {} }
+      };
+    },
+    esc(s) {
+      return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    },
+    copy(text, btn) {
+      const done = () => {
+        if (!btn) return;
+        const old = btn.textContent;
+        btn.textContent = '✓ Copié';
+        setTimeout(() => { btn.textContent = old; }, 1600);
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(done, () => fallback());
+      } else { fallback(); }
+      function fallback() {
+        const ta = document.createElement('textarea');
+        ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); done(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    }
+  };
+
+  function draw() {
+    nav.innerHTML = '';
+    tabs.forEach((t, i) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('role', 'tab');
+      b.setAttribute('aria-selected', String(current === t.id));
+      if (t.accent) b.style.setProperty('--tab-accent', t.accent);
+      b.innerHTML = (t.icon ? TOWER.esc(t.icon) + ' ' : '') + TOWER.esc(t.label) +
+        (i < 9 ? ' <kbd>alt+' + (i + 1) + '</kbd>' : '');
+      b.onclick = () => go(t.id);
+      nav.appendChild(b);
+    });
+  }
+
+  function go(id) {
+    const tab = tabs.find(t => t.id === id) || tabs[0];
+    if (!tab) { renderEmpty(); return; }
+    current = tab.id;
+    if (location.hash !== '#/' + tab.id) location.hash = '#/' + tab.id;
+    document.title = tab.label + ' — Tower';
+    view.innerHTML = '';
+    draw();
+    try { tab.render(view); }
+    catch (e) {
+      view.innerHTML = '<div class="empty"><h2>Onglet en erreur</h2><p class="mono">' +
+        TOWER.esc(e && e.message) + '</p></div>';
+      console.error(e);
+    }
+    window.scrollTo(0, 0);
+  }
+
+  function renderEmpty() {
+    view.innerHTML =
+      '<div class="empty"><h2>Console vide</h2>' +
+      '<p>Aucun onglet chargé. Ajoutez un fichier dans <code>tower/onglets/</code> ' +
+      'et une balise <code>&lt;script src="onglets/…"&gt;</code> dans <code>tower/index.html</code>.</p></div>';
+  }
+
+  window.TOWER = TOWER;
+
+  window.addEventListener('hashchange', () => {
+    const id = location.hash.replace(/^#\//, '');
+    if (id && id !== current) go(id);
+  });
+
+  document.addEventListener('keydown', e => {
+    if (!e.altKey || e.ctrlKey || e.metaKey) return;
+    const n = parseInt(e.key, 10);
+    if (n >= 1 && n <= 9 && tabs[n - 1]) { e.preventDefault(); go(tabs[n - 1].id); }
+  });
+
+  /* Démarrage après chargement des onglets. */
+  window.addEventListener('DOMContentLoaded', () => {
+    if (!tabs.length) { renderEmpty(); return; }
+    const wanted = location.hash.replace(/^#\//, '');
+    go(tabs.some(t => t.id === wanted) ? wanted : tabs[0].id);
+  });
+})();
+</script>
+
+<!-- ============ onglets ============ -->
+<script src="onglets/prudhommes.js"></script>
+
+</body>
+</html>
