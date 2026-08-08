@@ -22,9 +22,15 @@
 - Sites : mdmprod.fr · paieintermittents.com · chanteursynagogue.art
 
 ## 3. Coordonnées (à confirmer/compléter)
+> 🔒 **Règle : aucune coordonnée de personne physique tierce dans ce dépôt.** Les partenaires
+> sont identifiés par leur **cabinet ou société** ; le nom, l'e-mail et le téléphone de
+> l'interlocuteur restent dans le carnet d'adresses. Minimisation RGPD (préambule, règle 9) :
+> ces personnes n'ont pas consenti à figurer ici, et ces données ne servent à aucun calcul.
+> Les coordonnées **du Groupe MDM** ci-dessous sont publiques (mentions légales, sites).
+
 - Tél pro MDM : 01 82 28 99 60 · 06 61 40 51 40  **[À VÉRIFIER]**
 - E-mail pro : michel@mdmprod.fr · contact@mdmprod.fr  **[À VÉRIFIER]**
-- Comptabilité : Pennylane (fournisseurs : `neshama-music-...@suppliers.pennylane.com`)  **[À VÉRIFIER]**
+- Comptabilité : Pennylane (adresse de dépôt fournisseurs : voir l'espace Pennylane)  **[À VÉRIFIER]**
 
 ## 4. Tarifs SpectaGestion
 - **18 € HT / bulletin** + **14,90 € HT / mois**.
@@ -46,7 +52,7 @@
 - Droits : SACEM / SACD selon le cas.
 
 ## 7. Projets en cours (synthèse — détail ailleurs)
-- **Immobilier Touques** : offre prêt SG ≈ 387 000 € / 3,10 % / 228 mois → **2 383 €/mois** [À VÉRIFIER]. Courtier : Pretto (Alban de Villele).
+- **Immobilier Touques** : offre prêt SG ≈ 387 000 € / 3,10 % / 228 mois → **2 383 €/mois** [À VÉRIFIER]. Courtier : Pretto.
 - **Trésorerie** (à actualiser via Qonto) : voir agent /tresorerie.
 
 ## 8. Fonctions & rôles de Michel
@@ -54,11 +60,11 @@
 - Dirigeant du Groupe MDM (MDMProd, Neshama Music, SpectaGestion).
 
 ## 9. Contacts & partenaires (à confirmer/compléter)
-- **Courtier crédit** : Pretto — Alban de Villele (alban@pretto.fr) [À VÉRIFIER].
+- **Courtier crédit** : **Pretto** — interlocuteur habituel (coordonnées : carnet d'adresses, hors dépôt) [À VÉRIFIER].
 - **Banques sollicitées (prêt Touques)** : Société Générale, CCF ; **Fortuneo a refusé** (08/06/2026).
 - **Comptabilité** : Pennylane.
 - **Protection juridique** : Juridica (dossier MEQUIES / SCP Billaudel) [À VÉRIFIER].
-- **Expert-comptable** : **Finalia EURL** — contact **Ashley Cohen** (`Ashley.cohen@finalia.fr`), 2 rue Saint Louis, 93250 Villemomble, SIREN 943 413 161, inscrite à l'OEC de Paris. Mission « présentation des comptes annuels » (lettre signée MDMPROD + Neshama). *(Ancien EC prélevé 180 €/mois via GoCardless : résilié.)* Tél. : [À COMPLÉTER] ; exercice de départ (2025-2026 ou 2026-2027) : [À VÉRIFIER].
+- **Expert-comptable** : **Finalia EURL**, 2 rue Saint Louis, 93250 Villemomble, SIREN 943 413 161, inscrite à l'OEC de Paris. Interlocuteur dédié : voir carnet d'adresses (hors dépôt). Mission « présentation des comptes annuels » (lettre signée MDMPROD + Neshama). *(Ancien EC prélevé 180 €/mois via GoCardless : résilié.)* Exercice de départ (2025-2026 ou 2026-2027) : [À VÉRIFIER].
 
 ## 9bis. Paramètres paie établissements (réels, bulletins GHS)
 - **Taux AT/MP** : **Neshama Music 1,50 %** (spectacle vivant, APE 9001Z) · **MDMProd 1,07 %** (production audiovisuelle, APE 5911B). À revérifier chaque année (notification URSSAF).

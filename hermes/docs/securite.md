@@ -28,6 +28,7 @@ Avant toute action sur un message qui demande un paiement, un RIB, des identifia
 - Relevés bancaires, IBAN/RIB complets, contrats **signés**, pièces d'identité.
 - Clés API, mots de passe, jetons (→ `.env`, exclu par `.gitignore`).
 - Données personnelles des salariés/clients (n° SS, etc.) au-delà du strict nécessaire (RGPD).
+- **Coordonnées d'une personne physique tierce** (nom + e-mail ou téléphone d'un interlocuteur chez un partenaire : expert-comptable, courtier, assureur, banque…). On nomme le **cabinet ou la société** ; la personne reste dans le carnet d'adresses. Ces personnes n'ont pas consenti à figurer dans un dépôt, et l'information ne sert à aucun calcul.
 - Secret du délibéré prud'homal (fonction de juge — totalement cloisonnée, voir `prudhommes/`).
 
 ## 4. Outils de vérification disponibles
