@@ -40,7 +40,7 @@ référentiel marque une valeur `[À VÉRIFIER]`, l'onglet la marque aussi.
 
 ## ⚖️ L'onglet « Prud'hommes »
 
-Poste de travail du conseiller prud'homme (CPH de Paris, Encadrement — Ch. 8). Huit sections,
+Poste de travail du conseiller prud'homme (CPH de Paris, Encadrement — Ch. 8). Dix sections,
 adossées aux fiches du dossier [`../prudhommes/`](../prudhommes/) :
 
 | Section | Ce qu'elle fait |
@@ -48,13 +48,15 @@ adossées aux fiches du dossier [`../prudhommes/`](../prudhommes/) :
 | 📋 **Audience** | Formation du jour (BCO / bureau de jugement / référé / départage) et ce qu'elle peut faire, check-list de préparation avec suivi, rappel du serment et du déport |
 | ⏳ **Recevabilité** | Calcul de la date butoir de prescription (2 ans · 12 mois · 3 ans · 5 ans) et comparaison avec la date de saisine → recevable / prescrit |
 | ⚖️ **Charge de la preuve** | Qui prouve quoi, texte par texte, et la grille de lecture du licenciement |
+| 🧠 **Décision** | Cinq chemins de qualification (faute, économique, nullité, heures sup / rappel de salaire, requalification–prise d'acte–résiliation) : ce qu'il faut établir, qui le prouve, ce qui en découle, et **ce qui fait casser une décision** |
 | 🧭 **Délibéré** | La grille en 8 temps en check-list, les trois biais à neutraliser, la checklist express avant de clore |
 | 🧮 **Chiffrage** | Ancienneté, salaire de référence (moyennes 12 et 3 mois), fourchette L1235-3, plancher du licenciement nul, travail dissimulé |
 | ✍️ **Rédaction** | Chefs de demande un par un, contrôle *ultra / infra petita*, génération de la trame de motivation et du « PAR CES MOTIFS » (copier / imprimer) |
-| 🔗 **Sources** | Légifrance, Cour de cassation, Justice.fr, conventions collectives, articles réflexe, notes de droit personnelles |
+| 📚 **Bibliothèque** | La **carte du droit** par matière : compétence et procédure, statut du conseiller, prescriptions, licenciement, preuve, temps de travail, harcèlement et discrimination, rédaction — chaque référence avec son lien. Plus les arrêts repère et vos notes de droit |
+| 🔎 **Recherche** | Recherche restreinte aux sites officiels (Légifrance, Cour de cassation, code.travail, Justice.fr, Service-public), accès direct par n° d'article, n° de pourvoi ou convention collective, et génération de la question à poser au sous-agent `conseiller-prudhommes` qui, lui, interroge les sources **en direct** |
 | 🔥 **Garder la flamme** | Pourquoi le rôle compte, ce qui use et comment tenir |
 
-### Deux règles qui gouvernent cet onglet
+### Trois règles qui gouvernent cet onglet
 
 1. **Il ne connaît aucun chiffre de droit et n'en invente aucun.**
    Les fourchettes du barème `L1235-3` ne sont pas dans le code de l'outil : vous les lisez sur
@@ -64,7 +66,15 @@ adossées aux fiches du dossier [`../prudhommes/`](../prudhommes/) :
    Les durées de prescription affichées viennent des fiches du dépôt, avec leur article et leur
    lien : elles restent à vérifier à la date des faits.
 
-2. **Secret du délibéré.** Tout reste dans le navigateur, rien ne part sur le réseau. Malgré
+2. **Il contient la carte du droit, pas le droit.**
+   La bibliothèque ne recopie aucun texte de loi et ne cite aucun arrêt de mémoire : elle
+   range, par matière, les **références déjà vérifiées dans les fiches du dépôt**, avec le lien
+   pour aller lire le texte en vigueur à la date des faits. Ce qui n'y est pas ne s'invente pas —
+   la section 🔎 Recherche l'envoie chercher à la source, et le sous-agent
+   `conseiller-prudhommes` fait la vérification en direct. Un outil hors ligne qui prétendrait
+   connaître « toutes les lois et toutes les affaires » serait périmé le jour de son écriture.
+
+3. **Secret du délibéré.** Tout reste dans le navigateur, rien ne part sur le réseau. Malgré
    cela : aucun nom de partie, aucune pièce, jamais le sens d'un vote. Un bouton
    « Effacer toute la session » est présent en haut de l'onglet — réflexe de fin de session.
 

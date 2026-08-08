@@ -31,6 +31,8 @@
       nul: false, dissimule: ''
     },
     bareme: {},            // table personnelle vérifiée : "8|0" -> {min,max,date}
+    decision: { type: '', faits: {} },
+    recherche: { q: '', article: '', pourvoi: '', idcc: '', question: '' },
     chefs: [],
     dispositif: { interets: 'legal', execProv: 'droit', art700: '', art700Qui: 'defendeur', depens: 'defendeur' },
     notes: ''
@@ -168,17 +170,155 @@
     ["Code du travail numérique — conventions collectives", "https://code.travail.gouv.fr", "Un litige se tranche très souvent sur la convention collective applicable."]
   ];
 
-  var ARTICLES = [
-    ["Compétence du CPH", "L1411-1 et s.", "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006072050"],
-    ["Statut et déontologie du conseiller", "L1442-1 à L1442-19", "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006177897/"],
-    ["Procédure (partie législative)", "L1451-1 à L1457-1", "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006160722/"],
-    ["Procédure (partie réglementaire)", "R1451-1 à R1457-2", "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000018484833/"],
-    ["Conciliation et jugement", "R1454-1 à R1454-32", "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000018484875/"],
-    ["Sanctions du licenciement / barème", "L1235-1 à L1235-17", "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006177861/"],
-    ["Barème d'indemnisation", "L1235-3", "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000036762052"],
-    ["Licenciement nul — plancher 6 mois", "L1235-3-1", "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000036762026"],
-    ["Prescriptions", "L1471-1", "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000036762126"],
-    ["Prescription des salaires", "L3245-1", "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000027566295"]
+
+  /* ---------------------------------------------------------------- LE DROIT
+     RÈGLE : cette table ne contient QUE des références déjà présentes et
+     vérifiées dans les fiches du dépôt (prudhommes/01 à 07). Rien n'y est cité
+     de mémoire, aucun texte de loi n'y est recopié : ce sont des POINTEURS.
+     Un article absent d'ici ne s'invente pas — il se cherche (section 🔎).
+     `lien` : URL exacte quand la fiche la donne, sinon null → recherche ciblée. */
+  var ART = {
+    'L1411-1':   { quoi: "Compétence du conseil de prud'hommes", lien: null },
+    'L1442-1':   { quoi: "Formation du conseiller (initiale obligatoire, continue) — mandat de 4 ans", lien: 'https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006177897/' },
+    'L1442-11':  { quoi: "Indépendance, impartialité, dignité, probité — interdiction du mandat impératif", lien: 'https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006177897/' },
+    'L1442-13':  { quoi: "Serment : zèle, intégrité, secret des délibérations", lien: 'https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006177897/' },
+    'L1454-2':   { quoi: "Départage en cas de partage des voix", lien: 'https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006160722/' },
+    'R1454-7':   { quoi: "Mission du bureau de conciliation et d'orientation", lien: 'https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000018484875/' },
+    'R1454-29':  { quoi: "Procédure de départage", lien: 'https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000018484875/' },
+    'D1235-21':  { quoi: "Barème de l'indemnité forfaitaire de conciliation (montants à vérifier)", lien: null },
+    'L1471-1':   { quoi: "Prescription — 2 ans (exécution) · 12 mois (rupture)", lien: 'https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000036762126' },
+    'L3245-1':   { quoi: "Prescription des salaires — 3 ans", lien: 'https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000027566295' },
+    'L1134-5':   { quoi: "Prescription de l'action en discrimination — 5 ans à compter de la révélation", lien: null },
+    'L1235-1':   { quoi: "Le juge forme sa conviction au vu des éléments des parties — le doute profite au salarié", lien: null },
+    'L1235-2':   { quoi: "Irrégularité de procédure — indemnité propre, distincte de l'absence de cause", lien: null },
+    'L1235-3':   { quoi: "Barème d'indemnisation du licenciement sans cause réelle et sérieuse", lien: 'https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000036762052' },
+    'L1235-3-1': { quoi: "Licenciement nul — hors barème, plancher de 6 mois, réintégration possible", lien: 'https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000036762026' },
+    'L1233-3':   { quoi: "Motif économique — réalité et périmètre strictement encadrés", lien: null },
+    'L1134-1':   { quoi: "Preuve de la discrimination — éléments laissant supposer / éléments objectifs étrangers", lien: null },
+    'L1152-1':   { quoi: "Harcèlement moral — définition", lien: null },
+    'L1153-1':   { quoi: "Harcèlement sexuel — définition", lien: null },
+    'L1154-1':   { quoi: "Preuve du harcèlement — mécanisme probatoire allégé", lien: null },
+    'L3171-4':   { quoi: "Heures supplémentaires — preuve partagée, décompte à la charge de l'employeur", lien: null },
+    'L8223-1':   { quoi: "Travail dissimulé — indemnité forfaitaire de 6 mois si l'élément intentionnel est caractérisé", lien: null },
+    '455 CPC':   { quoi: "Obligation de motivation du jugement", lien: null },
+    '700 CPC':   { quoi: "Frais non compris dans les dépens", lien: null },
+    '2224 C. civ.': { quoi: "Prescription quinquennale de droit commun (harcèlement : réparation)", lien: 'https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006070721' },
+    '2226 C. civ.': { quoi: "Prescription propre au dommage corporel", lien: 'https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006070721' },
+    '2240 C. civ.': { quoi: "Interruption de la prescription (reconnaissance du droit)", lien: 'https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006070721' }
+  };
+
+  var MATIERES = [
+    { titre: "Compétence, procédure, formations",
+      arts: ['L1411-1', 'L1454-2', 'R1454-7', 'R1454-29', 'D1235-21'],
+      sections: [['Procédure — partie législative', 'https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006160722/'],
+                 ['Procédure — partie réglementaire', 'https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000018484833/'],
+                 ['Conciliation et jugement', 'https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000018484875/']],
+      note: "BCO (1 + 1) · bureau de jugement (paritaire, majorité) · référé (ordonnance provisoire) · départage (juge du tribunal judiciaire, en principe dans le mois)." },
+    { titre: "Statut et déontologie du conseiller",
+      arts: ['L1442-1', 'L1442-11', 'L1442-13'],
+      sections: [['Statut des conseillers — L1442-1 à L1442-19', 'https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006177897/']],
+      note: "Indépendance, impartialité, secret du délibéré, devoir de réserve, déport en cas de doute légitime. Aucun mandat impératif." },
+    { titre: "Recevabilité et prescriptions",
+      arts: ['L1471-1', 'L3245-1', 'L1134-5', '2224 C. civ.', '2226 C. civ.', '2240 C. civ.'],
+      sections: [],
+      note: "Un dossier mêle 12 mois, 2 ans, 3 ans, 5 ans selon les chefs. Qualifier la demande avant de retenir un délai." },
+    { titre: "Licenciement — cause et sanctions",
+      arts: ['L1235-1', 'L1235-2', 'L1235-3', 'L1235-3-1', 'L1233-3'],
+      sections: [['Sanctions du licenciement — L1235-1 à L1235-17', 'https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006177861/']],
+      note: "Réelle = existante, exacte, objective. Sérieuse = assez grave. Faute grave → ni préavis ni indemnité de licenciement ; faute lourde → intention de nuire." },
+    { titre: "Charge de la preuve",
+      arts: ['L1235-1', 'L3171-4', 'L1134-1', 'L1154-1'],
+      sections: [],
+      note: "Se tromper de débiteur de la preuve, c'est se tromper de jugement." },
+    { titre: "Temps de travail, salaire, dissimulation",
+      arts: ['L3171-4', 'L3245-1', 'L8223-1'],
+      sections: [],
+      note: "Forfait-jours : valable seulement si accord collectif conforme et suivi effectif de la charge de travail — vérifier le texte et l'accord applicables." },
+    { titre: "Harcèlement et discrimination",
+      arts: ['L1152-1', 'L1153-1', 'L1154-1', 'L1134-1', 'L1134-5'],
+      sections: [],
+      note: "Licenciement nul → hors barème (L1235-3-1). Qualifier précisément la demande : le délai de prescription en dépend." },
+    { titre: "Rédaction et frais",
+      arts: ['455 CPC', '700 CPC'],
+      sections: [],
+      note: "Le dispositif doit pouvoir s'exécuter seul. Le perdant doit comprendre pourquoi il a perdu." }
+  ];
+
+  /* Arrêts repère — uniquement ceux vérifiés dans les fiches du dépôt. */
+  var ARRETS = [
+    { juri: "Cass. soc., 11 mai 2022, n° 21-14.490 et n° 21-15.247 (publiés)",
+      apport: "Barème de l'article L1235-3 jugé conforme ; contrôle de conventionnalité in concreto écarté au regard de l'article 10 de la convention OIT n° 158. Le débat sur l'article 24 de la Charte sociale européenne a continué d'être examiné depuis.",
+      lien: 'https://www.courdecassation.fr/toutes-les-actualites/2022/05/11/bareme-dindemnisation-du-salarie-licencie-sans-cause-reelle-et' },
+    { juri: "Cass. soc., 4 sept. 2024, n° 22-22.860 (publié au bulletin)",
+      apport: "Prescription et harcèlement : pour une demande de nullité de la rupture fondée sur le harcèlement, la durée applicable dépend de la nature exacte de la demande.",
+      lien: 'https://www.legifrance.gouv.fr/juri/id/JURITEXT000050192525/' }
+  ];
+
+  /* Arbres de qualification — méthode, pas contenu de loi.
+     `arts` ne cite que des références de la table ART ci-dessus. */
+  var DECISIONS = [
+    { id: 'faute', titre: "Licenciement pour motif personnel (faute alléguée)",
+      etapes: [
+        ["Recevabilité", "Contester la rupture : 12 mois depuis la notification (L1471-1). Chaque chef annexe garde son propre délai — rappels de salaire 3 ans, exécution 2 ans."],
+        ["Procédure", "Convocation, entretien préalable, notification motivée, délais. Une irrégularité n'enlève pas nécessairement la cause réelle et sérieuse : elle ouvre une indemnité propre (L1235-2)."],
+        ["Qualification", "Faute simple → préavis et indemnité de licenciement dus. Faute grave → prive des deux. Faute lourde → faute grave + intention de nuire à l'employeur."],
+        ["Preuve", "L'employeur prouve la faute grave dont il se prévaut. Pour la cause réelle et sérieuse, le juge forme sa conviction au vu des éléments des deux parties — si un doute subsiste, il profite au salarié (L1235-1)."],
+        ["Conséquence", "Sans cause réelle et sérieuse → fourchette L1235-3 selon l'ancienneté. Nul → hors barème, plancher 6 mois (L1235-3-1)."]
+      ],
+      arts: ['L1235-1', 'L1235-2', 'L1235-3', 'L1235-3-1', 'L1471-1'],
+      pieges: ["Confondre irrégularité de procédure et absence de cause",
+               "Retenir la faute grave sans que l'employeur l'ait établie",
+               "Chiffrer avant d'avoir qualifié : barème ou hors barème, la réponse change tout",
+               "Oublier de vérifier la convention collective (préavis, indemnité conventionnelle)"] },
+
+    { id: 'eco', titre: "Licenciement pour motif économique",
+      etapes: [
+        ["Recevabilité", "12 mois depuis la notification pour contester la rupture (L1471-1)."],
+        ["Réalité du motif", "La réalité du motif économique et son périmètre d'appréciation sont strictement encadrés (L1233-3). Vérifier le texte en vigueur à la date des faits."],
+        ["Obligations de l'employeur", "Ordre des licenciements, obligation de reclassement, information-consultation, priorité de réembauche : identifier chaque obligation applicable à la source — ces textes ne sont pas listés ici, ils se cherchent."],
+        ["Preuve", "Chaque obligation contrôlée séparément, pièce par pièce."],
+        ["Conséquence", "Sans cause réelle et sérieuse → L1235-3. Manquement à une obligation spécifique → sanction propre, à vérifier."]
+      ],
+      arts: ['L1233-3', 'L1235-3', 'L1471-1'],
+      pieges: ["Se contenter d'une motivation économique générale sans vérifier le périmètre",
+               "Ne pas distinguer l'absence de cause et le manquement à une obligation procédurale",
+               "Traiter le reclassement comme une formalité"] },
+
+    { id: 'nul', titre: "Licenciement nul (discrimination, harcèlement, liberté fondamentale, maternité, lanceur d'alerte…)",
+      etapes: [
+        ["Qualification d'abord", "La nullité change tout le régime : elle se qualifie avant de chiffrer."],
+        ["Preuve allégée", "Discrimination : le salarié présente des éléments laissant supposer, l'employeur prouve des éléments objectifs étrangers (L1134-1). Harcèlement : mécanisme comparable (L1154-1)."],
+        ["Prescription", "Discrimination : 5 ans depuis la révélation (L1134-5). Harcèlement (réparation) : 5 ans, art. 2224 C. civ. Pour la nullité de la rupture fondée sur le harcèlement, la durée dépend de la nature exacte de la demande — Cass. soc., 4 sept. 2024, n° 22-22.860."],
+        ["Conséquence", "Le barème ne s'applique pas. Indemnité minimale de 6 mois (L1235-3-1) et réintégration possible si elle est demandée."]
+      ],
+      arts: ['L1134-1', 'L1134-5', 'L1152-1', 'L1153-1', 'L1154-1', 'L1235-3-1', '2224 C. civ.', '2226 C. civ.'],
+      pieges: ["Appliquer le barème à un licenciement nul",
+               "Retenir un délai de prescription sans avoir qualifié la demande",
+               "Oublier la demande de réintégration quand elle est formée"] },
+
+    { id: 'hsup', titre: "Rappel de salaire et heures supplémentaires",
+      etapes: [
+        ["Recevabilité", "3 ans (L3245-1), portant sur les 3 dernières années ou les 3 ans précédant la rupture."],
+        ["Preuve partagée", "Le salarié présente des éléments suffisamment précis ; l'employeur, à qui il incombe d'assurer le contrôle du temps de travail, répond en produisant ses propres éléments (L3171-4)."],
+        ["Vérification", "Décompte, majorations légales et conventionnelles, contingent, repos compensateur : croiser avec la convention collective."],
+        ["Chiffrage", "Montrer le calcul dans la motivation. Ne pas dépasser le demandé."]
+      ],
+      arts: ['L3171-4', 'L3245-1', 'L8223-1'],
+      pieges: ["Exiger du salarié une preuve qu'il ne supporte pas seul",
+               "Retenir un décompte sans vérifier les majorations conventionnelles",
+               "Retenir le travail dissimulé sans caractériser l'élément intentionnel (L8223-1)"] },
+
+    { id: 'requal', titre: "Requalification (CDD, temps partiel, statut) · prise d'acte · résiliation judiciaire",
+      etapes: [
+        ["Identifier le texte", "Ces régimes ne sont pas référencés dans cette bibliothèque : identifier les articles applicables à la source avant tout raisonnement (section 🔎 Recherche)."],
+        ["Qualification", "Ce que demande le salarié détermine le régime : requalification, prise d'acte, résiliation judiciaire n'ont ni les mêmes conditions ni les mêmes effets."],
+        ["Preuve", "Établir les manquements allégués pièce par pièce, et apprécier leur gravité — c'est elle qui commande l'effet de la rupture."],
+        ["Conséquence", "Selon la qualification retenue, effets de licenciement sans cause, de licenciement nul, ou rejet. Chiffrer seulement après."]
+      ],
+      arts: [],
+      pieges: ["Raisonner par analogie avec le licenciement sans vérifier le texte propre",
+               "Confondre prise d'acte et résiliation judiciaire (conditions et date d'effet distinctes)",
+               "Chiffrer sur un régime qu'on n'a pas encore qualifié"] }
   ];
 
   var SENS = {
@@ -194,10 +334,12 @@
     ['audience', '📋 Audience'],
     ['recevabilite', '⏳ Recevabilité'],
     ['preuve', '⚖️ Charge de la preuve'],
+    ['decision', '🧠 Décision'],
     ['delibere', '🧭 Délibéré'],
     ['chiffrage', '🧮 Chiffrage'],
     ['redaction', '✍️ Rédaction'],
-    ['sources', '🔗 Sources'],
+    ['bibliotheque', '📚 Bibliothèque'],
+    ['recherche', '🔎 Recherche'],
     ['flamme', '🔥 Garder la flamme']
   ];
 
@@ -205,6 +347,9 @@
 
   function render(el) {
     root = el;
+    /* Une session enregistrée par une version antérieure peut pointer une
+       section qui n'existe plus : on retombe sur l'audience. */
+    if (!SECTIONS.some(function (s) { return s[0] === S.section; })) S.section = 'audience';
     el.innerHTML =
       '<div class="wrap">' +
         banner() +
@@ -244,8 +389,9 @@
     var host = root.querySelector('#ph-body');
     host.innerHTML = ({
       audience: secAudience, recevabilite: secRecevabilite, preuve: secPreuve,
-      delibere: secDelibere, chiffrage: secChiffrage, redaction: secRedaction,
-      sources: secSources, flamme: secFlamme
+      decision: secDecision, delibere: secDelibere, chiffrage: secChiffrage,
+      redaction: secRedaction, bibliotheque: secBibliotheque, recherche: secRecherche,
+      flamme: secFlamme
     }[S.section] || secAudience)();
 
     refresh();
@@ -276,6 +422,10 @@
   }
 
   function onClick(e) {
+    /* Un bouton du corps peut renvoyer vers une autre section. */
+    var nav = e.target.closest('[data-sec]');
+    if (nav) { S.section = nav.getAttribute('data-sec'); save(); render(root); return; }
+
     var b = e.target.closest('[data-act]');
     if (!b) return;
     var act = b.getAttribute('data-act');
@@ -294,6 +444,9 @@
       if (r) { S.chiffrage.bmin = r.min; S.chiffrage.bmax = r.max; S.chiffrage.verifieLe = r.date; save(); body(); }
     } else if (act === 'copy-trame') {
       T.copy(trame(), b);
+    } else if (act === 'copy-node') {
+      var n = root.querySelector(b.getAttribute('data-target'));
+      T.copy(n ? (n.value !== undefined ? n.value : n.textContent) : '', b);
     } else if (act === 'print') {
       window.print();
     }
@@ -302,7 +455,7 @@
   /* Recalcule uniquement les zones de résultat de la section affichée. */
   function refresh() {
     var f = { recevabilite: calcPresc, chiffrage: calcChiffrage, redaction: calcRedaction,
-              audience: calcAudience, delibere: calcDelibere }[S.section];
+              audience: calcAudience, delibere: calcDelibere, recherche: calcRecherche }[S.section];
     if (f) f();
     root.querySelectorAll('.check').forEach(function (l) {
       var i = l.querySelector('input');
@@ -773,33 +926,175 @@
     return L.join('\n');
   }
 
-  /* ================================================================ 7. SOURCES */
-  function secSources() {
-    return '<div class="card"><h2>Les sources qui font autorité</h2>' +
-      '<p class="lead">On ne cite que ce qu\'on a lu à la source. Un commentaire, un forum, un résumé produit par une IA : utiles pour chercher, jamais pour fonder une décision.</p>' +
-      '<table><tbody>' + SOURCES.map(function (s) {
-        return '<tr><td><a href="' + esc(s[1]) + '" target="_blank" rel="noopener"><b>' + esc(s[0]) + '</b></a></td><td class="muted">' + esc(s[2]) + '</td></tr>';
+  /* ============================================================= 4. DÉCISION */
+  function secDecision() {
+    var d0 = DECISIONS.filter(function (x) { return x.id === S.decision.type; })[0];
+    return '<div class="card"><h2>Aide à la qualification</h2>' +
+      '<p class="lead">Le chemin de raisonnement d\'un type de litige : ce qu\'il faut établir, qui le prouve, ce qui en découle, et les pièges qui font casser une décision. La <b>méthode</b> est ici ; le <b>texte</b> se lit à la source.</p>' +
+      '<div class="row">' + field('Type de litige', select('decision.type', S.decision.type,
+        [['', '— choisir —']].concat(DECISIONS.map(function (x) { return [x.id, x.titre]; })), true)) + '</div>' +
+      '</div>' +
+      (d0 ? decisionCard(d0) : '<div class="card"><p class="muted">Choisissez un type de litige. Cinq chemins sont cartographiés ; pour tout autre, la méthode reste la grille en 8 temps (section 🧭 Délibéré) et l\'identification du texte à la source (section 🔎 Recherche).</p></div>');
+  }
+
+  function decisionCard(x) {
+    return '<div class="card"><h2>' + esc(x.titre) + '</h2>' +
+      '<table><tbody>' + x.etapes.map(function (e, i) {
+        return '<tr><td style="width:22%"><b>' + (i + 1) + '. ' + esc(e[0]) + '</b></td><td>' + esc(e[1]) + '</td></tr>';
       }).join('') + '</tbody></table></div>' +
 
-      '<div class="card"><h2>Articles réflexe</h2>' +
-      '<table><thead><tr><th>Sujet</th><th>Articles</th></tr></thead><tbody>' +
-      ARTICLES.map(function (r) {
-        return '<tr><td>' + esc(r[0]) + '</td><td><a class="mono" href="' + esc(r[2]) + '" target="_blank" rel="noopener">' + esc(r[1]) + '</a></td></tr>';
-      }).join('') + '</tbody></table>' +
-      '<p class="muted" style="margin-top:12px">Les renumérotations existent : vérifier les numéros et le contenu à jour.</p></div>' +
-
-      '<div class="card"><h2>Vérifier une règle — le réflexe en 4 temps</h2>' +
-      '<ol><li><b>Identifier le texte de base</b> — l\'article du code du travail.</li>' +
-      '<li><b>Lire la version en vigueur à la date des faits</b> sur Légifrance, pas une version abrogée.</li>' +
-      '<li><b>Chercher l\'interprétation</b> — l\'arrêt de la chambre sociale sur le point précis.</li>' +
-      '<li><b>Vérifier la convention collective</b> applicable : elle peut changer la solution.</li></ol>' +
-      '<div class="note"><span class="mono">L</span> = partie législative · <span class="mono">R</span> = réglementaire (décret en Conseil d\'État) · <span class="mono">D</span> = décret simple. Procédure prud\'homale : <span class="mono">R1451-1 et s.</span> Statut du conseiller : <span class="mono">L1442-1 et s.</span></div>' +
+      '<div class="card"><h2>Textes à vérifier</h2>' +
+      (x.arts.length
+        ? tableArts(x.arts) + '<p class="muted" style="margin-top:12px">Ces références viennent des fiches du dépôt. Elles se lisent <b>dans leur version en vigueur à la date des faits</b> — un numéro juste avec un contenu périmé produit une décision fausse.</p>'
+        : '<div class="note warn"><b>Aucun texte n\'est affiché ici, et c\'est volontaire.</b> Ce régime n\'est pas référencé dans les fiches du dépôt : l\'outil ne l\'invente pas. Identifiez les articles applicables à la source avant de raisonner.' +
+          '<div class="btns"><button type="button" class="btn" data-sec="recherche">Aller à la recherche 🔎</button></div></div>') +
       '</div>' +
 
-      '<div class="card"><h2>Notes de droit <span class="muted">(jamais de dossier réel)</span></h2>' +
-      '<p class="lead">Le point de droit que vous avez clarifié pour vous-même. Pas de nom, pas de fait d\'espèce, rien du délibéré.</p>' +
-      '<textarea data-path="notes" placeholder="ex. forfait-jours : sans suivi effectif de la charge de travail, l\'accord est privé d\'effet — vérifier la jurisprudence récente.">' + esc(S.notes) + '</textarea>' +
+      '<div class="card"><h2>Ce qui fait casser une décision</h2>' +
+      '<ul class="clean">' + x.pieges.map(function (p) { return '<li>⚠️ ' + esc(p) + '</li>'; }).join('') + '</ul>' +
+      '<div class="note">Contrôle final : chaque chef a une réponse, la charge de la preuve est bien placée, le montant est motivé, et la convention collective a été examinée.</div>' +
       '</div>';
+  }
+
+  /* ========================================================== 8. BIBLIOTHÈQUE */
+  function secBibliotheque() {
+    return '<div class="card"><h2>Ce que cette bibliothèque est — et ce qu\'elle n\'est pas</h2>' +
+      '<div class="note warn"><b>Elle ne contient pas le droit : elle contient la carte du droit.</b> ' +
+      'Aucun texte de loi n\'y est recopié, aucun arrêt n\'y est cité de mémoire. On y trouve les <b>références</b> déjà vérifiées dans les fiches du dépôt, classées par matière, avec le lien pour aller lire le texte <b>en vigueur à la date des faits</b>. ' +
+      'Un outil hors ligne qui prétendrait connaître « toutes les lois et toutes les affaires » serait périmé le jour de son écriture — et c\'est exactement ce qu\'un juge ne peut pas se permettre. Ce qui n\'est pas ici se cherche : section 🔎.</div>' +
+      '<div class="btns"><button type="button" class="btn" data-sec="recherche">Chercher un texte ou un arrêt 🔎</button></div>' +
+      '</div>' +
+
+      MATIERES.map(function (m) {
+        return '<div class="card"><h2>' + esc(m.titre) + '</h2>' +
+          (m.note ? '<p class="lead">' + esc(m.note) + '</p>' : '') +
+          tableArts(m.arts) +
+          (m.sections.length ? '<div class="btns">' + m.sections.map(function (s) {
+            return '<a class="btn ghost" href="' + esc(s[1]) + '" target="_blank" rel="noopener">' + esc(s[0]) + ' ↗</a>';
+          }).join('') + '</div>' : '') +
+          '</div>';
+      }).join('') +
+
+      '<div class="card"><h2>Arrêts repère</h2>' +
+      '<p class="lead">Seulement ceux qui sont vérifiés dans les fiches du dépôt. La jurisprudence de la chambre sociale évolue : pour l\'état actuel d\'une question, on interroge la source.</p>' +
+      ARRETS.map(function (a) {
+        return '<div class="note"><b>' + esc(a.juri) + '</b><br>' + esc(a.apport) +
+          '<br><a href="' + esc(a.lien) + '" target="_blank" rel="noopener">Lire à la source ↗</a></div>';
+      }).join('') +
+      '<div class="btns"><button type="button" class="btn" data-sec="recherche">Chercher un arrêt par n° de pourvoi</button></div>' +
+      '</div>' +
+
+      '<div class="card"><h2>Vos notes de droit <span class="muted">(jamais de dossier réel)</span></h2>' +
+      '<p class="lead">Le point de droit que vous avez clarifié pour vous-même, dossier après dossier. Pas de nom, pas de fait d\'espèce, rien du délibéré.</p>' +
+      '<textarea data-path="notes" style="min-height:160px" placeholder="ex. forfait-jours : sans suivi effectif de la charge de travail, l\'accord est privé d\'effet — vérifié le … sur Légifrance + arrêt ch. soc. n° …">' + esc(S.notes) + '</textarea>' +
+      '</div>';
+  }
+
+  function tableArts(codes) {
+    return '<table><thead><tr><th style="width:20%">Référence</th><th>Ce qu\'il régit</th><th style="width:14%"></th></tr></thead><tbody>' +
+      codes.map(function (c) {
+        var a = ART[c] || { quoi: '—', lien: null };
+        return '<tr><td class="mono"><b>' + esc(c) + '</b></td><td class="muted">' + esc(a.quoi) + '</td>' +
+          '<td><a class="btn ghost" href="' + esc(a.lien || rechercheURL(c + ' code du travail', 'legifrance.gouv.fr')) +
+          '" target="_blank" rel="noopener">' + (a.lien ? 'Légifrance ↗' : 'chercher ↗') + '</a></td></tr>';
+      }).join('') + '</tbody></table>';
+  }
+
+  /* ============================================================= 9. RECHERCHE */
+  function rechercheURL(q, site) {
+    return 'https://www.google.com/search?q=' + encodeURIComponent((site ? 'site:' + site + ' ' : '') + q);
+  }
+
+  function secRecherche() {
+    var r = S.recherche;
+    var q = r.q.trim();
+    return '<div class="card"><h2>Chercher, puis lire à la source</h2>' +
+      '<p class="lead">Le moteur sert à <b>trouver</b> ; seule la page officielle <b>fonde</b>. Chaque bouton lance une recherche restreinte au site officiel et ouvre un nouvel onglet.</p>' +
+      '<div><label>Question ou notion</label><input type="text" data-path="recherche.q" value="' + esc(r.q) + '" placeholder="ex. forfait-jours suivi de la charge de travail"></div>' +
+      '<div id="ph-rech-moteurs"></div>' +
+      '</div>' +
+
+      '<div class="card"><h2>Aller droit au but</h2>' +
+      '<div class="row">' +
+        field('Article', '<input type="text" data-path="recherche.article" value="' + esc(r.article) + '" placeholder="ex. L1235-3">') +
+        field('N° de pourvoi', '<input type="text" data-path="recherche.pourvoi" value="' + esc(r.pourvoi) + '" placeholder="ex. 21-14.490">') +
+        field('Convention collective (IDCC ou nom)', '<input type="text" data-path="recherche.idcc" value="' + esc(r.idcc) + '" placeholder="ex. 3090 ou spectacle vivant privé">') +
+      '</div>' +
+      '<div id="ph-rech-liens"></div>' +
+      '<div class="note"><b>Le réflexe en 4 temps :</b> identifier le texte de base → lire la version en vigueur <b>à la date des faits</b> → chercher l\'interprétation de la chambre sociale sur le point précis → vérifier la convention collective applicable, qui peut changer la solution.</div>' +
+      '</div>' +
+
+      '<div class="card"><h2>Déléguer la vérification à l\'agent <span class="mono">conseiller-prudhommes</span></h2>' +
+      '<p class="lead">C\'est lui qui « connaît toutes les affaires » : il interroge Légifrance et la Cour de cassation <b>en direct</b>, et ne fonde jamais une réponse sur autre chose. Cet onglet prépare la question ; l\'agent va la vérifier.</p>' +
+      '<div><label>Votre question de droit</label>' +
+      '<textarea data-path="recherche.question" placeholder="ex. le barème L1235-3 s\'applique-t-il quand la nullité est écartée mais le licenciement jugé sans cause ?">' + esc(r.question) + '</textarea></div>' +
+      '<div class="btns"><button type="button" class="btn primary" data-act="copy-node" data-target="#ph-agent">Copier la question</button></div>' +
+      '<textarea id="ph-agent" readonly class="mono" style="margin-top:14px; min-height:150px"></textarea>' +
+      '<div class="note warn">Ne jamais coller dans la question un nom de partie, une pièce du dossier ou un élément du délibéré : la question se pose <b>en droit</b>, de façon abstraite.</div>' +
+      '</div>' +
+
+      '<div class="card"><h2>Les sources qui font autorité</h2>' +
+      '<p class="lead">On ne cite que ce qu\'on a lu à la source. Un commentaire, un forum, un résumé produit par une IA — celui de cet outil compris : utiles pour chercher, jamais pour fonder une décision.</p>' +
+      '<table><tbody>' + SOURCES.map(function (s) {
+        return '<tr><td><a href="' + esc(s[1]) + '" target="_blank" rel="noopener"><b>' + esc(s[0]) + '</b></a></td><td class="muted">' + esc(s[2]) + '</td></tr>';
+      }).join('') + '</tbody></table>' +
+      '<div class="note"><span class="mono">L</span> = partie législative · <span class="mono">R</span> = réglementaire (décret en Conseil d\'État) · <span class="mono">D</span> = décret simple. Procédure prud\'homale : <span class="mono">R1451-1 et s.</span> · statut du conseiller : <span class="mono">L1442-1 et s.</span> Les renumérotations existent : vérifier le numéro <i>et</i> le contenu.</div>' +
+      '</div>';
+  }
+
+  function calcRecherche() {
+    var r = S.recherche;
+
+    var mot = root.querySelector('#ph-rech-moteurs');
+    if (mot) {
+      var q = r.q.trim();
+      mot.innerHTML = q
+        ? '<div class="btns">' + [
+            ['Légifrance', rechercheURL(q, 'legifrance.gouv.fr'), 'primary'],
+            ['Cour de cassation', rechercheURL(q + ' chambre sociale', 'courdecassation.fr'), ''],
+            ['Code du travail numérique', rechercheURL(q, 'code.travail.gouv.fr'), ''],
+            ['Justice.fr', rechercheURL(q, 'justice.fr'), 'ghost'],
+            ['Service-public', rechercheURL(q, 'service-public.fr'), 'ghost']
+          ].map(function (o) {
+            return '<a class="btn ' + o[2] + '" href="' + esc(o[1]) + '" target="_blank" rel="noopener">' + esc(o[0]) + ' ↗</a>';
+          }).join('') + '</div>'
+        : '<p class="muted" style="margin-top:12px">Les boutons apparaissent dès que la question est saisie.</p>';
+    }
+
+    var host = root.querySelector('#ph-rech-liens');
+    if (host) {
+      var out = [];
+      if (r.article.trim())
+        out.push(['Article ' + r.article.trim(), rechercheURL('"' + r.article.trim() + '" code du travail', 'legifrance.gouv.fr')]);
+      if (r.pourvoi.trim()) {
+        out.push(['Pourvoi n° ' + r.pourvoi.trim() + ' — Cour de cassation', rechercheURL('"' + r.pourvoi.trim() + '"', 'courdecassation.fr')]);
+        out.push(['Pourvoi n° ' + r.pourvoi.trim() + ' — Légifrance (jurisprudence)', rechercheURL('"' + r.pourvoi.trim() + '"', 'legifrance.gouv.fr')]);
+      }
+      if (r.idcc.trim())
+        out.push(['Convention collective « ' + r.idcc.trim() + ' »', rechercheURL('convention collective ' + r.idcc.trim(), 'code.travail.gouv.fr')]);
+      host.innerHTML = out.length
+        ? '<div class="btns">' + out.map(function (o) {
+            return '<a class="btn" href="' + esc(o[1]) + '" target="_blank" rel="noopener">' + esc(o[0]) + ' ↗</a>';
+          }).join('') + '</div>'
+        : '<p class="muted" style="margin-top:12px">Renseignez un article, un n° de pourvoi ou une convention pour obtenir le lien.</p>';
+    }
+    var ta = root.querySelector('#ph-agent');
+    if (ta) {
+      var a = S.audience;
+      ta.value = [
+        'Utilise l\'agent conseiller-prudhommes.',
+        '',
+        'Question : ' + (S.recherche.question || '[votre question de droit]'),
+        '',
+        'Contexte : formation ' + (FORMATIONS[a.formation] ? FORMATIONS[a.formation].nom : '—') +
+          (a.date ? ', audience du ' + fmtD(d(a.date)) : '') + '.',
+        (S.chiffrage.rupture ? 'Date des faits à retenir pour la version du texte : ' + fmtD(d(S.chiffrage.rupture)) + '.' : 'Précise la date des faits à retenir pour la version du texte.'),
+        '',
+        'Exigences : article en vigueur à cette date (lien Légifrance), jurisprudence de la chambre sociale',
+        'sur le point précis (n° de pourvoi + lien), incidence éventuelle de la convention collective,',
+        'et ce qui reste incertain. Aucune source non officielle.'
+      ].join('\n');
+    }
   }
 
   /* ================================================================ 8. FLAMME */

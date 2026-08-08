@@ -50,10 +50,13 @@ Ces fiches ont un **poste de travail** : l'onglet ⚖️ Prud'hommes de la conso
 [`../tower/`](../tower/README.md) — un fichier HTML autonome à ouvrir d'un double-clic
 (`tower/index.html`), hors ligne, sans rien qui sorte du poste.
 
-Préparation d'audience · calcul de la prescription · charge de la preuve · grille de délibéré
-en 8 temps · chiffrage (ancienneté, salaire de référence, fourchette `L1235-3`, plancher du
-licenciement nul) · chefs de demande avec contrôle *ultra / infra petita* · génération de la
-trame de motivation et du « PAR CES MOTIFS ».
+Préparation d'audience · calcul de la prescription · charge de la preuve · **chemins de
+qualification** par type de litige (avec les pièges qui font casser une décision) · grille de
+délibéré en 8 temps · chiffrage (ancienneté, salaire de référence, fourchette `L1235-3`,
+plancher du licenciement nul) · chefs de demande avec contrôle *ultra / infra petita* ·
+génération de la trame de motivation et du « PAR CES MOTIFS » · **bibliothèque** (la carte du
+droit par matière, références et arrêts repère de ces fiches) · **recherche** restreinte aux
+sites officiels et question prête à poser au sous-agent `conseiller-prudhommes`.
 
 L'outil **ne contient aucun chiffre de droit** : les fourchettes du barème se lisent sur
 Légifrance, se saisissent, et l'outil mémorise la ligne **vérifiée et datée** par le conseiller.
