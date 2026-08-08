@@ -353,7 +353,7 @@
     el.innerHTML =
       '<div class="wrap">' +
         banner() +
-        '<div class="btns no-print" id="ph-nav" style="margin:0 0 18px">' +
+        '<div class="btns secnav no-print" id="ph-nav" style="margin:0 0 18px">' +
           SECTIONS.map(function (s) {
             return '<button type="button" class="btn' + (S.section === s[0] ? ' primary' : '') +
               '" data-sec="' + s[0] + '">' + esc(s[1]) + '</button>';
@@ -376,13 +376,16 @@
   }
 
   function banner() {
-    return '<div class="note warn no-print" style="margin-top:18px">' +
-      '<b>Secret du délibéré.</b> Tout ce que vous saisissez reste dans ce navigateur, ' +
-      'sur cet ordinateur — rien n\'est envoyé nulle part. N\'y écrivez malgré tout ' +
-      '<b>aucun nom de partie</b>, aucune pièce du dossier, et jamais le sens d\'un vote. ' +
-      'Cet outil aide à la <i>méthode</i> et au <i>calcul</i> ; il ne décide pas.' +
+    return '<details class="fold no-print"' + (T.isWide() ? ' open' : '') + '>' +
+      '<summary>🔒 Secret du délibéré — tout reste sur ce poste</summary>' +
+      '<div class="foldbody">' +
+      'Tout ce que vous saisissez reste dans ce navigateur, sur cet appareil — rien n\'est ' +
+      'envoyé nulle part. N\'y écrivez malgré tout <b>aucun nom de partie</b>, aucune pièce ' +
+      'du dossier, et jamais le sens d\'un vote. Cet outil aide à la <i>méthode</i> et au ' +
+      '<i>calcul</i> ; il ne décide pas.' +
       '<div class="btns"><button type="button" class="btn danger" id="ph-reset">Effacer toute la session</button>' +
-      '<span class="muted" style="align-self:center">Réflexe fin de session : effacer.</span></div></div>';
+      '<span class="muted" style="align-self:center">Réflexe fin de session : effacer.</span></div>' +
+      '</div></details>';
   }
 
   function body() {

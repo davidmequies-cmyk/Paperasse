@@ -15,6 +15,22 @@ Ouvrir : `tower/index.html` (ou `open tower/index.html` sur Mac).
 Raccourcis : `alt+1` … `alt+9` pour passer d'un onglet à l'autre. L'URL retient l'onglet
 courant (`#/prudhommes`), les saisies sont conservées dans le navigateur (`localStorage`).
 
+## 📱 Sur téléphone
+
+La console est utilisable à une main, en audience :
+
+- **En-tête compact et collé** : la barre d'onglets reste en haut, la barre de sections
+  défile horizontalement juste en dessous — plus de pavé de dix boutons avant le contenu.
+- **Un champ par ligne**, saisie en 16 px (pas de zoom automatique sur iOS), boutons de
+  44 px minimum, cases à cocher agrandies.
+- **Bandeaux repliés** par défaut (dépliés sur grand écran) : on arrive directement dans le travail.
+- Tableaux larges défilables, marges respectant l'encoche et la barre d'accueil (`safe-area`).
+- Ajouté à l'écran d'accueil, il s'ouvre en plein écran (métadonnées « web app » incluses).
+
+⚠️ **Les saisies sont propres à chaque appareil et à chaque navigateur** : rien n'est
+synchronisé — c'est le prix du « rien ne sort du poste ». Une session commencée sur le Mac
+ne se retrouve pas sur le téléphone.
+
 ---
 
 ## 🛰️ L'onglet « Hermès » — tour de contrôle

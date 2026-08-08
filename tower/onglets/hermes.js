@@ -283,12 +283,14 @@
     root = el;
     el.innerHTML =
       '<div class="wrap">' +
-        '<div class="note no-print" style="margin-top:18px; border-color:var(--acc)">' +
-          '<b>Hermès prépare → Michel valide ✅ / ✏️ / ❌ → Hermès exécute.</b> ' +
+        '<details class="fold acc no-print"' + (T.isWide() ? ' open' : '') + '>' +
+          '<summary>✅ Hermès prépare → Michel valide → Hermès exécute</summary>' +
+          '<div class="foldbody">' +
           'Aucune action externe ou irréversible — e-mail, déclaration DPAE/AEM/DSN, contrat, relance, ' +
-          'publication, paiement — sans validation explicite. Cette console <b>prépare</b> : elle ne déclenche rien.' +
-        '</div>' +
-        '<div class="btns no-print" id="he-nav" style="margin:0 0 18px">' +
+          'publication, paiement — sans validation explicite ✅ / ✏️ / ❌. Cette console <b>prépare</b> : ' +
+          'elle ne déclenche rien.' +
+          '</div></details>' +
+        '<div class="btns secnav no-print" id="he-nav" style="margin:0 0 18px">' +
           SECTIONS.map(function (s) {
             return '<button type="button" class="btn' + (S.section === s[0] ? ' primary' : '') +
               '" data-sec="' + s[0] + '">' + esc(s[1]) + '</button>';
