@@ -18,8 +18,14 @@
 | Rôle | Nom | siteId |
 |---|---|---|
 | **LIVE** (sert chanteursynagogue.art — ne pas toucher avant bascule) | Chanteur Synagogue David Méquiès | `b4b041af-75e8-4305-ac2e-c153401e31b3` |
-| Brouillon Studio existant (créé le 29/06, positionnement PÉRIMÉ « sans offices » → à réviser selon le brief actuel) | David Méquiès — Pianiste & Chanteur | `22b2327e-f306-47ae-8670-216712ac4152` |
+| **Site Studio de la refonte** (état vérifié le 24/08 : coquille VIDE, rien n'y a jamais été construit) | David Méquiès — Pianiste & Chanteur | `22b2327e-f306-47ae-8670-216712ac4152` |
 | Ancien site gratuit (mdmprod.wixsite.com — ignorer) | chanteursynagogue | `b68ae201-8703-4f3c-9278-b8f5985cf2b2` |
+
+## État du site Studio (vérifié par API le 24/08/2026)
+- **Vide** : créé le 27/06, aucune page construite depuis.
+- **Réglages à corriger** : langue `en`, pays `US`, fuseau `America/New_York`, devise `USD` → doit passer en français / France / Europe-Paris / EUR.
+- **Wix Bookings : installé par API le 24/08** (vérifié : l'API répond, 0 service pour l'instant). Les 4 services restent à recréer avec leurs descriptions intégrales (`donnees-live/bookings-services.md`).
+- Reste à installer selon le brief : Wix Portfolio n'est pas nécessaire ici (c'était pour mdmprod) ; prévoir la structure multilingue sans l'activer.
 
 ## Points d'arbitrage relevés (à trancher avant construction)
 0. ⚠️ **Conformité** : sur le site actuel, un embed masque le bandeau de consentement aux cookies alors que la conversion Google Ads tourne sur la page Contact. À corriger sans attendre la bascule (`JSON-LD.md` §4).
