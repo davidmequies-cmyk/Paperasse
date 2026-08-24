@@ -1,10 +1,14 @@
 # Check-list de recette — refonte chanteursynagogue.art
 
-## Phase 0 — AVANT de construire (sauvegarde, bloquant)
-- [ ] Recopier depuis le site LIVE (view-source page par page) : title + meta description + texte intégral des 9 pages → compléter `SPEC-PAGES.md`.
-- [ ] Recopier les custom embeds existants (LocalBusiness+Person, FAQPage 12 Q/R, WebSite/WebPage/Breadcrumb, ItemList, metas geo/ICBM/robots, conversion Google Ads) → coller dans `JSON-LD.md`.
-- [ ] Exporter/inventorier la galerie : fait ✅ (`donnees-live/galerie-seo.md`, 89 items dont 31 optimisés).
-- [ ] Services Bookings : fait ✅ (`donnees-live/bookings-services.md`).
+## Phase 0 — Sauvegarde du site live (avant de construire)
+- [x] Services Bookings — `donnees-live/bookings-services.md` (5 services, descriptions intégrales, anciens slugs).
+- [x] Galerie — `donnees-live/galerie-seo.md` (89 médias, dont les 31 titres/descriptions SEO).
+- [x] Custom embeds — `donnees-live/custom-embeds.md` (25 embeds verbatim) + tri dans `JSON-LD.md`.
+- [x] robots.txt + token Search Console — `donnees-live/robots-et-reglages-seo.md`.
+- [ ] **Reste à faire (seule tâche de sauvegarde restante, bloquante)** : ouvrir chaque page du site EN LIGNE
+      (clic droit → code source) et recopier **title + meta description + texte intégral** des 9 pages dans
+      `SPEC-PAGES.md`. Non extractible par API : l'API SEO Tags ne renvoie que des valeurs générées, pas celles
+      saisies dans l'éditeur (test fait sur `/apropos`).
 
 ## Phase 1 — Maquette (validation AVANT bascule)
 - [ ] Preview des pages clés : Accueil, /chanteur-houppa, /book-online.
@@ -17,6 +21,9 @@
 - [ ] `grep` visuel : **0 occurrence** de hazan / hazzan / chantre / cantor (contenus, titles, metas, alt, schemas, noms de fichiers).
 - [ ] Bookings fonctionnel : 4 services, descriptions intégrales, « Répétition » masqué, consultation réservable de bout en bout.
 - [ ] Formulaire contact testé (réception réelle) + événement de conversion Google Ads présent sur /contact.
+- [ ] **Bandeau de consentement visible et fonctionnel** (il est actuellement masqué par un embed sur le live)
+      et tracking publicitaire déclenché seulement après acceptation — voir `JSON-LD.md` §4.
+- [ ] Aucune rustine CSS de l'ancien site réinjectée (`JSON-LD.md` §3) : elles casseraient la mise en page Studio.
 - [ ] Click-to-call permanent sur mobile + WhatsApp. Test réel sur téléphone.
 - [ ] Galerie : 31 titres/descriptions SEO reportés à l'identique, alt sur toutes les images, filtres + lightbox OK.
 - [ ] FAQ HTML visibles sur chaque page prestation, cohérentes avec le schema FAQPage.

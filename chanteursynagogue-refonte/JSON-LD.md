@@ -1,67 +1,63 @@
-# JSON-LD & balises head — blocs à réinjecter (custom embeds)
+# Embeds du site live — ce qui migre, ce qui reste
 
-> Le brief impose de **réinjecter les custom embeds JSON-LD existants** du site actuel. Ils ne sont pas lisibles par API : la session éditeur doit les **recopier depuis le site actuel** (Paramètres → Custom Code, ou view-source des pages live) AVANT toute reconstruction, et les coller ici pour archivage.
-> ⛔ Ne PAS réactiver l'ancien bloc global « Open Graph + Twitter Card » (il écrasait les descriptions par page).
-> Les gabarits ci-dessous servent de **filet de secours** si un bloc existant est introuvable — à compléter avec les textes réels, jamais avec des données inventées.
+> ✅ **Les 25 embeds du site live ont été récupérés par API** et sont archivés verbatim dans
+> [`donnees-live/custom-embeds.md`](donnees-live/custom-embeds.md). Il n'y a plus rien à recopier à la main.
+> Ce fichier dit **lesquels réinjecter dans Wix Studio** — et surtout lesquels **ne pas** réinjecter.
 
-## 1. LocalBusiness + Person (toutes pages)
-```json
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://www.chanteursynagogue.art/#business",
-      "name": "David Méquiès — Chanteur de synagogue et pianiste",
-      "url": "https://www.chanteursynagogue.art/",
-      "telephone": "+33745174129",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "61 rue de Lyon",
-        "postalCode": "75012",
-        "addressLocality": "Paris",
-        "addressCountry": "FR"
-      },
-      "areaServed": ["Paris", "Île-de-France", "France"],
-      "parentOrganization": {
-        "@type": "Organization",
-        "name": "Neshama Music",
-        "identifier": "Licence spectacle PLATESV-R-2021-012818"
-      }
-    },
-    {
-      "@type": "Person",
-      "@id": "https://www.chanteursynagogue.art/#person",
-      "name": "David Méquiès",
-      "jobTitle": "Chanteur de synagogue et pianiste",
-      "worksFor": { "@id": "https://www.chanteursynagogue.art/#business" },
-      "knowsAbout": ["Houppa", "Bar-Mitsva", "Bat-Mitsva", "Offices de synagogue", "Répertoire ashkénaze", "Répertoire sépharade"],
-      "sameAs": [
-        "«URL fiche Google Business Profile»",
-        "«URL YouTube»",
-        "«URL Mariages.net»",
-        "«URL Zankyou»"
-      ]
-    }
-  ]
-}
+## 1. À RÉINJECTER tels quels (6)
+
+| Embed | Portée | Rôle |
+|---|---|---|
+| `Schema SEO - LocalBusiness + Person - David Méquiès` | toutes pages, HEAD | Entité principale (GEO) |
+| `Schema FAQ - Houppa Bar-Mitsva - David Méquiès` | toutes pages, HEAD | FAQPage — doit rester cohérent avec les FAQ affichées |
+| `Schema Services - Forfaits Musicaux - David Méquiès` | toutes pages, HEAD | ItemList des services |
+| `Schema WebSite + BreadcrumbList - chanteursynagogue.art` | toutes pages, HEAD | WebSite / fil d'Ariane |
+| `Meta tags SEO local - Paris - David Méquiès` | toutes pages, HEAD | geo, ICBM, robots |
+| `Contact - Google Ads` | **page Contact uniquement** | Conversion `AW-935076516/085sCN2o0PwCEKTF8L0D` |
+
+À vérifier au passage dans le schéma LocalBusiness : il annonce « plus de 35 ans d'expérience » alors que le
+reste du site dit « depuis 1987 » (39 ans en 2026). Harmoniser sur « depuis 1987 ».
+
+Ne pas oublier non plus le **token de propriété Search Console** relevé sur le live :
+`google-site-verification = 5YaNl1IBIMezxsq2LfyIVOyMSHoCq0jka6E9AaV2Sc4` (voir `donnees-live/robots-et-reglages-seo.md`).
+
+## 2. À NE PAS RÉINJECTER — consigne du brief (1)
+
+- `Open Graph + Twitter Card - David Méquiès` — actif sur le live, mais il **écrase les descriptions par page**.
+  Le brief l'exclut explicitement. Laisser Wix Studio gérer l'OG page par page.
+
+## 3. À NE PAS RÉINJECTER — rustines de l'ancien site (9 actifs)
+
+Ces embeds sont des **correctifs CSS/JS du site Wix classique actuel** : ils repositionnent des blocs,
+masquent des vides, refont l'accueil et la galerie à la main. Les porter dans Wix Studio **casserait la
+nouvelle mise en page** — Studio fait tout cela nativement (grille responsive, breakpoints, barre d'appel).
+
+`CSS GLOBAL PREMIUM (menu/footer/typo/boutons/fonds)` · `Accueil REFONTE - bloc premium full-bleed` ·
+`GALERIE REFONTE premium` · `BOOK-ONLINE REFONTE premium` · `CONTACT REFONTE premium` ·
+`CSS mobile responsive` · `CSS global overflow-x (anti scroll latéral)` · `CSS bande haut /apropos` ·
+`CSS fix vide mobile /apropos` · plus la `Barre mobile - Appeler/WhatsApp/Reserver` (à refaire en natif Studio).
+
+## 4. ⚠️ À NE SURTOUT PAS RÉINJECTER — point de conformité
+
+Un embed **actif**, nommé simplement « Personnalisé », masque la bannière de consentement aux cookies :
+
+```html
+<style>#usercentrics-cmp-ui,#usercentrics-cmp,[id^="usercentrics"]{display:none!important;visibility:hidden!important;}</style>
 ```
-(`sameAs` : remplacer par les URLs réelles — GBP, YouTube, réseaux, annuaires. Ne rien laisser entre «».)
 
-## 2. FAQPage (12 questions — RÉCUPÉRER le bloc existant du site live tel quel)
-Le bloc actuel contient 12 Q/R validées : le recopier intégralement. Les FAQ affichées en HTML sur les pages doivent correspondre au schema (cohérence obligatoire).
+Or la conversion **Google Ads tourne sur la page Contact**. Masquer le bandeau de consentement pendant qu'un
+traceur publicitaire s'exécute est un **manquement RGPD/CNIL** (consentement préalable obligatoire pour les
+cookies publicitaires). À signaler à David : sur le nouveau site, le bandeau doit être **visible et
+fonctionnel**, et le tracking ne doit se déclencher qu'après acceptation. À corriger aussi sur le site actuel
+sans attendre la bascule.
 
-## 3. WebSite / WebPage / BreadcrumbList
-Recopier l'existant. Sinon gabarit : WebSite (name + url) ; par page, WebPage (name = title de la page, url) + BreadcrumbList Accueil → page.
+## 5. Embeds désactivés (5) — archivés, rien à faire
 
-## 4. ItemList des 4 services
-Recopier l'existant. Les 4 services = les 3 forfaits + consultation gratuite (noms/URLs exacts dans `donnees-live/bookings-services.md`).
+`Personnalisé` (vide) · `Schema JSON-LD - David Méquiès` (ancienne version) · `Menu 3 entrées` ·
+`Bandeau footer NAP + liens` · `CSS fix vide ACCUEIL` · `CSS accueil mobile (Option B)` ·
+`Corrections textes et SEO` (récupéré incomplet — la réponse API a été tronquée ; vérifier dans le tableau de
+bord s'il existe d'autres embeds après celui-ci).
 
-## 5. Meta SEO local Paris (geo, ICBM, robots)
-Recopier depuis le site actuel (view-source de l'accueil), notamment : `geo.region`, `geo.placename`, `geo.position`, `ICBM`, `robots`.
-
-## 6. Conversion Google Ads (page Contact)
-Recopier l'extrait de code de l'événement de conversion depuis le site actuel (Custom Code) et le réinstaller sur /contact uniquement, à l'identique.
-
-## 7. robots.txt
-Autoriser explicitement : GPTBot, PerplexityBot, Google-Extended, ClaudeBot (ne pas les bloquer). Sitemap déclaré. 404 réelles (pas de partial route match).
+## 6. robots.txt
+Rien à changer : le live autorise déjà tous les crawlers, IA comprises (seul PetalBot est bloqué).
+Sur le nouveau site, ne rien bloquer et déclarer le sitemap. Détail dans `donnees-live/robots-et-reglages-seo.md`.
