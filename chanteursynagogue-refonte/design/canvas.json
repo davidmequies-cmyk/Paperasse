@@ -1,0 +1,25 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "Accueil — desktop", "x": 0, "y": 0, "w": 1440, "h": 4400 },
+    { "file": "Houppa.dc.html", "title": "Houppa — page prestation", "x": 1600, "y": 0, "w": 1440, "h": 3560 },
+    { "file": "Reserver.dc.html", "title": "Réserver — Bookings", "x": 3200, "y": 0, "w": 1440, "h": 2520 },
+    { "file": "Mobile.dc.html", "title": "Accueil — mobile 390", "x": 4800, "y": 0, "w": 390, "h": 2400 }
+  ],
+  "annotations": [
+    {
+      "id": "note-geo",
+      "x": 0,
+      "y": -300,
+      "w": 420,
+      "text": "GEO — le paragraphe en serif sous chaque hero est la « réponse directe » : nom, prestation, zone, depuis 1987, formules.\nC'est ce que ChatGPT / Perplexity / AI Overviews citent. Les FAQ sont en texte HTML visible, pas seulement dans le schéma."
+    },
+    {
+      "id": "note-placeholders",
+      "x": 3200,
+      "y": -300,
+      "w": 420,
+      "text": "Placeholders assumés (rien d'inventé) :\n— témoignages en cadre pointillé, à remplir avec de vrais avis\n— zones [Photo] / [Vidéo] : médias réels de la galerie\n— créneaux du calendrier : widget Wix Bookings réel\nTout le reste (tél, adresse, formules, licence) vient du site live."
+    }
+  ],
+  "launch": { "view": "canvas" }
+}
