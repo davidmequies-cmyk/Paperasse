@@ -1,5 +1,29 @@
 # Embeds du site live — ce qui migre, ce qui reste
 
+## ✅ FAIT le 24/08/2026 — les 5 schémas sont posés sur le site Studio
+Les 5 blocs SEO ci-dessous ont été **récupérés intacts** (un par un, l'archive faite par lot était tronquée
+et corrompue) puis **injectés par API dans le site Studio `22b2327e`**, actifs, en position HEAD. Vérifié.
+Restent à poser plus tard : la conversion Google Ads (elle vise la page Contact, qui n'existe pas encore).
+
+## ⚠️ CONTRADICTION MAJEURE À TRANCHER AVEC DAVID
+Le site live dit, **deux fois dans ses propres schémas** :
+> « cérémonies religieuses en synagogue **(lundi et jeudi)** »
+> « Pour une cérémonie religieuse en synagogue (lundi ou jeudi), 4 à 8 semaines suffisent »
+
+Or le brief de la refonte annonce des **offices de Shabbat, Rosh Hashana et Kippour**. Ce n'est pas un détail :
+lundi et jeudi sont les jours de lecture de la Torah en semaine — les seuls où un accompagnement instrumental
+est habituel. Shabbat et les grandes fêtes, non.
+**Tant que David n'a pas tranché, la page `/offices-synagogue` ne doit pas être publiée en l'état.**
+Deux possibilités : soit le brief élargit volontairement l'offre, soit la page Offices doit être recentrée sur
+les cérémonies du lundi et du jeudi. La maquette porte déjà un encart « voix seule à la synagogue » marqué à confirmer.
+
+## Autres écarts relevés dans les schémas (à corriger avant bascule)
+- « plus de 35 ans d'expérience » (schémas) vs « depuis 1987 » = 39 ans en 2026. Harmoniser.
+- La consultation gratuite est décrite « 30 minutes » dans le schéma Services, « 20 minutes » dans Bookings,
+  et paramétrée à 15 minutes. Trois valeurs différentes — en choisir une.
+- `sameAs` récupérés et utilisables : YouTube `@davidmequies`, Facebook `100073403876456`.
+
+
 > ✅ **Les 25 embeds du site live ont été récupérés par API** et sont archivés verbatim dans
 > [`donnees-live/custom-embeds.md`](donnees-live/custom-embeds.md). Il n'y a plus rien à recopier à la main.
 > Ce fichier dit **lesquels réinjecter dans Wix Studio** — et surtout lesquels **ne pas** réinjecter.

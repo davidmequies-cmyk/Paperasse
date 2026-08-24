@@ -24,6 +24,8 @@
 ## État du site Studio (vérifié par API le 24/08/2026)
 - **Vide** : créé le 27/06, aucune page construite depuis.
 - **Réglages à corriger** : langue `en`, pays `US`, fuseau `America/New_York`, devise `USD` → doit passer en français / France / Europe-Paris / EUR.
+- **5 schémas SEO injectés par API le 24/08** (LocalBusiness+Person, FAQPage 11 questions, ItemList services, WebSite+Breadcrumb, metas geo Paris) — actifs, vérifiés. Catégorie Bookings « Forfaits » créée.
+- **Langue du site : NON modifiable par API** — à passer en français / France / Europe-Paris / EUR depuis le tableau de bord (Réglages → Infos de l'entreprise). À faire **avant** de créer les services, sinon leurs horaires seront calés sur New York.
 - **Wix Bookings : installé par API le 24/08** (vérifié : l'API répond, 0 service pour l'instant). Les 4 services restent à recréer avec leurs descriptions intégrales (`donnees-live/bookings-services.md`).
 - Reste à installer selon le brief : Wix Portfolio n'est pas nécessaire ici (c'était pour mdmprod) ; prévoir la structure multilingue sans l'activer.
 
