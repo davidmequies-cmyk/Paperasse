@@ -1,9 +1,15 @@
 {
   "artboards": [
     { "file": "Main.dc.html", "title": "Accueil — desktop", "x": 0, "y": 0, "w": 1440, "h": 5550 },
-    { "file": "Houppa.dc.html", "title": "Houppa — page prestation", "x": 1600, "y": 0, "w": 1440, "h": 3700 },
+    { "file": "Houppa.dc.html", "title": "Houppa", "x": 1600, "y": 0, "w": 1440, "h": 3700 },
     { "file": "Reserver.dc.html", "title": "Réserver — Bookings", "x": 3200, "y": 0, "w": 1440, "h": 2750 },
-    { "file": "Mobile.dc.html", "title": "Accueil — mobile 390", "x": 4800, "y": 0, "w": 390, "h": 2400 }
+    { "file": "Mobile.dc.html", "title": "Accueil — mobile 390", "x": 4800, "y": 0, "w": 390, "h": 2400 },
+
+    { "file": "Apropos.dc.html", "title": "À propos — L'Art d'une Voix", "x": 0, "y": 5750, "w": 1440, "h": 3100 },
+    { "file": "BarMitsva.dc.html", "title": "Bar-Mitsva & Bat-Mitsva", "x": 1600, "y": 5750, "w": 1440, "h": 3600 },
+    { "file": "Offices.dc.html", "title": "Offices de synagogue", "x": 3200, "y": 5750, "w": 1440, "h": 3200 },
+    { "file": "Galerie.dc.html", "title": "Galerie", "x": 4800, "y": 5750, "w": 1440, "h": 2450 },
+    { "file": "Contact.dc.html", "title": "Contact", "x": 6400, "y": 5750, "w": 1440, "h": 1900 }
   ],
   "annotations": [
     {
@@ -11,7 +17,7 @@
       "x": 0,
       "y": -340,
       "w": 460,
-      "text": "CE QUI EST CLIQUABLE\n— Accueil : les questions de la FAQ s'ouvrent et se ferment ; les filtres Houppa / Bar-Mitsva / Offices / Concerts changent la galerie.\n— Houppa : FAQ dépliable, et les trois formules se sélectionnent.\n— Réserver : calendrier complet — jour, horaire, formule, puis « Confirmer » affiche le récapitulatif ; « Modifier » revient en arrière.\n— Mobile : le bouton menu ouvre la navigation plein écran.\nLes autres boutons réagissent au survol et au clic, mais ne changent pas de page : chaque écran est une maquette indépendante."
+      "text": "CE QUI EST CLIQUABLE\n— Accueil : FAQ dépliable, filtres de galerie.\n— Houppa / Bar-Mitsva : FAQ dépliable, formules sélectionnables.\n— Offices : FAQ dépliable, Shabbat / Rosh Hashana / Kippour sélectionnables.\n— Réserver : calendrier complet — jour, horaire, formule, « Confirmer » puis récapitulatif.\n— Galerie : les 5 filtres changent la grille et le compteur.\n— Contact : type de cérémonie, puis « Envoyer » affiche la confirmation.\n— Mobile : le bouton menu ouvre la navigation plein écran.\nLes autres boutons réagissent au survol et au clic, mais ne changent pas de page : chaque écran est une maquette indépendante."
     },
     {
       "id": "note-geo",
@@ -33,6 +39,13 @@
       "y": -340,
       "w": 380,
       "text": "La barre d'appel dorée est « sticky » : sur un vrai téléphone elle reste collée en bas de l'écran pendant tout le défilement. Ici, la maquette étant dépliée en entier, elle se dessine tout en bas."
+    },
+    {
+      "id": "note-rang2",
+      "x": 0,
+      "y": 5410,
+      "w": 520,
+      "text": "LES CINQ AUTRES PAGES\nMêmes règles que la première rangée : URL et balises SEO conservées, réponse directe en tête, FAQ en HTML visible, aucune occurrence de hazan / chantre / cantor.\nÀ propos : le texte existant de « L'Art d'une Voix » doit être repris tel quel — sa place est marquée en pointillés, le brief impose de le conserver.\nGalerie : les libellés sont les vrais titres SEO des médias en ligne, à reporter à l'identique.\nContact : c'est la page qui porte la conversion Google Ads — le bandeau de consentement doit y être visible et fonctionnel."
     }
   ],
   "launch": { "view": "canvas" }

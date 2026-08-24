@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Karla:wght@300;400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #F7F3EA; font-family: 'Karla', 'Helvetica Neue', Helvetica, sans-serif; color: #16202D; -webkit-font-smoothing: antialiased; }
+    a { color: #8A6A28; text-decoration: none; }
+    a:hover { color: #C3A05C; }
+    p { margin: 0; }
+    h1, h2, h3 { margin: 0; font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; font-weight: 400; }
+    .i { cursor: pointer; transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease; -webkit-user-select: none; user-select: none; }
+    .i:focus-visible { outline: 2px solid #C3A05C; outline-offset: 3px; }
+    .btn-gold:hover { background: #DFC48D !important; }
+    .btn-gold:active { transform: translateY(1px); }
+    .btn-ghost:hover { border-color: rgba(195,160,92,0.9) !important; color: #DFC48D !important; }
+    .link-gold:hover { color: #DFC48D !important; }
+    .card-pick:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(13,28,43,0.14); }
+    .faq:hover .q { color: #8A6A28; }
+    .next:hover { transform: translateX(4px); box-shadow: 0 10px 26px rgba(13,28,43,0.1); }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #F7F3EA;">
+
+  <!-- ============ HERO ============ -->
+  <div style="position: relative; height: 560px; background: #0D1C2B; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(110% 100% at 78% 30%, #1E3A54 0%, #0D1C2B 60%);"></div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,19,32,0.94) 0%, rgba(7,19,32,0.55) 55%, rgba(7,19,32,0.25) 100%);"></div>
+    <div style="position: absolute; right: 48px; bottom: 40px; padding: 10px 14px; border: 1px solid rgba(195,160,92,0.45); color: #DFC48D; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;">[ Photo — synagogue ]</div>
+
+    <div style="position: relative; display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 30px 64px; border-bottom: 1px solid rgba(247,243,234,0.12);">
+      <div style="display: flex; flex-direction: column; gap: 3px;">
+        <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 25px; letter-spacing: 0.12em; color: #F7F3EA;">DAVID MÉQUIÈS</div>
+        <div style="font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; color: #C3A05C;">Neshama · Paris</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 30px; font-size: 14px; letter-spacing: 0.03em; color: rgba(247,243,234,0.86);">
+        <span class="i link-gold">Accueil</span><span class="i link-gold">À propos</span><span class="i link-gold">Houppa</span><span class="i link-gold">Bar-Mitsva</span>
+        <span style="color: #F7F3EA; border-bottom: 1px solid #C3A05C; padding-bottom: 3px;">Offices</span>
+        <span class="i link-gold">Galerie</span><span class="i link-gold">Réserver</span><span class="i link-gold">Contact</span>
+      </div>
+      <div class="i btn-ghost" style="display: flex; align-items: center; gap: 9px; padding: 13px 20px; border: 1px solid rgba(195,160,92,0.6); color: #F7F3EA; font-size: 14px; white-space: nowrap;" role="button" tabIndex="0">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C3A05C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        07 45 17 41 29
+      </div>
+    </div>
+
+    <div style="position: relative; display: flex; flex-direction: column; gap: 22px; padding: 92px 64px 0; max-width: 860px;">
+      <div style="display: flex; align-items: center; gap: 12px; font-size: 12px; letter-spacing: 0.1em; color: rgba(247,243,234,0.5);">
+        <span class="i link-gold">Accueil</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(247,243,234,0.4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+        <span style="color: #C3A05C;">Offices</span>
+      </div>
+      <h1 style="font-size: 66px; line-height: 1.06; color: #F7F3EA; letter-spacing: -0.01em;">Chanteur pour offices<br>de synagogue à Paris</h1>
+      <p style="font-size: 19px; line-height: 1.55; color: rgba(247,243,234,0.75); max-width: 540px; font-weight: 300;">Shabbat, Rosh Hashana, Kippour — répertoire liturgique ashkénaze et sépharade.</p>
+    </div>
+  </div>
+
+  <!-- ============ RÉPONSE DIRECTE (GEO) ============ -->
+  <div style="background: #F7F3EA; padding: 88px 64px 76px;">
+    <div style="max-width: 980px; margin: 0 auto; display: flex; gap: 52px; align-items: flex-start;">
+      <span style="flex: 0 0 auto; width: 64px; height: 1px; background: #C3A05C; margin-top: 20px;"></span>
+      <p style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; line-height: 1.5; color: #16202D; font-weight: 300; text-wrap: pretty;">David Méquiès accompagne les offices de synagogue à Paris <em style="font-style: italic; color: #8A6A28;">depuis 1987</em> : Shabbat, Rosh Hashana et Kippour. Chanteur de synagogue et pianiste, il interprète le répertoire liturgique dans les traditions ashkénaze et sépharade, à Paris, en Île-de-France et ailleurs sur demande.</p>
+    </div>
+  </div>
+
+  <!-- ============ LES TEMPS DE L'ANNÉE ============ -->
+  <div style="background: #EDE5D6; padding: 100px 64px;">
+    <div style="max-width: 1160px; margin: 0 auto; display: flex; flex-direction: column; gap: 46px;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;">
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <span style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8A6A28;">Les temps de l'année</span>
+          <h2 style="font-size: 46px; line-height: 1.12; color: #16202D;">Quel répertoire, pour quel office ?</h2>
+        </div>
+        <p style="max-width: 340px; font-size: 15px; line-height: 1.65; color: #4A5666;">Le programme se cale avec les responsables de l'office, dans le rite de votre communauté.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px;">
+        <sc-for list="{{ temps }}" as="t" hint-placeholder-count="3">
+          <div class="i card-pick" style="{{ t.cardStyle }}" onClick="{{ t.pick }}" role="button" tabIndex="0">
+            <h3 style="{{ t.titleStyle }}">{{ t.name }}</h3>
+            <p style="{{ t.bodyStyle }}">{{ t.body }}</p>
+            <div style="{{ t.footStyle }}">
+              <span style="{{ t.labelStyle }}">{{ t.label }}</span>
+              <sc-if value="{{ t.on }}" hint-placeholder-val="{{ false }}">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C3A05C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+              </sc-if>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ COMMENT CELA S'ORGANISE ============ -->
+  <div style="background: #F7F3EA; padding: 100px 64px;">
+    <div style="max-width: 1160px; margin: 0 auto; display: flex; flex-direction: column; gap: 50px;">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8A6A28;">Organisation</span>
+        <h2 style="font-size: 46px; line-height: 1.12; color: #16202D;">Comment organiser cela avec votre synagogue ?</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px;">
+        <div style="display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 2px solid #C3A05C;">
+          <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 34px; color: #C3A05C; line-height: 1;">01</div>
+          <h3 style="font-size: 22px; color: #16202D;">Le premier échange</h3>
+          <p style="font-size: 14px; line-height: 1.7; color: #4A5666;">Une consultation gratuite pour connaître l'office, le rite et vos attentes.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 2px solid rgba(195,160,92,0.4);">
+          <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 34px; color: #C3A05C; line-height: 1;">02</div>
+          <h3 style="font-size: 22px; color: #16202D;">Le programme</h3>
+          <p style="font-size: 14px; line-height: 1.7; color: #4A5666;">Les chants sont arrêtés avec les responsables de l'office, ashkénaze ou sépharade.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 2px solid rgba(195,160,92,0.4);">
+          <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 34px; color: #C3A05C; line-height: 1;">03</div>
+          <h3 style="font-size: 22px; color: #16202D;">Le jour de l'office</h3>
+          <p style="font-size: 14px; line-height: 1.7; color: #4A5666;">Une présence sobre, au service de la prière et de la communauté.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FAQ ============ -->
+  <div style="background: #EDE5D6; padding: 100px 64px;">
+    <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 42px;">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8A6A28;">Questions fréquentes</span>
+        <h2 style="font-size: 46px; line-height: 1.12; color: #16202D;">Offices — ce qu'il faut savoir</h2>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <sc-for list="{{ faq }}" as="item" hint-placeholder-count="3">
+          <div class="i faq" style="{{ item.rowStyle }}" onClick="{{ item.toggle }}" role="button" tabIndex="0">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 28px;">
+              <h3 class="q" style="font-size: 24px; line-height: 1.25; color: #16202D; transition: color 150ms ease;">{{ item.q }}</h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C3A05C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="{{ item.chevron }}"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+            <sc-if value="{{ item.open }}" hint-placeholder-val="{{ true }}">
+              <p style="font-size: 15px; line-height: 1.7; color: #4A5666; max-width: 780px; padding-top: 14px;">{{ item.a }}</p>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ CTA ============ -->
+  <div style="background: #0D1C2B; padding: 100px 64px;">
+    <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center;">
+      <span style="width: 46px; height: 1px; background: #C3A05C;"></span>
+      <h2 style="font-size: 50px; line-height: 1.12; color: #F7F3EA;">Pour votre prochain office</h2>
+      <p style="font-size: 17px; line-height: 1.65; color: rgba(247,243,234,0.72); max-width: 560px; font-weight: 300;">Un premier échange gratuit pour caler le programme avec votre synagogue.</p>
+      <div style="display: flex; align-items: center; gap: 16px; margin-top: 8px;">
+        <div class="i btn-gold" style="display: flex; align-items: center; gap: 10px; padding: 19px 32px; background: #C3A05C; color: #0D1C2B; font-size: 15px; font-weight: 600; letter-spacing: 0.04em;" role="button" tabIndex="0">
+          Consultation gratuite
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <div class="i btn-ghost" style="padding: 19px 30px; border: 1px solid rgba(247,243,234,0.35); color: #F7F3EA; font-size: 15px;" role="button" tabIndex="0">07 45 17 41 29</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MAILLAGE ============ -->
+  <div style="background: #F7F3EA; padding: 84px 64px 96px;">
+    <div style="max-width: 1160px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px;">
+      <span style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8A6A28;">Voir aussi</span>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px;">
+        <div class="i next" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 30px; background: #FFFFFF; border-left: 1px solid rgba(195,160,92,0.6);" role="button" tabIndex="0">
+          <h3 style="font-size: 24px; color: #16202D;">Houppa</h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C3A05C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <div class="i next" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 30px; background: #FFFFFF; border-left: 1px solid rgba(195,160,92,0.6);" role="button" tabIndex="0">
+          <h3 style="font-size: 24px; color: #16202D;">Bar-Mitsva</h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C3A05C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <div class="i next" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 30px; background: #FFFFFF; border-left: 1px solid rgba(195,160,92,0.6);" role="button" tabIndex="0">
+          <h3 style="font-size: 24px; color: #16202D;">Réserver</h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C3A05C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+
+<script data-dc-script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { openFaq: 0, temps: null };
+  }
+
+  renderVals() {
+    var self = this;
+    var s = this.state || {};
+    var openFaq = (s.openFaq === undefined) ? null : s.openFaq;
+    var tempsIdx = (s.temps === undefined) ? null : s.temps;
+    var serif = "font-family: 'Cormorant Garamond', Georgia, serif;";
+
+    var FAQ_DATA = [
+      {
+        q: 'Quel répertoire pour un office de Kippour ?',
+        a: "Les chants liturgiques propres au jour — Kol Nidré, Ne'ila — dans la tradition de votre communauté, ashkénaze ou sépharade."
+      },
+      {
+        q: 'Intervenez-vous pour les grandes fêtes ?',
+        a: 'Oui : Rosh Hashana et Kippour, ainsi que les offices de Shabbat.'
+      },
+      {
+        q: 'Comment organiser cela avec ma synagogue ?',
+        a: "Une consultation gratuite au 07 45 17 41 29 permet de caler le programme avec les responsables de l'office."
+      }
+    ];
+
+    var TEMPS_DATA = [
+      { name: 'Shabbat', body: "Les offices de Shabbat, tout au long de l'année, dans le rite de votre synagogue.", dark: false },
+      { name: 'Rosh Hashana', body: "L'entrée dans la nouvelle année, portée par les chants qui lui sont propres.", dark: false },
+      { name: 'Kippour', body: "Le jour le plus solennel de l'année : Kol Nidré, Ne'ila et le répertoire du jour.", dark: true }
+    ];
+
+    var faq = FAQ_DATA.map(function (item, i) {
+      var open = (openFaq === i);
+      var last = (i === FAQ_DATA.length - 1);
+      return {
+        q: item.q,
+        a: item.a,
+        open: open,
+        rowStyle: 'display: flex; flex-direction: column; padding: 28px 0; border-top: 1px solid rgba(22,32,45,0.16);'
+          + (last ? ' border-bottom: 1px solid rgba(22,32,45,0.16);' : ''),
+        chevron: 'flex: 0 0 auto; transition: transform 200ms ease;' + (open ? ' transform: rotate(180deg);' : ''),
+        toggle: function () { self.setState({ openFaq: open ? null : i }); }
+      };
+    });
+
+    var temps = TEMPS_DATA.map(function (t, i) {
+      var on = (tempsIdx === i);
+      return {
+        name: t.name,
+        body: t.body,
+        on: on,
+        cardStyle: 'display: flex; flex-direction: column; gap: 16px; padding: 36px 32px; height: 100%; box-sizing: border-box; background: '
+          + (t.dark ? '#0D1C2B' : '#FFFFFF')
+          + '; border-top: 3px solid '
+          + (on ? '#C3A05C' : (t.dark ? '#C3A05C' : 'rgba(195,160,92,0.5)'))
+          + (on ? '; box-shadow: 0 0 0 1px #C3A05C;' : ';'),
+        titleStyle: serif + ' margin: 0; font-weight: 400; font-size: 30px; line-height: 1.2; color: ' + (t.dark ? '#F7F3EA' : '#16202D') + ';',
+        bodyStyle: 'margin: 0; font-size: 15px; line-height: 1.7; color: ' + (t.dark ? 'rgba(247,243,234,0.72)' : '#4A5666') + ';',
+        footStyle: 'margin-top: auto; padding-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid ' + (t.dark ? 'rgba(247,243,234,0.16)' : 'rgba(22,32,45,0.1)') + ';',
+        labelStyle: 'font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: ' + (on ? '#C3A05C' : (t.dark ? '#DFC48D' : '#8A6A28')) + ';',
+        label: on ? 'Sélectionné' : 'En savoir plus',
+        pick: function () { self.setState({ temps: (tempsIdx === i) ? null : i }); }
+      };
+    });
+
+    return { faq: faq, temps: temps };
+  }
+}
+</script>
+</body>
+</html>

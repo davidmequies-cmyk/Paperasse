@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Karla:wght@300;400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #F7F3EA; font-family: 'Karla', 'Helvetica Neue', Helvetica, sans-serif; color: #16202D; -webkit-font-smoothing: antialiased; }
+    a { color: #8A6A28; text-decoration: none; }
+    a:hover { color: #C3A05C; }
+    p { margin: 0; }
+    h1, h2, h3 { margin: 0; font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; font-weight: 400; }
+    .i { cursor: pointer; transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease; -webkit-user-select: none; user-select: none; }
+    .i:focus-visible { outline: 2px solid #C3A05C; outline-offset: 3px; }
+    .btn-gold:hover { background: #DFC48D !important; }
+    .btn-gold:active { transform: translateY(1px); }
+    .btn-ghost:hover { border-color: rgba(195,160,92,0.9) !important; color: #DFC48D !important; }
+    .link-gold:hover { color: #DFC48D !important; }
+    .next:hover { transform: translateX(4px); box-shadow: 0 10px 26px rgba(13,28,43,0.1); }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #F7F3EA;">
+
+  <!-- ============ HERO ============ -->
+  <div style="position: relative; height: 520px; background: #0D1C2B; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(110% 100% at 76% 28%, #1E3A54 0%, #0D1C2B 60%);"></div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,19,32,0.93) 0%, rgba(7,19,32,0.55) 58%, rgba(7,19,32,0.28) 100%);"></div>
+    <div style="position: absolute; right: 48px; bottom: 40px; padding: 10px 14px; border: 1px solid rgba(195,160,92,0.45); color: #DFC48D; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;">[ Portrait — piano ]</div>
+
+    <div style="position: relative; display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 30px 64px; border-bottom: 1px solid rgba(247,243,234,0.12);">
+      <div style="display: flex; flex-direction: column; gap: 3px;">
+        <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 25px; letter-spacing: 0.12em; color: #F7F3EA;">DAVID MÉQUIÈS</div>
+        <div style="font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; color: #C3A05C;">Neshama · Paris</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 30px; font-size: 14px; letter-spacing: 0.03em; color: rgba(247,243,234,0.86);">
+        <span class="i link-gold">Accueil</span>
+        <span style="color: #F7F3EA; border-bottom: 1px solid #C3A05C; padding-bottom: 3px;">À propos</span>
+        <span class="i link-gold">Houppa</span><span class="i link-gold">Bar-Mitsva</span><span class="i link-gold">Offices</span><span class="i link-gold">Galerie</span><span class="i link-gold">Réserver</span><span class="i link-gold">Contact</span>
+      </div>
+      <div class="i btn-ghost" style="display: flex; align-items: center; gap: 9px; padding: 13px 20px; border: 1px solid rgba(195,160,92,0.6); color: #F7F3EA; font-size: 14px; white-space: nowrap;" role="button" tabIndex="0">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C3A05C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        07 45 17 41 29
+      </div>
+    </div>
+
+    <div style="position: relative; display: flex; flex-direction: column; gap: 22px; padding: 76px 64px 0; max-width: 820px;">
+      <div style="display: flex; align-items: center; gap: 12px; font-size: 12px; letter-spacing: 0.1em; color: rgba(247,243,234,0.5);">
+        <span class="i link-gold">Accueil</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(247,243,234,0.4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+        <span style="color: #C3A05C;">À propos</span>
+      </div>
+      <h1 style="font-size: 70px; line-height: 1.05; color: #F7F3EA;">L'Art d'une Voix</h1>
+      <p style="font-size: 19px; line-height: 1.55; color: rgba(247,243,234,0.75); max-width: 540px; font-weight: 300;">Chanteur de synagogue et pianiste à Paris, depuis 1987.</p>
+    </div>
+  </div>
+
+  <!-- ============ RÉPONSE DIRECTE (GEO) ============ -->
+  <div style="background: #F7F3EA; padding: 88px 64px 76px;">
+    <div style="max-width: 980px; margin: 0 auto; display: flex; gap: 52px; align-items: flex-start;">
+      <span style="flex: 0 0 auto; width: 64px; height: 1px; background: #C3A05C; margin-top: 20px;"></span>
+      <p style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; line-height: 1.5; color: #16202D; font-weight: 300; text-wrap: pretty;">David Méquiès est chanteur de synagogue et pianiste à Paris <em style="font-style: italic; color: #8A6A28;">depuis 1987</em>. Sous la marque NESHAMA, il accompagne cérémonies et offices juifs — houppa, bar-mitsva, bat-mitsva, Shabbat, Rosh Hashana, Kippour — dans les traditions ashkénaze et sépharade.</p>
+    </div>
+  </div>
+
+  <!-- ============ PARCOURS ============ -->
+  <div style="background: #EDE5D6; padding: 100px 64px;">
+    <div style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 72px; align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 22px;">
+        <span style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8A6A28;">Le parcours</span>
+        <h2 style="font-size: 46px; line-height: 1.12; color: #16202D;">Un parcours au service de la tradition</h2>
+        <div style="display: flex; flex-direction: column; gap: 16px; padding: 26px 28px; background: #FFFFFF; border: 1px dashed rgba(195,160,92,0.7);">
+          <p style="font-size: 15px; line-height: 1.7; color: #8A6A28; font-style: italic;">[ TEXTE EXISTANT de la page « L'Art d'une Voix » à reprendre ici — il est déjà rédigé et référencé sur le site actuel. Le brief impose de le conserver tel quel, simplement reformaté sous ces intertitres. ]</p>
+        </div>
+        <p style="font-size: 15px; line-height: 1.7; color: #4A5666;">Près de quarante ans de cérémonies, d'offices et de concerts, à Paris, en Île-de-France, partout en France et à l'international.</p>
+      </div>
+      <div style="height: 520px; background: #16293C; display: flex; align-items: flex-end; padding: 22px;">
+        <span style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(223,196,141,0.85);">[ Photo — David au piano ]</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ DEUX TRADITIONS ============ -->
+  <div style="background: #F7F3EA; padding: 100px 64px;">
+    <div style="max-width: 1160px; margin: 0 auto; display: flex; flex-direction: column; gap: 46px;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;">
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <span style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8A6A28;">Répertoire</span>
+          <h2 style="font-size: 46px; line-height: 1.12; color: #16202D;">Deux traditions, un même soin</h2>
+        </div>
+        <p style="max-width: 340px; font-size: 15px; line-height: 1.65; color: #4A5666;">Le rite de votre famille guide le choix des chants, de l'entrée jusqu'au dernier moment de la cérémonie.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px;">
+        <div style="display: flex; flex-direction: column; gap: 16px; padding: 40px 36px; background: #FFFFFF; border-top: 3px solid rgba(195,160,92,0.5);">
+          <h3 style="font-size: 30px; color: #16202D;">Ashkénaze</h3>
+          <p style="font-size: 15px; line-height: 1.7; color: #4A5666;">Mélodies liturgiques et chants de fête de la tradition ashkénaze, pour la houppa comme pour les offices.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 16px; padding: 40px 36px; background: #FFFFFF; border-top: 3px solid rgba(195,160,92,0.5);">
+          <h3 style="font-size: 30px; color: #16202D;">Sépharade</h3>
+          <p style="font-size: 15px; line-height: 1.7; color: #4A5666;">Le répertoire sépharade dans ses nuances, adapté à la communauté et à la famille qui reçoit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FORMULES ============ -->
+  <div style="background: #EDE5D6; padding: 92px 64px;">
+    <div style="max-width: 1160px; margin: 0 auto; display: flex; flex-direction: column; gap: 44px;">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8A6A28;">Formules</span>
+        <h2 style="font-size: 46px; line-height: 1.12; color: #16202D;">Des formules adaptées à chaque cérémonie</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px;">
+        <div style="display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid #C3A05C;">
+          <h3 style="font-size: 24px; color: #16202D;">Chanteur &amp; Pianiste</h3>
+          <p style="font-size: 14px; line-height: 1.7; color: #4A5666;">Le duo piano-voix, pour les cérémonies intimes et élégantes.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid rgba(195,160,92,0.4);">
+          <h3 style="font-size: 24px; color: #16202D;">+ Violoniste</h3>
+          <p style="font-size: 14px; line-height: 1.7; color: #4A5666;">Une couleur lyrique et émouvante portée par le violon.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid rgba(195,160,92,0.4);">
+          <h3 style="font-size: 24px; color: #16202D;">+ Violoniste &amp; Saxophone</h3>
+          <p style="font-size: 14px; line-height: 1.7; color: #4A5666;">Trois musiciens, pour les grandes cérémonies et les galas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ ENCADRÉ ENTITÉ ============ -->
+  <div style="background: #0D1C2B; padding: 76px 64px;">
+    <div style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 10px; border-top: 1px solid rgba(195,160,92,0.4); padding-top: 22px;">
+        <div style="font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #C3A05C;">Nom</div>
+        <div style="font-size: 15px; line-height: 1.6; color: rgba(247,243,234,0.8);">David Méquiès</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; border-top: 1px solid rgba(195,160,92,0.4); padding-top: 22px;">
+        <div style="font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #C3A05C;">Métier</div>
+        <div style="font-size: 15px; line-height: 1.6; color: rgba(247,243,234,0.8);">Chanteur de synagogue et pianiste, depuis 1987</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; border-top: 1px solid rgba(195,160,92,0.4); padding-top: 22px;">
+        <div style="font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #C3A05C;">Adresse</div>
+        <div style="font-size: 15px; line-height: 1.6; color: rgba(247,243,234,0.8);">61 rue de Lyon<br>75012 Paris</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; border-top: 1px solid rgba(195,160,92,0.4); padding-top: 22px;">
+        <div style="font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #C3A05C;">Neshama Music</div>
+        <div style="font-size: 15px; line-height: 1.6; color: rgba(247,243,234,0.8);">Licence spectacle<br>PLATESV-R-2021-012818</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ CTA + MAILLAGE ============ -->
+  <div style="background: #F7F3EA; padding: 92px 64px;">
+    <div style="max-width: 1160px; margin: 0 auto; display: flex; flex-direction: column; gap: 44px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 48px;">
+        <h2 style="font-size: 44px; line-height: 1.12; color: #16202D; max-width: 620px;">Parlons de votre cérémonie</h2>
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <div class="i btn-gold" style="display: flex; align-items: center; gap: 10px; padding: 19px 32px; background: #C3A05C; color: #0D1C2B; font-size: 15px; font-weight: 600; letter-spacing: 0.04em;" role="button" tabIndex="0">
+            Consultation gratuite
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+          <div class="i btn-ghost" style="padding: 19px 30px; border: 1px solid rgba(22,32,45,0.25); color: #16202D; font-size: 15px;" role="button" tabIndex="0">07 45 17 41 29</div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px;">
+        <div class="i next" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 30px; background: #FFFFFF; border-left: 1px solid rgba(195,160,92,0.6);" role="button" tabIndex="0">
+          <h3 style="font-size: 24px; color: #16202D;">Houppa</h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C3A05C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <div class="i next" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 30px; background: #FFFFFF; border-left: 1px solid rgba(195,160,92,0.6);" role="button" tabIndex="0">
+          <h3 style="font-size: 24px; color: #16202D;">Bar-Mitsva</h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C3A05C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <div class="i next" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 30px; background: #FFFFFF; border-left: 1px solid rgba(195,160,92,0.6);" role="button" tabIndex="0">
+          <h3 style="font-size: 24px; color: #16202D;">Offices de synagogue</h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C3A05C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
