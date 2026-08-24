@@ -1,24 +1,38 @@
 {
   "artboards": [
-    { "file": "Main.dc.html", "title": "Accueil — desktop", "x": 0, "y": 0, "w": 1440, "h": 4400 },
-    { "file": "Houppa.dc.html", "title": "Houppa — page prestation", "x": 1600, "y": 0, "w": 1440, "h": 3560 },
-    { "file": "Reserver.dc.html", "title": "Réserver — Bookings", "x": 3200, "y": 0, "w": 1440, "h": 2520 },
+    { "file": "Main.dc.html", "title": "Accueil — desktop", "x": 0, "y": 0, "w": 1440, "h": 5550 },
+    { "file": "Houppa.dc.html", "title": "Houppa — page prestation", "x": 1600, "y": 0, "w": 1440, "h": 3700 },
+    { "file": "Reserver.dc.html", "title": "Réserver — Bookings", "x": 3200, "y": 0, "w": 1440, "h": 2750 },
     { "file": "Mobile.dc.html", "title": "Accueil — mobile 390", "x": 4800, "y": 0, "w": 390, "h": 2400 }
   ],
   "annotations": [
     {
-      "id": "note-geo",
+      "id": "note-clic",
       "x": 0,
-      "y": -300,
+      "y": -340,
+      "w": 460,
+      "text": "CE QUI EST CLIQUABLE\n— Accueil : les questions de la FAQ s'ouvrent et se ferment ; les filtres Houppa / Bar-Mitsva / Offices / Concerts changent la galerie.\n— Houppa : FAQ dépliable, et les trois formules se sélectionnent.\n— Réserver : calendrier complet — jour, horaire, formule, puis « Confirmer » affiche le récapitulatif ; « Modifier » revient en arrière.\n— Mobile : le bouton menu ouvre la navigation plein écran.\nLes autres boutons réagissent au survol et au clic, mais ne changent pas de page : chaque écran est une maquette indépendante."
+    },
+    {
+      "id": "note-geo",
+      "x": 1600,
+      "y": -340,
       "w": 420,
       "text": "GEO — le paragraphe en serif sous chaque hero est la « réponse directe » : nom, prestation, zone, depuis 1987, formules.\nC'est ce que ChatGPT / Perplexity / AI Overviews citent. Les FAQ sont en texte HTML visible, pas seulement dans le schéma."
     },
     {
       "id": "note-placeholders",
       "x": 3200,
-      "y": -300,
-      "w": 420,
-      "text": "Placeholders assumés (rien d'inventé) :\n— témoignages en cadre pointillé, à remplir avec de vrais avis\n— zones [Photo] / [Vidéo] : médias réels de la galerie\n— créneaux du calendrier : widget Wix Bookings réel\nTout le reste (tél, adresse, formules, licence) vient du site live."
+      "y": -340,
+      "w": 440,
+      "text": "Placeholders assumés (rien d'inventé) :\n— témoignages en cadre pointillé, à remplir avec de vrais avis\n— zones [Photo] / [Vidéo] : médias réels de la galerie\n— dates et horaires du calendrier : exemples, le widget Wix Bookings affichera les vraies disponibilités\nTout le reste (tél, adresse, formules, licence, descriptions des forfaits) vient du site live."
+    },
+    {
+      "id": "note-mobile",
+      "x": 4800,
+      "y": -340,
+      "w": 380,
+      "text": "La barre d'appel dorée est « sticky » : sur un vrai téléphone elle reste collée en bas de l'écran pendant tout le défilement. Ici, la maquette étant dépliée en entier, elle se dessine tout en bas."
     }
   ],
   "launch": { "view": "canvas" }

@@ -14,6 +14,15 @@
     a:hover { color: #C3A05C; }
     p { margin: 0; }
     h1, h2, h3 { margin: 0; font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; font-weight: 400; }
+    .i { cursor: pointer; transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease; -webkit-user-select: none; user-select: none; }
+    .i:focus-visible { outline: 2px solid #C3A05C; outline-offset: 3px; }
+    .btn-gold:hover { background: #DFC48D !important; }
+    .btn-gold:active { transform: translateY(1px); }
+    .btn-ghost:hover { border-color: rgba(195,160,92,0.9) !important; color: #DFC48D !important; }
+    .link-gold:hover { color: #DFC48D !important; }
+    .card-pick:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(13,28,43,0.14); }
+    .faq:hover .q { color: #8A6A28; }
+    .next:hover { transform: translateX(4px); box-shadow: 0 10px 26px rgba(13,28,43,0.1); }
   </style>
 </helmet>
 
@@ -31,11 +40,11 @@
         <div style="font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; color: #C3A05C;">Neshama · Paris</div>
       </div>
       <div style="display: flex; align-items: center; gap: 30px; font-size: 14px; letter-spacing: 0.03em; color: rgba(247,243,234,0.86);">
-        <span>Accueil</span><span>À propos</span>
+        <span class="i link-gold">Accueil</span><span class="i link-gold">À propos</span>
         <span style="color: #F7F3EA; border-bottom: 1px solid #C3A05C; padding-bottom: 3px;">Houppa</span>
-        <span>Bar-Mitsva</span><span>Offices</span><span>Galerie</span><span>Réserver</span><span>Contact</span>
+        <span class="i link-gold">Bar-Mitsva</span><span class="i link-gold">Offices</span><span class="i link-gold">Galerie</span><span class="i link-gold">Réserver</span><span class="i link-gold">Contact</span>
       </div>
-      <div style="display: flex; align-items: center; gap: 9px; padding: 13px 20px; border: 1px solid rgba(195,160,92,0.6); color: #F7F3EA; font-size: 14px; white-space: nowrap;">
+      <div class="i btn-ghost" style="display: flex; align-items: center; gap: 9px; padding: 13px 20px; border: 1px solid rgba(195,160,92,0.6); color: #F7F3EA; font-size: 14px; white-space: nowrap;" role="button" tabIndex="0">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C3A05C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
         07 45 17 41 29
       </div>
@@ -105,21 +114,18 @@
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px;">
-        <div style="display: flex; flex-direction: column; gap: 16px; padding: 36px 32px; background: #FFFFFF; border-top: 3px solid rgba(195,160,92,0.5);">
-          <h3 style="font-size: 27px; line-height: 1.2; color: #16202D;">Chanteur &amp; Pianiste</h3>
-          <p style="font-size: 15px; line-height: 1.7; color: #4A5666;">La formule essentielle, idéale pour les cérémonies intimes et élégantes.</p>
-          <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid rgba(22,32,45,0.1); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A6A28;">Sur devis</div>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 16px; padding: 36px 32px; background: #FFFFFF; border-top: 3px solid rgba(195,160,92,0.5);">
-          <h3 style="font-size: 27px; line-height: 1.2; color: #16202D;">+ Violoniste</h3>
-          <p style="font-size: 15px; line-height: 1.7; color: #4A5666;">Une atmosphère lyrique et émouvante, portée par le violon.</p>
-          <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid rgba(22,32,45,0.1); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A6A28;">Sur devis</div>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 16px; padding: 36px 32px; background: #0D1C2B; border-top: 3px solid #C3A05C;">
-          <h3 style="font-size: 27px; line-height: 1.2; color: #F7F3EA;">+ Violoniste &amp; Saxophone</h3>
-          <p style="font-size: 15px; line-height: 1.7; color: rgba(247,243,234,0.72);">Trois musiciens : l'expérience musicale la plus complète.</p>
-          <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid rgba(247,243,234,0.16); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #DFC48D;">Sur devis</div>
-        </div>
+        <sc-for list="{{ formules }}" as="f" hint-placeholder-count="3">
+          <div class="i card-pick" style="{{ f.cardStyle }}" onClick="{{ f.pick }}" role="button" tabIndex="0">
+            <h3 style="{{ f.titleStyle }}">{{ f.name }}</h3>
+            <p style="{{ f.bodyStyle }}">{{ f.body }}</p>
+            <div style="{{ f.footStyle }}">
+              <span style="{{ f.labelStyle }}">{{ f.label }}</span>
+              <sc-if value="{{ f.on }}" hint-placeholder-val="{{ false }}">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C3A05C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+              </sc-if>
+            </div>
+          </div>
+        </sc-for>
       </div>
     </div>
   </div>
@@ -132,18 +138,17 @@
         <h2 style="font-size: 46px; line-height: 1.12; color: #16202D;">Houppa — ce qu'il faut savoir</h2>
       </div>
       <div style="display: flex; flex-direction: column;">
-        <div style="display: flex; flex-direction: column; gap: 12px; padding: 28px 0; border-top: 1px solid rgba(22,32,45,0.16);">
-          <h3 style="font-size: 24px; color: #16202D;">Combien coûte un chanteur pour une houppa ?</h3>
-          <p style="font-size: 15px; line-height: 1.7; color: #4A5666; max-width: 780px;">Le tarif dépend de la formule, de la durée et du lieu. Devis personnalisé, précédé d'une consultation gratuite au 07 45 17 41 29.</p>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 12px; padding: 28px 0; border-top: 1px solid rgba(22,32,45,0.16);">
-          <h3 style="font-size: 24px; color: #16202D;">Le répertoire peut-il être ashkénaze ou sépharade ?</h3>
-          <p style="font-size: 15px; line-height: 1.7; color: #4A5666; max-width: 780px;">Oui — les deux traditions sont maîtrisées, et les chants s'adaptent à votre famille.</p>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 12px; padding: 28px 0; border-top: 1px solid rgba(22,32,45,0.16); border-bottom: 1px solid rgba(22,32,45,0.16);">
-          <h3 style="font-size: 24px; color: #16202D;">Intervenez-vous hors de Paris ?</h3>
-          <p style="font-size: 15px; line-height: 1.7; color: #4A5666; max-width: 780px;">Oui : Paris, Île-de-France, toute la France et à l'international.</p>
-        </div>
+        <sc-for list="{{ faq }}" as="item" hint-placeholder-count="3">
+          <div class="i faq" style="{{ item.rowStyle }}" onClick="{{ item.toggle }}" role="button" tabIndex="0">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 28px;">
+              <h3 class="q" style="font-size: 24px; line-height: 1.25; color: #16202D; transition: color 150ms ease;">{{ item.q }}</h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C3A05C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="{{ item.chevron }}"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+            <sc-if value="{{ item.open }}" hint-placeholder-val="{{ true }}">
+              <p style="font-size: 15px; line-height: 1.7; color: #4A5666; max-width: 780px; padding-top: 14px;">{{ item.a }}</p>
+            </sc-if>
+          </div>
+        </sc-for>
       </div>
     </div>
   </div>
@@ -160,11 +165,11 @@
         <h2 style="font-size: 46px; line-height: 1.12; color: #F7F3EA;">Votre houppa, en musique</h2>
         <p style="font-size: 17px; line-height: 1.65; color: rgba(247,243,234,0.72); font-weight: 300;">Réservez un premier échange gratuit pour caler le programme et vérifier la date.</p>
         <div style="display: flex; align-items: center; gap: 16px;">
-          <div style="display: flex; align-items: center; gap: 10px; padding: 19px 32px; background: #C3A05C; color: #0D1C2B; font-size: 15px; font-weight: 600; letter-spacing: 0.04em;">
+          <div class="i btn-gold" style="display: flex; align-items: center; gap: 10px; padding: 19px 32px; background: #C3A05C; color: #0D1C2B; font-size: 15px; font-weight: 600; letter-spacing: 0.04em;" role="button" tabIndex="0">
             Consultation gratuite
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0D1C2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </div>
-          <div style="padding: 19px 30px; border: 1px solid rgba(247,243,234,0.35); color: #F7F3EA; font-size: 15px;">07 45 17 41 29</div>
+          <div class="i btn-ghost" style="padding: 19px 30px; border: 1px solid rgba(247,243,234,0.35); color: #F7F3EA; font-size: 15px;" role="button" tabIndex="0">07 45 17 41 29</div>
         </div>
       </div>
     </div>
@@ -175,15 +180,15 @@
     <div style="max-width: 1160px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px;">
       <span style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8A6A28;">Voir aussi</span>
       <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 30px; background: #FFFFFF; border-left: 1px solid rgba(195,160,92,0.6);">
+        <div class="i next" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 30px; background: #FFFFFF; border-left: 1px solid rgba(195,160,92,0.6);" role="button" tabIndex="0">
           <h3 style="font-size: 24px; color: #16202D;">Bar-Mitsva &amp; Bat-Mitsva</h3>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C3A05C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </div>
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 30px; background: #FFFFFF; border-left: 1px solid rgba(195,160,92,0.6);">
+        <div class="i next" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 30px; background: #FFFFFF; border-left: 1px solid rgba(195,160,92,0.6);" role="button" tabIndex="0">
           <h3 style="font-size: 24px; color: #16202D;">Offices de synagogue</h3>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C3A05C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </div>
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 30px; background: #FFFFFF; border-left: 1px solid rgba(195,160,92,0.6);">
+        <div class="i next" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 30px; background: #FFFFFF; border-left: 1px solid rgba(195,160,92,0.6);" role="button" tabIndex="0">
           <h3 style="font-size: 24px; color: #16202D;">Galerie</h3>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C3A05C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </div>
@@ -193,5 +198,79 @@
 
 </div>
 </x-dc>
+
+<script data-dc-script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { openFaq: 0, formule: null };
+  }
+
+  renderVals() {
+    var self = this;
+    var s = this.state || {};
+    var openFaq = (s.openFaq === undefined) ? null : s.openFaq;
+    var formuleIdx = (s.formule === undefined) ? null : s.formule;
+    var serif = "font-family: 'Cormorant Garamond', Georgia, serif;";
+
+    var FAQ_DATA = [
+      {
+        q: 'Combien coûte un chanteur pour une houppa ?',
+        a: "Le tarif dépend de la formule, de la durée et du lieu. Devis personnalisé, précédé d'une consultation gratuite au 07 45 17 41 29."
+      },
+      {
+        q: 'Le répertoire peut-il être ashkénaze ou sépharade ?',
+        a: "Oui — les deux traditions sont maîtrisées, et les chants s'adaptent à votre famille."
+      },
+      {
+        q: 'Intervenez-vous hors de Paris ?',
+        a: "Oui : Paris, Île-de-France, toute la France et à l'international."
+      }
+    ];
+
+    var FORMULE_DATA = [
+      { name: 'Chanteur & Pianiste', body: 'La formule essentielle, idéale pour les cérémonies intimes et élégantes.', dark: false },
+      { name: '+ Violoniste', body: 'Une atmosphère lyrique et émouvante, portée par le violon.', dark: false },
+      { name: '+ Violoniste & Saxophone', body: "Trois musiciens : l'expérience musicale la plus complète.", dark: true }
+    ];
+
+    var faq = FAQ_DATA.map(function (item, i) {
+      var open = (openFaq === i);
+      var last = (i === FAQ_DATA.length - 1);
+      return {
+        q: item.q,
+        a: item.a,
+        open: open,
+        rowStyle: 'display: flex; flex-direction: column; padding: 28px 0; border-top: 1px solid rgba(22,32,45,0.16);'
+          + (last ? ' border-bottom: 1px solid rgba(22,32,45,0.16);' : ''),
+        chevron: 'flex: 0 0 auto; transition: transform 200ms ease;' + (open ? ' transform: rotate(180deg);' : ''),
+        toggle: function () { self.setState({ openFaq: open ? null : i }); }
+      };
+    });
+
+    var formules = FORMULE_DATA.map(function (f, i) {
+      var on = (formuleIdx === i);
+      return {
+        name: f.name,
+        body: f.body,
+        on: on,
+        cardStyle: 'display: flex; flex-direction: column; gap: 16px; padding: 36px 32px; height: 100%; box-sizing: border-box; background: '
+          + (f.dark ? '#0D1C2B' : '#FFFFFF')
+          + '; border-top: 3px solid '
+          + (on ? '#C3A05C' : (f.dark ? '#C3A05C' : 'rgba(195,160,92,0.5)'))
+          + (on ? '; box-shadow: 0 0 0 1px #C3A05C;' : ';'),
+        titleStyle: serif + ' margin: 0; font-weight: 400; font-size: 27px; line-height: 1.2; color: ' + (f.dark ? '#F7F3EA' : '#16202D') + ';',
+        bodyStyle: 'margin: 0; font-size: 15px; line-height: 1.7; color: ' + (f.dark ? 'rgba(247,243,234,0.72)' : '#4A5666') + ';',
+        footStyle: 'margin-top: auto; padding-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid ' + (f.dark ? 'rgba(247,243,234,0.16)' : 'rgba(22,32,45,0.1)') + ';',
+        labelStyle: 'font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: ' + (on ? '#C3A05C' : (f.dark ? '#DFC48D' : '#8A6A28')) + ';',
+        label: on ? 'Formule retenue' : 'Sur devis',
+        pick: function () { self.setState({ formule: (formuleIdx === i) ? null : i }); }
+      };
+    });
+
+    return { faq: faq, formules: formules };
+  }
+}
+</script>
 </body>
 </html>
