@@ -39,18 +39,31 @@
   - *Avec numéro* : « Licence d'entrepreneur de spectacles vivants n° [N° À
     RENSEIGNER] ».
 
-**4. Page Intermittents — formulations de paie à retirer** · [DÉCISION]
-Retirer : « bulletins de salaire », « fiche de paie », « versement des
-rémunérations et des cotisations », « il ne peut pas vous employer lui-même »
-(y compris dans la FAQ de la page).
-Angle de remplacement proposé (à caler sur les paragraphes réels — je peux lire
-la page live pour l'ajuster au mot près) :
-> « Pour vos spectacles et productions, MDM **emploie** l'équipe artistique et
-> technique : contrats, déclarations et obligations d'employeur sont pris en
-> charge dans le cadre de la production que nous assurons. »
+**4. Page Intermittents — paie** · [DÉCISION]
+⚠️ Précision de David (30/10) : **la paie des intermittents est l'activité
+principale**. Retirer tout vocabulaire de paie viderait le site de son cœur de
+métier. Le risque n'est pas le mot « paie » : c'est de laisser croire que
+MDMProd **devient l'employeur à la place du client** et lui met du personnel à
+disposition (prêt de main-d'œuvre).
 
-Éviter toute formule laissant croire que MDM gère la paie **du personnel d'un
-tiers** (c'est le risque signalé).
+À retirer dans tous les cas (page + FAQ) :
+- « il ne peut pas vous employer lui-même » (suggère que MDMProd emploie à sa place)
+- toute formule laissant croire que MDMProd est l'employeur des intermittents du client
+
+À faire valider par l'avocat :
+- « versement des rémunérations et des cotisations » (manipulation des fonds pour le compte du client ?)
+
+**Variante 1 — la paie reste sur mdmprod.fr** (prestation de gestion de paie) :
+> « Vous restez l'employeur de vos artistes et techniciens. MDMProd gère pour
+> vous leur paie : contrats CDDU, bulletins de paie, déclarations aux organismes
+> du spectacle (Audiens, Congés Spectacles, France Travail). »
+
+**Variante 2 — la paie passe sur une marque dédiée** (PaieIntermittents.com /
+SpectaGestion ?) : retirer les formules de paie de mdmprod.fr et ajouter un
+renvoi : « Pour la gestion de la paie de vos intermittents, rendez-vous sur
+[site dédié]. »
+
+Choix 1/2 + relecture avocat avant mise en ligne.
 
 **5. Blog — extrait** · [PRÊT]
 - Retirer la formule « zéro démarche » de l'extrait de l'article.
