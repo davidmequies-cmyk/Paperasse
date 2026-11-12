@@ -34,11 +34,11 @@
     },
     {
       "file": "Apropos.dc.html",
-      "title": "À propos — L'Art d'une Voix",
+      "title": "À propos — refaite",
       "x": 0,
       "y": 5750,
       "w": 1440,
-      "h": 3350
+      "h": 5600
     },
     {
       "file": "BarMitsva.dc.html",
@@ -107,7 +107,7 @@
       "x": 0,
       "y": 5590,
       "w": 520,
-      "text": "LES CINQ AUTRES PAGES\nMêmes règles que la première rangée : URL et balises SEO conservées, réponse directe en tête, FAQ en HTML visible, aucune occurrence de hazan / chantre / cantor.\nÀ propos : le texte existant de « L'Art d'une Voix » doit être repris tel quel — sa place est marquée en pointillés.\nGalerie : les libellés sont les vrais titres SEO des médias déjà en ligne (31 médias optimisés sur 89), à reporter à l'identique.\nContact : c'est la page qui porte la conversion Google Ads. Le bandeau de consentement n'est pas dessiné ici parce qu'il est réglé au niveau du site, pas de la page — mais il doit être visible et fonctionnel avant toute mise en ligne.\n✅ CONFIRMÉ PAR DAVID (12/11) : cérémonies en synagogue le LUNDI et le JEUDI uniquement — ni Shabbat, ni Rosh Hashana, ni Kippour. Soirées du dimanche au jeudi, et samedi soir en hiver (galas, houppa, bar-mitsva). La page Offices a été refondue en conséquence ; son title en ligne mentionne encore Kippour et Shabbat — à changer (voir FAITS-CONFIRMES.md)."
+      "text": "LES CINQ AUTRES PAGES\nMêmes règles que la première rangée : URL et balises SEO conservées, réponse directe en tête, FAQ en HTML visible, aucune occurrence de hazan / chantre / cantor.\nÀ propos : REFAITE le 12/11. « L'Art d'une Voix » devient un sur-titre et le H1 porte enfin le mot-clé « chanteur de synagogue et pianiste à Paris ». Les intertitres sont posés en questions (Qui est… ? Quelles cérémonies… ? Où intervient-il… ?), comme les IA les posent. Deux sections ajoutées — les cérémonies accompagnées, la zone d'intervention — et une FAQ laissée dépliée, car un texte replié n'est pas toujours lu. Le texte existant de la page reste à reprendre tel quel : sa place est marquée en pointillés. Retirés faute de validation : « chef de chœur » et les frais de déplacement hors Île-de-France.\nGalerie : les libellés sont les vrais titres SEO des médias déjà en ligne (31 médias optimisés sur 89), à reporter à l'identique.\nContact : c'est la page qui porte la conversion Google Ads. Le bandeau de consentement n'est pas dessiné ici parce qu'il est réglé au niveau du site, pas de la page — mais il doit être visible et fonctionnel avant toute mise en ligne.\n✅ CONFIRMÉ PAR DAVID (12/11) : cérémonies en synagogue le LUNDI et le JEUDI uniquement — ni Shabbat, ni Rosh Hashana, ni Kippour. Soirées du dimanche au jeudi, et samedi soir en hiver (galas, houppa, bar-mitsva). La page Offices a été refondue en conséquence ; son title en ligne mentionne encore Kippour et Shabbat — à changer (voir FAITS-CONFIRMES.md)."
     }
   ],
   "launch": {
