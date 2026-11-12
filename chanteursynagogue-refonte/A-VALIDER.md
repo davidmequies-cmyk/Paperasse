@@ -124,3 +124,28 @@ n'est pas réglé sur **français / France / Europe-Paris / EUR**, les horaires 
 | 5 services Bookings, 89 médias, 25 embeds, robots.txt | ✅ sauvegardés — `donnees-live/` |
 | Maquettes des 9 pages | ✅ à jour — https://claude.ai/artifact/GRmfnGzYoJDfu2kCu8jPc7 |
 | Bookings installé + catégorie créée sur le site Studio | ✅ |
+
+---
+
+## 7. 🔴 Deux embeds désactivés à supprimer, et deux prestations à trancher
+
+Un balayage de tous les embeds des deux sites (→ `donnees-live/AUDIT-COHERENCE.md`) confirme que
+**rien de faux n'est publié aujourd'hui**. Mais deux embeds désactivés sont des mines :
+
+- **« Corrections textes et SEO »** (`c007a148-…`) : son nom donne envie de l'activer. Il remasquerait
+  le bandeau de consentement — plus largement qu'avant —, cacherait un H1 hors de l'écran (texte
+  dissimulé, sanctionné par Google) et réécrirait en JavaScript tous les titles et canonicals,
+  dont celui de `/offices-synagogue` corrigé ce matin.
+- **« Schema JSON-LD »** (`72d55dde-…`) : un sixième schéma qui créerait **deux personnes et deux
+  entreprises** pour un seul homme, en concurrence avec les cinq schémas en service.
+
+→ Je recommande de **les supprimer** plutôt que de les laisser désactivés. Je ne l'ai pas fait :
+effacer un travail existant ne m'appartient pas. Un mot et c'est fait en deux minutes.
+
+**Et deux questions qui valent peut-être de l'argent :**
+
+| Question | Pourquoi ça compte |
+|---|---|
+| Fais-tu les **Shabbat Hatan** ? | Annoncé dans ces embeds désactivés, nulle part ailleurs. Si tu les fais, le site ne les propose pas : demandes perdues. |
+| Fais-tu les **Brit Mila** ? | Idem. |
+| **« Chir Orchestra »** est-il encore un nom utilisé ? | S'il l'est, il devrait figurer dans le schéma actif comme nom alternatif. |
