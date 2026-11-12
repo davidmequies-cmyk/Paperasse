@@ -89,17 +89,20 @@ licence d'entrepreneur de spectacles PLATESV-R-2021-012818.
 
 ### H2 — Quelles cérémonies accompagne-t-il ?
 
-Quatre blocs :
+Cinq blocs :
 
 | Bloc | Texte |
 |---|---|
 | **La houppa** | La cérémonie de mariage juif, de l'entrée des mariés au dernier chant. |
 | **La bar-mitsva** | Bar-mitsva et bat-mitsva, à la synagogue comme à la réception qui suit. |
+| **La brit mila** | La circoncision rituelle, célébrée le huitième jour, accompagnée en chant. |
 | **En synagogue** | Les cérémonies religieuses en synagogue, le lundi et le jeudi — les jours de lecture de la Torah. |
 | **Concerts & galas** | Du dimanche au jeudi soir, et le samedi soir en hiver. |
 
 > ✅ Lundi/jeudi et samedi soir en hiver : **confirmés par David le 12/11.**
-> ⛔ Ne jamais écrire Shabbat, Rosh Hashana ni Kippour sur cette page.
+> ✅ La **brit mila** est confirmée par David le 12/11. Elle n'était annoncée nulle part sur le site :
+> c'était une prestation réelle que personne ne pouvait trouver.
+> ⛔ Ne jamais écrire Shabbat, Rosh Hashana, Kippour ni **Shabbat Hatan** sur cette page.
 
 ### H2 — Ashkénaze ou sépharade : quelle tradition ?
 

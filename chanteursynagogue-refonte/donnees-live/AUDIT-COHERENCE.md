@@ -1,5 +1,11 @@
 # Audit de cohérence du site en ligne — 12/11/2026
 
+> ✅ **SUITE DONNÉE LE MÊME JOUR.** Les deux embeds décrits ci-dessous ont été **supprimés
+> définitivement** sur demande de David ; leur contenu est archivé dans
+> `embeds-supprimes-12-11-2026.md`. Shabbat Hatan est confirmé faux ; la brit mila est confirmée
+> vraie et a été **ajoutée** aux schémas des deux sites (live rév. 13, Studio rév. 3).
+> Ce qui suit est conservé comme compte rendu de ce qui a été trouvé et pourquoi.
+
 > Balayage de **tous** les embeds du site live et du site Studio, confronté à `FAITS-CONFIRMES.md`.
 > Objectif : vérifier qu'après les corrections de la journée, plus rien de faux n'est publié —
 > et repérer ce qui pourrait le redevenir.

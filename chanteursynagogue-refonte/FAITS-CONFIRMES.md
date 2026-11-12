@@ -38,8 +38,14 @@
 - Corrigé dans les schémas `LocalBusiness` des deux sites le 12/11 (live rév. 12, Studio rév. 2).
   Remplaçait un faux « lun-ven 9h-20h + dimanche 10h-18h ».
 
+### Prestations
+- **Brit mila** : ✅ confirmée par David le 12/11. Ajoutée aux schémas des deux sites et à la page
+  À propos. Elle n'était annoncée nulle part auparavant.
+- ⛔ **Shabbat Hatan** : confirmé FAUX par David le 12/11. Ne jamais l'annoncer.
+
 ### Ne pas écrire / ne pas annoncer
 - ⛔ La préparation de l'enfant à la lecture de la Torah et des Haftarot. **Retiré des deux sites le 12/11/2026.**
+- ⛔ **Shabbat Hatan.** Confirmé faux le 12/11.
 - ⛔ Les mélodies sépharades « marocaines, tunisiennes, algériennes ». **Retiré des deux sites le 12/11/2026**
   sur demande de David. Formulation retenue à la place : « la liturgie ashkénaze comme le répertoire sépharade ».
 

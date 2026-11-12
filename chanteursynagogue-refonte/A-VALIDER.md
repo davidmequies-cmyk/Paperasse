@@ -127,25 +127,18 @@ n'est pas réglé sur **français / France / Europe-Paris / EUR**, les horaires 
 
 ---
 
-## 7. 🔴 Deux embeds désactivés à supprimer, et deux prestations à trancher
+## 7. ✅ Réglé le 12/11
 
-Un balayage de tous les embeds des deux sites (→ `donnees-live/AUDIT-COHERENCE.md`) confirme que
-**rien de faux n'est publié aujourd'hui**. Mais deux embeds désactivés sont des mines :
+Les deux embeds désactivés ont été **supprimés définitivement** sur demande de David :
+`c007a148-…` (« Corrections textes et SEO ») et `72d55dde-…` (« Schema JSON-LD »).
+Leur contenu intégral est archivé dans `donnees-live/embeds-supprimes-12-11-2026.md` — la
+suppression par API est irréversible, c'est la seule trace restante.
 
-- **« Corrections textes et SEO »** (`c007a148-…`) : son nom donne envie de l'activer. Il remasquerait
-  le bandeau de consentement — plus largement qu'avant —, cacherait un H1 hors de l'écran (texte
-  dissimulé, sanctionné par Google) et réécrirait en JavaScript tous les titles et canonicals,
-  dont celui de `/offices-synagogue` corrigé ce matin.
-- **« Schema JSON-LD »** (`72d55dde-…`) : un sixième schéma qui créerait **deux personnes et deux
-  entreprises** pour un seul homme, en concurrence avec les cinq schémas en service.
+Les deux prestations sont tranchées :
+- ⛔ **Shabbat Hatan** : faux. Supprimé avec les embeds, inscrit dans les formulations interdites.
+- ✅ **Brit mila** : vrai. **Ajoutée** aux schémas `LocalBusiness` et `Person` des deux sites
+  (live rév. 13, Studio rév. 3) et à la page À propos. Elle n'était annoncée nulle part :
+  c'était une prestation réelle qu'aucun visiteur ne pouvait trouver.
 
-→ Je recommande de **les supprimer** plutôt que de les laisser désactivés. Je ne l'ai pas fait :
-effacer un travail existant ne m'appartient pas. Un mot et c'est fait en deux minutes.
-
-**Et deux questions qui valent peut-être de l'argent :**
-
-| Question | Pourquoi ça compte |
-|---|---|
-| Fais-tu les **Shabbat Hatan** ? | Annoncé dans ces embeds désactivés, nulle part ailleurs. Si tu les fais, le site ne les propose pas : demandes perdues. |
-| Fais-tu les **Brit Mila** ? | Idem. |
-| **« Chir Orchestra »** est-il encore un nom utilisé ? | S'il l'est, il devrait figurer dans le schéma actif comme nom alternatif. |
+Reste ouvert : **« Chir Orchestra »** est-il encore un nom utilisé ? Il a disparu avec les embeds.
+S'il sert encore, il doit figurer en `alternateName` du schéma actif.
