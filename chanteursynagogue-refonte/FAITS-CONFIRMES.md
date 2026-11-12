@@ -27,8 +27,7 @@
 
 ### Délais de réservation
 - **6 à 12 mois à l'avance** pour une houppa ou une bar-mitsva : ✅ confirmé par David le 12/11.
-- Le délai de « 4 à 8 semaines » annoncé pour les cérémonies en synagogue n'a pas été abordé :
-  il reste à confirmer.
+- **4 à 8 semaines** pour une cérémonie en synagogue : ✅ confirmé par David le 12/11.
 
 ### Ne pas écrire / ne pas annoncer
 - ⛔ La préparation de l'enfant à la lecture de la Torah et des Haftarot. **Retiré des deux sites le 12/11/2026.**
@@ -38,7 +37,6 @@
 ## ❓ À préciser avec David
 > Regroupées, avec les décisions en attente, dans **`A-VALIDER.md`**.
 
-- Délai « 4 à 8 semaines » pour une cérémonie en synagogue : exact ? (le délai de 6 à 12 mois est confirmé)
 - Horaires d'ouverture annoncés dans le schéma (lun-ven 9h-20h, dim 10h-18h) : à remplacer par la vraie
   disponibilité ci-dessus, qui est bien plus précise et plus vendeuse.
 
