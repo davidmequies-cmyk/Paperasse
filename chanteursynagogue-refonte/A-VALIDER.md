@@ -79,7 +79,7 @@ Je ne peux pas le vérifier d'ici (accès réseau sortant bloqué, cf. point 2).
 
 ---
 
-## 5. ❓ Quatre affirmations de la FAQ, non vérifiées
+## 5. ❓ Trois affirmations de la FAQ, non vérifiées
 
 La FAQ du site a déjà livré une information fausse (la préparation à la Torah). Elle n'est donc plus
 une source fiable, et ces points sont repris sur le nouveau site **seulement si tu les confirmes** :
@@ -88,7 +88,7 @@ une source fiable, et ces points sont repris sur le nouveau site **seulement si 
 |---|---|---|
 | a | ~~David Méquiès est **chef de chœur**~~ | ✅ **VRAI — confirmé le 12/11** |
 | b | Réserver **6 à 12 mois** à l'avance (et **4 à 8 semaines** en dernière minute) | |
-| c | **Frais de déplacement** facturés hors Île-de-France | |
+| c | ~~**Frais de déplacement** facturés hors Île-de-France~~ | ✅ **VRAI — confirmé le 12/11** |
 | d | Horaires d'ouverture **lun-ven 9h-20h, dim 10h-18h** | |
 | e | « **plus de 35 ans** de carrière » vs « **depuis 1987** » (= 39 ans) — laquelle garder ? | |
 

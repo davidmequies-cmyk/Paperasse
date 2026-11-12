@@ -6,9 +6,9 @@
 >
 > ⛔ Interdits absolus : hazan / hazzan / chantre / cantor. Formulation unique : « chanteur de synagogue et pianiste ».
 > ✅ Chaque fait ci-dessous est soit confirmé par David, soit repris de son propre site. **Rien d'inventé.**
-> ❌ Une affirmation a été **retirée** faute de validation : les frais de déplacement hors
-> Île-de-France. Voir la fin du fichier. (« Chef de chœur » a été **confirmé par David le 12/11**
-> et figure dans la page.)
+> ✅ « Chef de chœur » et les frais de déplacement hors Île-de-France ont tous deux été
+> **confirmés par David le 12/11** et figurent dans la page. Plus aucune affirmation n'a été
+> retirée faute de validation.
 
 ---
 
@@ -133,7 +133,8 @@ Chaque formule fait l'objet d'un devis, selon la durée et le lieu.
 
 ```
 Paris et l'Île-de-France en premier lieu, puis toute la France et l'étranger.
-Le déplacement se discute lors du premier échange, selon le lieu et la date.
+Des frais de déplacement s'appliquent hors Île-de-France ; ils sont chiffrés lors
+du premier échange, selon le lieu et la date.
 ```
 Quatre repères : **Base** 61 rue de Lyon, 75012 Paris · **Priorité** Paris, Île-de-France ·
 **Également** toute la France · **Sur demande** international.
@@ -183,14 +184,16 @@ Facebook `100073403876456`. À ajouter s'ils existent : Google Business Profile,
 
 ## 8. Ce qui a été retiré, et pourquoi
 
-> ✅ « Chef de chœur » avait été retiré le 12/11 par prudence, puis **confirmé par David le même
-> jour** : il est rétabli dans la section « Qui est David Méquiès ? ». Il reste une compétence
-> mentionnée dans le corps du texte, et non le descripteur d'entité : celui-ci demeure
-> « chanteur de synagogue et pianiste », identique partout (H1, meta, encadré entité, schémas).
+> ✅ Deux affirmations avaient été retirées le 12/11 par prudence, puis **confirmées par David le
+> même jour** : « chef de chœur » et les frais de déplacement hors Île-de-France. Les deux sont
+> rétablies dans la page.
+>
+> « Chef de chœur » reste une compétence mentionnée dans le corps du texte, et non le descripteur
+> d'entité : celui-ci demeure « chanteur de synagogue et pianiste », identique partout (H1, meta,
+> encadré entité, schémas).
 
 | Retiré | Raison |
 |---|---|
-| « Des frais de déplacement s'appliquent hors Île-de-France » | Même raison. Remplacé par une formulation qui n'engage rien : « le déplacement se discute lors du premier échange ». |
 | « plus de 35 ans » | Contredit « depuis 1987 » (= 39 ans en 2026). La page est ancrée sur **1987**, une date vérifiable, et laisse le calcul se faire. |
 | Durée de la consultation gratuite | Trois valeurs circulent (15, 20 et 30 min selon la source). La page dit « premier échange gratuit » sans durée, jusqu'à arbitrage. |
 | Mélodies « marocaines, tunisiennes, algériennes » | Retiré sur demande de David le 12/11. |

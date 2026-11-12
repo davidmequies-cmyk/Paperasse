@@ -21,6 +21,10 @@
 - **Chef de chœur** : ✅ confirmé par David le 12/11. À mentionner dans le corps du texte, pas comme
   descripteur d'entité — celui-ci reste « chanteur de synagogue et pianiste », identique partout.
 
+### Zone d'intervention et déplacement
+- Paris et Île-de-France en premier lieu, puis toute la France et l'international.
+- **Des frais de déplacement s'appliquent hors Île-de-France** : ✅ confirmé par David le 12/11.
+
 ### Ne pas écrire / ne pas annoncer
 - ⛔ La préparation de l'enfant à la lecture de la Torah et des Haftarot. **Retiré des deux sites le 12/11/2026.**
 - ⛔ Les mélodies sépharades « marocaines, tunisiennes, algériennes ». **Retiré des deux sites le 12/11/2026**
@@ -30,7 +34,6 @@
 > Regroupées, avec les décisions en attente, dans **`A-VALIDER.md`**.
 
 - Délais de réservation « 6 à 12 mois » / « 4 à 8 semaines » : exact ?
-- Frais de déplacement hors Île-de-France : exact ?
 - Horaires d'ouverture annoncés dans le schéma (lun-ven 9h-20h, dim 10h-18h) : à remplacer par la vraie
   disponibilité ci-dessus, qui est bien plus précise et plus vendeuse.
 
