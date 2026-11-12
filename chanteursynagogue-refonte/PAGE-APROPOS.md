@@ -111,10 +111,9 @@ titulaire de la licence d'entrepreneur de spectacles PLATESV-R-2021-012818.
 ### H2 — Ashkénaze ou sépharade : quelle tradition ?
 
 ```
-Les deux. David Méquiès maîtrise la liturgie ashkénaze aussi bien que les
-mélodies sépharades — marocaines, tunisiennes, algériennes — et le répertoire
-israélien contemporain. Le programme se construit avec la famille, selon son
-rite et les chants qui comptent pour elle.
+Les deux. David Méquiès maîtrise la liturgie ashkénaze comme le répertoire
+sépharade. Le programme se construit avec la famille, selon son rite et les
+chants qui comptent pour elle.
 ```
 
 ### H2 — Avec quels musiciens ?
@@ -173,7 +172,7 @@ pour des faits, toutes tirées du site lui-même — **à valider une par une av
 | « préparation du jeune garçon à la lecture de la Torah et des Haftarot » | FAQ | ❌ **FAUX — confirmé par David** |
 | « cérémonies religieuses en synagogue **(lundi et jeudi)** » | schéma LocalBusiness + FAQ (2 fois) | ❓ à confirmer |
 | « chanteur de synagogue, pianiste et **chef de chœur** » | FAQ | ❓ à confirmer |
-| mélodies sépharades « marocaines, tunisiennes, algériennes » + musique israélienne contemporaine | FAQ | ❓ à confirmer |
+| mélodies sépharades « marocaines, tunisiennes, algériennes » | FAQ | ❌ **RETIRÉ sur demande de David (12/11)** |
 | « réserver 6 à 12 mois à l'avance » / « 4 à 8 semaines » pour la synagogue | FAQ | ❓ à confirmer |
 | « frais de déplacement hors Île-de-France » | FAQ | ❓ à confirmer |
 | horaires d'ouverture lun-ven 9h-20h, dim 10h-18h | schéma LocalBusiness | ❓ à confirmer |

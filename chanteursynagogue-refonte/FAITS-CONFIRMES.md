@@ -17,13 +17,14 @@
   *(En hiver, Shabbat se termine tôt, ce qui rend la soirée du samedi possible.)*
   → formulation à confirmer : voir « à préciser » ci-dessous.
 
-### Ne fait pas
+### Ne pas écrire / ne pas annoncer
 - ⛔ La préparation de l'enfant à la lecture de la Torah et des Haftarot. **Retiré des deux sites le 12/11/2026.**
+- ⛔ Les mélodies sépharades « marocaines, tunisiennes, algériennes ». **Retiré des deux sites le 12/11/2026**
+  sur demande de David. Formulation retenue à la place : « la liturgie ashkénaze comme le répertoire sépharade ».
 
 ## ❓ À préciser avec David
 - Le samedi soir en hiver : est-ce bien **« en hiver seulement »** (Shabbat finissant tôt), ou bien toute l'année ?
 - « Chef de chœur » : exact ? (affirmé dans la FAQ du site)
-- Mélodies sépharades « marocaines, tunisiennes, algériennes » + musique israélienne contemporaine : exact ?
 - Délais de réservation « 6 à 12 mois » / « 4 à 8 semaines » : exact ?
 - Frais de déplacement hors Île-de-France : exact ?
 - Horaires d'ouverture annoncés dans le schéma (lun-ven 9h-20h, dim 10h-18h) : à remplacer par la vraie
