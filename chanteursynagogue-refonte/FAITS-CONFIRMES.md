@@ -15,7 +15,7 @@
 - **Du dimanche au jeudi soir.**
 - **Samedi soir en hiver également**, pour les galas, houppa et bar-mitsva.
   *(En hiver, Shabbat se termine tôt, ce qui rend la soirée du samedi possible.)*
-  → formulation à confirmer : voir « à préciser » ci-dessous.
+  ✅ **Confirmé par David le 12/11 : « samedi soir uniquement en hiver ».** Pas toute l'année.
 
 ### Ne pas écrire / ne pas annoncer
 - ⛔ La préparation de l'enfant à la lecture de la Torah et des Haftarot. **Retiré des deux sites le 12/11/2026.**
@@ -23,7 +23,8 @@
   sur demande de David. Formulation retenue à la place : « la liturgie ashkénaze comme le répertoire sépharade ».
 
 ## ❓ À préciser avec David
-- Le samedi soir en hiver : est-ce bien **« en hiver seulement »** (Shabbat finissant tôt), ou bien toute l'année ?
+> Regroupées, avec les décisions en attente, dans **`A-VALIDER.md`**.
+
 - « Chef de chœur » : exact ? (affirmé dans la FAQ du site)
 - Délais de réservation « 6 à 12 mois » / « 4 à 8 semaines » : exact ?
 - Frais de déplacement hors Île-de-France : exact ?
@@ -39,7 +40,11 @@ Chanteur pour offices de synagogue à Paris — Kippour, Shabbat | David Méqui�
 Kippour et Shabbat sont **dans le title**, donc dans les résultats Google. C'est le même problème que les
 Haftarot, mais à l'échelle d'une page entière : elle attire des demandes qu'il faudra décliner.
 
-**Décision à prendre (elle a un coût SEO, voir plus bas) :**
+✅ **Title et meta corrigés le 12/11** (voir la section en bas de ce fichier) — en gardant le mot-clé
+porteur « offices de synagogue à Paris » intact, et non la formulation proposée ci-dessous, qui perdait
+le mot « offices ». ⏳ En attente d'un clic « Publier » dans l'éditeur.
+
+Le reste du positionnement de la page (H1, contenu, blocs) reste à construire :
 
 Nouveau positionnement proposé — la page parle des cérémonies du lundi et du jeudi :
 - **Title** : `Chanteur pour cérémonie en synagogue à Paris — lundi et jeudi | David Méquiès`
