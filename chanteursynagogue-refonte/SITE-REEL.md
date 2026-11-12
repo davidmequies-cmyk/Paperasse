@@ -48,18 +48,22 @@ Ce qui était donc **faux dans mes alertes**, puisque observé sur la mauvaise c
 
 1. ✅ **Le texte visible de la page `/faq`** : corrigé par David dans l'éditeur Studio le 12/11.
    Schéma et texte affiché disent désormais la même chose.
-2. **Google Search Console.** Correction : le statut `INVALID` lu plus tôt venait de la copie
-   `b4b041af`. Sur le vrai site, la liaison Wix ↔ Search Console n'a **jamais été faite**
-   (`NOT_CONNECTED` / `SITE_OWNER_NOT_VERIFIED`), bien que la balise google-site-verification soit
-   présente. Lien d'autorisation Google généré le 12/11 (valable 2 h) et transmis à David.
-   Une fois autorisé : vérification du site, ajout de la propriété, envoi du sitemap, puis
-   demande de réindexation de `/` et `/faq`, les deux pages corrigées.
+2. ✅ **Google Search Console — configurée le 12/11/2026.** (Le statut `INVALID` lu plus tôt venait de
+   la copie `b4b041af` ; sur le vrai site, la liaison n'avait jamais été faite.) David a autorisé son
+   compte Google ; les six étapes sont enregistrées côté Google (liste des événements, 17h15–17h17 UTC) :
 
-### Pages relevées
+   | Étape | État |
+   |---|---|
+   | Compte Google connecté | ✅ `ACCOUNT_CONNECTED` |
+   | Site vérifié (balise meta) | ✅ `SITE_VERIFIED` |
+   | Propriété ajoutée | ✅ `SITE_ADDED` |
+   | Plan du site envoyé | ✅ `SITEMAP_SUBMITTED` |
+   | Réindexation de l'accueil demandée | ✅ `PAGE_INDEXING_REQUESTED` |
+   | Réindexation du site entier demandée | ✅ `SITE_INDEXING_REQUESTED` |
 
-`/` · `/a-propos` · `/chanteur-houppa` · `/chanteur-bar-mitsva` · `/offices-synagogue` ·
-`/chanteur-synagogue-paris` · `/book-online` · `/galerie` · `/faq` · `/mentions-legales` ·
-`/politique-confidentialite` · `/accessibilite` · pages utilitaires (panier, remerciement — en `noindex`).
+   L'API n'accepte la demande page par page que pour l'accueil : `/faq` est couverte par la demande
+   sur le site entier. Une demande acceptée ne garantit pas un délai ; Google repasse en général en
+   quelques jours.
 
 ## Volontairement non fait
 
