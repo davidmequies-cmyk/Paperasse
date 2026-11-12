@@ -1,5 +1,11 @@
 # Audit de cohérence du site en ligne — 12/11/2026
 
+> ## ⚠️ 12/11/2026 — LIRE `SITE-REEL.md` D'ABORD
+> Le site appelé « live » dans ce fichier (`b4b041af-…`) est en réalité un **brouillon gratuit,
+> jamais publié**. Le vrai site est **`6011e245-…`** (Studio, publié depuis le 4/11). Les corrections
+> faites sur `b4b041af` n'ont eu aucun effet public. Les **faits** consignés ici restent valables.
+
+
 > ✅ **SUITE DONNÉE LE MÊME JOUR.** Les deux embeds décrits ci-dessous ont été **supprimés
 > définitivement** sur demande de David ; leur contenu est archivé dans
 > `embeds-supprimes-12-11-2026.md`. Shabbat Hatan est confirmé faux ; la brit mila est confirmée

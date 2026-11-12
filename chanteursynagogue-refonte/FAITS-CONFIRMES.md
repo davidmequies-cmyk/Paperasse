@@ -1,5 +1,11 @@
 # Faits confirmés par David — source de vérité
 
+> ## ⚠️ 12/11/2026 — LIRE `SITE-REEL.md` D'ABORD
+> Le site appelé « live » dans ce fichier (`b4b041af-…`) est en réalité un **brouillon gratuit,
+> jamais publié**. Le vrai site est **`6011e245-…`** (Studio, publié depuis le 4/11). Les corrections
+> faites sur `b4b041af` n'ont eu aucun effet public. Les **faits** consignés ici restent valables.
+
+
 > ⚠️ La FAQ du site en ligne a livré au moins une information **fausse** (la préparation de l'enfant à la
 > Torah et aux Haftarot). Elle n'est donc plus une source fiable. **Ce fichier prime sur tout le reste**,
 > y compris sur le brief et sur les schémas du site.

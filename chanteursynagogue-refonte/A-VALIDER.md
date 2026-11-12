@@ -1,5 +1,11 @@
 # À valider — refonte chanteursynagogue.art
 
+> ## ⚠️ 12/11/2026 — LIRE `SITE-REEL.md` D'ABORD
+> Le site appelé « live » dans ce fichier (`b4b041af-…`) est en réalité un **brouillon gratuit,
+> jamais publié**. Le vrai site est **`6011e245-…`** (Studio, publié depuis le 4/11). Les corrections
+> faites sur `b4b041af` n'ont eu aucun effet public. Les **faits** consignés ici restent valables.
+
+
 > Tout ce qui est bloqué sur une décision ou une information de David, au 12/11/2026.
 > Rangé par ce que ça coûte de ne pas y répondre. Les points 1 à 3 bloquent du travail déjà fait.
 
