@@ -46,9 +46,8 @@ Ce qui était donc **faux dans mes alertes**, puisque observé sur la mauvaise c
 
 ### Ce qui reste à faire, et que l'API ne permet pas
 
-1. **Le texte visible de la page `/faq`.** La correction porte sur le schéma (lu par Google et les IA).
-   La même phrase figure très probablement dans le **widget FAQ affiché**, qui ne se modifie
-   que dans l'éditeur Studio. À vérifier et corriger à la main.
+1. ✅ **Le texte visible de la page `/faq`** : corrigé par David dans l'éditeur Studio le 12/11.
+   Schéma et texte affiché disent désormais la même chose.
 2. **Google Search Console : connexion `INVALID`.** Le compte Google relié au site ne répond plus.
    À reconnecter depuis le tableau de bord Wix (Marketing & SEO → Google Search Console).
    Sans ça, impossible d'inspecter les URL ou de demander une réindexation.
