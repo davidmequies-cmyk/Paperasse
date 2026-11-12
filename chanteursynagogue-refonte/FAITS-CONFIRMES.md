@@ -17,6 +17,10 @@
   *(En hiver, Shabbat se termine tôt, ce qui rend la soirée du samedi possible.)*
   ✅ **Confirmé par David le 12/11 : « samedi soir uniquement en hiver ».** Pas toute l'année.
 
+### Compétences
+- **Chef de chœur** : ✅ confirmé par David le 12/11. À mentionner dans le corps du texte, pas comme
+  descripteur d'entité — celui-ci reste « chanteur de synagogue et pianiste », identique partout.
+
 ### Ne pas écrire / ne pas annoncer
 - ⛔ La préparation de l'enfant à la lecture de la Torah et des Haftarot. **Retiré des deux sites le 12/11/2026.**
 - ⛔ Les mélodies sépharades « marocaines, tunisiennes, algériennes ». **Retiré des deux sites le 12/11/2026**
@@ -25,7 +29,6 @@
 ## ❓ À préciser avec David
 > Regroupées, avec les décisions en attente, dans **`A-VALIDER.md`**.
 
-- « Chef de chœur » : exact ? (affirmé dans la FAQ du site)
 - Délais de réservation « 6 à 12 mois » / « 4 à 8 semaines » : exact ?
 - Frais de déplacement hors Île-de-France : exact ?
 - Horaires d'ouverture annoncés dans le schéma (lun-ven 9h-20h, dim 10h-18h) : à remplacer par la vraie
