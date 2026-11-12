@@ -38,6 +38,12 @@
 - Corrigé dans les schémas `LocalBusiness` des deux sites le 12/11 (live rév. 12, Studio rév. 2).
   Remplaçait un faux « lun-ven 9h-20h + dimanche 10h-18h ».
 
+### Noms utilisés
+- **Neshama Music** (NESHAMA) : marque titulaire de la licence PLATESV-R-2021-012818.
+- **Chir Orchestra** : ✅ toujours utilisé, confirmé par David le 12/11. Rétabli en `alternateName`
+  du nœud `LocalBusiness` des deux sites (live rév. 14, Studio rév. 4) — et non du nœud `Person`,
+  qui ferait de « David Méquiès » un synonyme d'orchestre.
+
 ### Prestations
 - **Brit mila** : ✅ confirmée par David le 12/11. Ajoutée aux schémas des deux sites et à la page
   À propos. Elle n'était annoncée nulle part auparavant.

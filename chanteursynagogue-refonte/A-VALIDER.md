@@ -140,5 +140,6 @@ Les deux prestations sont tranchées :
   (live rév. 13, Studio rév. 3) et à la page À propos. Elle n'était annoncée nulle part :
   c'était une prestation réelle qu'aucun visiteur ne pouvait trouver.
 
-Reste ouvert : **« Chir Orchestra »** est-il encore un nom utilisé ? Il a disparu avec les embeds.
-S'il sert encore, il doit figurer en `alternateName` du schéma actif.
+✅ **« Chir Orchestra »** : toujours utilisé, confirmé par David. Rétabli en nom alternatif de
+l'entreprise dans les schémas des deux sites (live rév. 14, Studio rév. 4) et mentionné sur la
+page À propos.

@@ -4,6 +4,8 @@
 > définitivement** sur demande de David ; leur contenu est archivé dans
 > `embeds-supprimes-12-11-2026.md`. Shabbat Hatan est confirmé faux ; la brit mila est confirmée
 > vraie et a été **ajoutée** aux schémas des deux sites (live rév. 13, Studio rév. 3).
+> « Chir Orchestra » est confirmé toujours utilisé et rétabli en `alternateName` (live rév. 14,
+> Studio rév. 4). Toutes les questions de l'audit sont closes.
 > Ce qui suit est conservé comme compte rendu de ce qui a été trouvé et pourquoi.
 
 > Balayage de **tous** les embeds du site live et du site Studio, confronté à `FAITS-CONFIRMES.md`.

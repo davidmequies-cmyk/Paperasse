@@ -84,7 +84,8 @@ Puis, en complément :
 Chanteur de synagogue et pianiste depuis 1987, soit près de quarante ans de
 cérémonies, de célébrations en synagogue et de concerts. Il est également chef
 de chœur. Il travaille sous la marque NESHAMA (Neshama Music), titulaire de la
-licence d'entrepreneur de spectacles PLATESV-R-2021-012818.
+licence d'entrepreneur de spectacles PLATESV-R-2021-012818. Il se produit aussi
+sous le nom Chir Orchestra.
 ```
 
 ### H2 — Quelles cérémonies accompagne-t-il ?
@@ -181,6 +182,7 @@ Depuis 1987 · Paris, Île-de-France, France et international
 61 rue de Lyon, 75012 Paris · 07 45 17 41 29
 Joignable du lundi au jeudi de 9h à 19h, le vendredi de 9h à 16h
 Neshama Music — licence d'entrepreneur de spectacles PLATESV-R-2021-012818
+Également : Chir Orchestra
 ```
 
 ---
