@@ -48,12 +48,24 @@ Ce qui était donc **faux dans mes alertes**, puisque observé sur la mauvaise c
 
 1. ✅ **Le texte visible de la page `/faq`** : corrigé par David dans l'éditeur Studio le 12/11.
    Schéma et texte affiché disent désormais la même chose.
-2. **Google Search Console : connexion `INVALID`.** Le compte Google relié au site ne répond plus.
-   À reconnecter depuis le tableau de bord Wix (Marketing & SEO → Google Search Console).
-   Sans ça, impossible d'inspecter les URL ou de demander une réindexation.
+2. **Google Search Console.** Correction : le statut `INVALID` lu plus tôt venait de la copie
+   `b4b041af`. Sur le vrai site, la liaison Wix ↔ Search Console n'a **jamais été faite**
+   (`NOT_CONNECTED` / `SITE_OWNER_NOT_VERIFIED`), bien que la balise google-site-verification soit
+   présente. Lien d'autorisation Google généré le 12/11 (valable 2 h) et transmis à David.
+   Une fois autorisé : vérification du site, ajout de la propriété, envoi du sitemap, puis
+   demande de réindexation de `/` et `/faq`, les deux pages corrigées.
 
 ### Pages relevées
 
 `/` · `/a-propos` · `/chanteur-houppa` · `/chanteur-bar-mitsva` · `/offices-synagogue` ·
 `/chanteur-synagogue-paris` · `/book-online` · `/galerie` · `/faq` · `/mentions-legales` ·
 `/politique-confidentialite` · `/accessibilite` · pages utilitaires (panier, remerciement — en `noindex`).
+
+## Volontairement non fait
+
+- **Ajouter « 4 à 8 semaines pour une cérémonie en synagogue » au schéma FAQ** du vrai site, alors que
+  le fait est confirmé. Google exige que les données FAQ correspondent au texte **visible** de la page :
+  un ajout dans le schéma seul créerait un écart sanctionnable. À faire d'abord dans le widget FAQ
+  visible (éditeur), puis je l'ajoute au schéma.
+- **Horaires de joignabilité** dans le schéma : le nœud du vrai site est de type `Organization`, qui
+  n'accepte pas `openingHoursSpecification`. Leur bonne place est la fiche Google Business Profile.
