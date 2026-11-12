@@ -166,11 +166,17 @@ Quatre repères : **Base** 61 rue de Lyon, 75012 Paris · **Priorité** Paris, �
 > Ce bloc sert directement la visibilité dans les IA : il regroupe, en texte lisible, les informations
 > qu'elles croisent entre le site, Google Business Profile et les annuaires. Il doit être **identique
 > partout**, au caractère près.
+>
+> ⚠️ Les horaires sont ceux où David est **joignable**, et non ceux où il se produit. Ne pas
+> confondre les deux : les cérémonies en synagogue sont le lundi et le jeudi, les soirées du
+> dimanche au jeudi et le samedi soir en hiver. Un visiteur qui lit « fermé le dimanche » ne doit
+> pas en conclure qu'il ne chante pas le dimanche soir.
 
 ```
 David Méquiès — Chanteur de synagogue et pianiste
 Depuis 1987 · Paris, Île-de-France, France et international
 61 rue de Lyon, 75012 Paris · 07 45 17 41 29
+Joignable du lundi au jeudi de 9h à 19h, le vendredi de 9h à 16h
 Neshama Music — licence d'entrepreneur de spectacles PLATESV-R-2021-012818
 ```
 

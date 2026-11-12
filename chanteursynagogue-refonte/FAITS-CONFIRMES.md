@@ -29,6 +29,15 @@
 - **6 à 12 mois à l'avance** pour une houppa ou une bar-mitsva : ✅ confirmé par David le 12/11.
 - **4 à 8 semaines** pour une cérémonie en synagogue : ✅ confirmé par David le 12/11.
 
+### Horaires de joignabilité
+- **Du lundi au jeudi, 9h – 19h. Le vendredi, 9h – 16h.** ✅ confirmé par David le 12/11.
+- **Fermé le vendredi après 16h** (avant Shabbat), **le samedi et le dimanche.**
+- ⚠️ Ne pas confondre avec la disponibilité pour se produire, plus large : cérémonies en
+  synagogue le lundi et le jeudi, soirées du dimanche au jeudi, samedi soir en hiver.
+  Le schéma `openingHoursSpecification` ne décrit que la joignabilité.
+- Corrigé dans les schémas `LocalBusiness` des deux sites le 12/11 (live rév. 12, Studio rév. 2).
+  Remplaçait un faux « lun-ven 9h-20h + dimanche 10h-18h ».
+
 ### Ne pas écrire / ne pas annoncer
 - ⛔ La préparation de l'enfant à la lecture de la Torah et des Haftarot. **Retiré des deux sites le 12/11/2026.**
 - ⛔ Les mélodies sépharades « marocaines, tunisiennes, algériennes ». **Retiré des deux sites le 12/11/2026**
@@ -37,8 +46,6 @@
 ## ❓ À préciser avec David
 > Regroupées, avec les décisions en attente, dans **`A-VALIDER.md`**.
 
-- Horaires d'ouverture annoncés dans le schéma (lun-ven 9h-20h, dim 10h-18h) : à remplacer par la vraie
-  disponibilité ci-dessus, qui est bien plus précise et plus vendeuse.
 
 ## 🔴 Conséquence majeure : la page `/offices-synagogue` est à refondre
 

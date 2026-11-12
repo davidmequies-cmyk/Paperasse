@@ -79,7 +79,7 @@ Je ne peux pas le vérifier d'ici (accès réseau sortant bloqué, cf. point 2).
 
 ---
 
-## 5. ❓ Une seule affirmation de la FAQ reste non vérifiée
+## 5. ✅ Les affirmations de la FAQ sont toutes arbitrées
 
 La FAQ du site a déjà livré une information fausse (la préparation à la Torah). Elle n'est donc plus
 une source fiable, et ces points sont repris sur le nouveau site **seulement si tu les confirmes** :
@@ -90,11 +90,12 @@ une source fiable, et ces points sont repris sur le nouveau site **seulement si 
 | b | ~~Réserver **6 à 12 mois** à l'avance~~ | ✅ **VRAI — confirmé le 12/11** |
 | b′ | ~~**4 à 8 semaines** pour une cérémonie en synagogue~~ | ✅ **VRAI — confirmé le 12/11** |
 | c | ~~**Frais de déplacement** facturés hors Île-de-France~~ | ✅ **VRAI — confirmé le 12/11** |
-| d | Horaires d'ouverture **lun-ven 9h-20h, dim 10h-18h** | |
+| d | ~~Horaires **lun-ven 9h-20h, dim 10h-18h**~~ | ❌ **FAUX** → corrigé : lun-jeu 9h-19h, ven 9h-16h |
 | e | « **plus de 35 ans** de carrière » vs « **depuis 1987** » (= 39 ans) — laquelle garder ? | |
 
-Pour (d) : la vraie disponibilité (dimanche→jeudi soir, samedi soir en hiver) est plus précise **et**
-plus vendeuse que des horaires de bureau. Je propose de remplacer.
+✅ **(d) est réglé le 12/11** : David a donné ses vrais horaires de joignabilité — lundi à jeudi
+9h-19h, vendredi 9h-16h. Les schémas `LocalBusiness` des deux sites sont corrigés
+(live rév. 12, Studio rév. 2). L'ancienne version annonçait un dimanche 10h-18h qui n'existe pas.
 
 Un sixième, mineur, relevé en lisant les metas : `/chanteur-bar-mitsva` annonce « **montée à la
 Torah** ». Ce n'est pas la préparation de l'enfant (retirée le 12/11) mais le moment de la cérémonie
