@@ -54,22 +54,28 @@ qui n'existe pas est une erreur SEO silencieuse. Même remarque pour le maillage
 
 ---
 
-## 4. 🔴 Le bandeau de consentement aux cookies — décision
+## 4. ✅ Le bandeau de consentement — masquage retiré le 12/11
 
-Un embed actif sur le site en ligne, nommé seulement « Personnalisé », **masque** le bandeau de
-consentement :
+L'embed qui masquait le bandeau a été **désactivé** sur le site en ligne, sur ton accord explicite.
 
-```html
-<style>#usercentrics-cmp-ui,#usercentrics-cmp,[id^="usercentrics"]{display:none!important;visibility:hidden!important;}</style>
-```
+- embed `3b2f4c35-9d0b-47c4-9a96-ff1409e76b75`, nommé seulement « Personnalisé », position HEAD,
+  toutes les pages → `enabled: false` (révision 1 → 2)
+- Son contenu était **uniquement** ce CSS, rien d'autre :
+  `#usercentrics-cmp-ui,#usercentrics-cmp,[id^="usercentrics"]{display:none!important}`
+- Le code est conservé, seulement désactivé : réversible en une minute si besoin.
+- Aucun autre embed actif ne masque le bandeau (vérifié sur les 25). Le second embed
+  « Personnalisé » (`7106fcaa-…`) masquait tout le site mais était déjà désactivé.
 
-Or la conversion Google Ads `AW-935076516/085sCN2o0PwCEKTF8L0D` tourne sur la page Contact. Masquer le
-bandeau de consentement pendant qu'un traceur publicitaire s'exécute expose à un **manquement
-RGPD/CNIL** : le consentement doit être recueilli *avant* le dépôt des traceurs publicitaires.
+⚠️ **Un contrôle visuel reste nécessaire.** Il n'y a aucun script Usercentrics parmi les embeds :
+le bandeau est donc celui **intégré à Wix** (sa bannière cookies est fournie par Usercentrics),
+ce qui explique qu'on l'ait masqué en CSS plutôt que désactivé. Le masquage est levé, mais le
+bandeau ne réapparaîtra que s'il est **toujours activé dans les réglages de confidentialité du
+site**. S'il y a aussi été coupé, rien ne s'affichera et le traceur Google Ads continuera de
+partir sans consentement — c'est-à-dire le problème d'origine, intact.
 
-→ **Je n'y touche pas sans ton accord** : retirer ce CSS fera réapparaître un bandeau sur le site pour
-tous les visiteurs, et c'est une décision qui vous appartient, à toi et à Michel. Dis-moi si je le
-retire, et je le fais par API en une minute.
+→ Ouvrir le site en navigation privée et regarder si un bandeau apparaît. Si non :
+Réglages Wix → Confidentialité / Bandeau de cookies → l'activer.
+Je ne peux pas le vérifier d'ici (accès réseau sortant bloqué, cf. point 2).
 
 ---
 

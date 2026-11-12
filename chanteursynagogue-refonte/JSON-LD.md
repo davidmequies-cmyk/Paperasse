@@ -63,7 +63,10 @@ nouvelle mise en page** — Studio fait tout cela nativement (grille responsive,
 
 ## 4. ⚠️ À NE SURTOUT PAS RÉINJECTER — point de conformité
 
-Un embed **actif**, nommé simplement « Personnalisé », masque la bannière de consentement aux cookies :
+✅ **RÉSOLU le 12/11/2026** — embed `3b2f4c35-…` désactivé (révision 2) sur accord de David.
+Le code est conservé. Contrôle visuel encore requis : voir `A-VALIDER.md` point 4.
+
+Un embed, alors **actif**, nommé simplement « Personnalisé », masquait la bannière de consentement aux cookies :
 
 ```html
 <style>#usercentrics-cmp-ui,#usercentrics-cmp,[id^="usercentrics"]{display:none!important;visibility:hidden!important;}</style>
