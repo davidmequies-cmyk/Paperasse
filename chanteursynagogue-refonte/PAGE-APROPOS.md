@@ -6,9 +6,25 @@
 
 ---
 
-## ⚠️ 1. Quatre corrections à faire, par ordre d'importance
+## ⚠️ 1. Cinq corrections à faire, par ordre d'importance
 
-### a) L'URL ne correspond pas au schéma — à trancher en premier
+### a) 🔴 Une prestation FAUSSE est publiée sur le site actuel — à retirer
+La FAQ du site en ligne affirme, dans la réponse « Quel est le déroulement d'une Bar-Mitsva ? » :
+> « préparation du jeune garçon à la lecture de la Torah et des Haftarot »
+
+**David ne fait pas cela.** C'est une prestation annoncée publiquement qu'il n'assure pas — risque
+d'attente déçue côté famille, et affirmation reprise telle quelle par les IA qui lisent le schéma.
+Présente à deux endroits : le schéma FAQPage du **site live**, et celui que j'ai réinjecté dans le
+**site Studio** (corrigé, voir plus bas).
+
+Formulation de remplacement, qui garde le vrai et retire le faux :
+```
+David Méquiès accompagne la Bar-Mitsva en deux temps : le chant liturgique lors de la
+cérémonie religieuse en synagogue, puis la musique pendant le cocktail et le repas.
+Le programme est personnalisé selon la synagogue et les traditions familiales.
+```
+
+### b) L'URL ne correspond pas au schéma
 Vous donnez la page comme étant `/a-propos` (avec tiret). Or le schéma **Person** publié sur le site déclare :
 ```
 "url":"https://www.chanteursynagogue.art/apropos"
@@ -17,17 +33,17 @@ sans tiret. Deux cas, deux conséquences :
 - **Si la vraie page est `/a-propos`** → le schéma pointe vers une URL erronée. Google suit ce lien et tombe à côté : l'entité « David Méquiès » n'est plus rattachée à sa page. **À corriger dans le schéma.**
 - **Si les deux URL existent** → contenu dupliqué. Garder une seule URL, rediriger l'autre en 301, et aligner le canonical.
 
-C'est le point le plus coûteux en SEO des quatre. À vérifier avant tout le reste.
+C'est le point le plus coûteux en SEO. À vérifier avant tout le reste.
 
-### b) Le H1 ne contient aucun mot-clé
+### c) Le H1 ne contient aucun mot-clé
 « L'Art d'une Voix » est une belle formule, mais elle ne dit à Google ni à ChatGPT de quoi parle la page.
 **Solution qui garde les deux** : « L'Art d'une Voix » passe en sur-titre, et le H1 porte le mot-clé.
 
-### c) « Plus de 35 ans » contredit « depuis 1987 »
+### d) « Plus de 35 ans » contredit « depuis 1987 »
 Les schémas disent « plus de 35 ans d'expérience », le site dit « depuis 1987 » — soit **39 ans en 2026**.
 Pour les IA, qui croisent les sources, une incohérence de ce type dilue l'entité. **Ancrer sur « depuis 1987 »**, qui est une date vérifiable, et laisser le calcul se faire tout seul.
 
-### d) La consultation gratuite existe en trois durées
+### e) La consultation gratuite existe en trois durées
 **15 min** (paramétrage Bookings), **20 min** (description du service), **30 min** (schéma Services). En choisir une et l'écrire partout pareil.
 
 ---
@@ -101,15 +117,6 @@ israélien contemporain. Le programme se construit avec la famille, selon son
 rite et les chants qui comptent pour elle.
 ```
 
-### H2 — Prépare-t-il l'enfant à sa bar-mitsva ?
-
-```
-Oui. Au-delà du chant le jour de la cérémonie, David Méquiès prépare le jeune
-à la lecture de la Torah et des Haftarot, puis l'accompagne à la synagogue et
-pendant la fête qui suit.
-```
-> 💡 **Ce service est aujourd'hui enterré dans la FAQ du site alors que c'est un vrai différenciateur** : très peu de prestataires préparent l'enfant. Le remonter sur la page À propos — et sur la page Bar-Mitsva — est l'optimisation la plus rentable de cette page.
-
 ### H2 — Avec quels musiciens ?
 
 ```
@@ -156,7 +163,22 @@ Déjà présents et exploitables : YouTube `@davidmequies` · Facebook `10007340
 
 ---
 
-## 4. Contrôles avant publication
+## 4. ⚠️ Autres affirmations du site à faire confirmer par David
+
+La FAQ en ligne a déjà livré une affirmation fausse (correction a). J'avais pris les suivantes
+pour des faits, toutes tirées du site lui-même — **à valider une par une avant publication** :
+
+| Affirmation publiée | Source | Statut |
+|---|---|---|
+| « préparation du jeune garçon à la lecture de la Torah et des Haftarot » | FAQ | ❌ **FAUX — confirmé par David** |
+| « cérémonies religieuses en synagogue **(lundi et jeudi)** » | schéma LocalBusiness + FAQ (2 fois) | ❓ à confirmer |
+| « chanteur de synagogue, pianiste et **chef de chœur** » | FAQ | ❓ à confirmer |
+| mélodies sépharades « marocaines, tunisiennes, algériennes » + musique israélienne contemporaine | FAQ | ❓ à confirmer |
+| « réserver 6 à 12 mois à l'avance » / « 4 à 8 semaines » pour la synagogue | FAQ | ❓ à confirmer |
+| « frais de déplacement hors Île-de-France » | FAQ | ❓ à confirmer |
+| horaires d'ouverture lun-ven 9h-20h, dim 10h-18h | schéma LocalBusiness | ❓ à confirmer |
+
+## 5. Contrôles avant publication
 - [ ] Zéro occurrence de hazan / hazzan / chantre / cantor (texte, title, meta, alt, schéma).
 - [ ] Un seul H1 sur la page, celui ci-dessus.
 - [ ] L'URL de la page, le canonical et le `url` du schéma Person pointent tous vers la même adresse.
