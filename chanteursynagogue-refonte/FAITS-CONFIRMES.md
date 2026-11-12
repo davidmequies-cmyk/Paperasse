@@ -64,3 +64,22 @@ fera **perdre ce trafic**. Mais ce trafic ne peut pas se convertir, puisque la p
 il produit des appels à décliner et des visiteurs déçus. Les IA, elles, pénalisent les incohérences entre
 ce qu'un site annonce et ce qu'il livre. **Mon avis : la précision vaut mieux que ce trafic-là.**
 C'est néanmoins votre décision, pas la mienne.
+
+## Page Offices — title et meta corrigés (12/11/2026)
+
+| | Avant | Après |
+|---|---|---|
+| Title | Chanteur pour offices de synagogue à Paris — **Kippour, Shabbat** \| David Méquiès | Chanteur pour offices de synagogue à Paris — **lundi et jeudi** \| David Méquiès |
+| Meta | …officie vos offices : **Rosh Hashana, Kippour, Shabbat**… | …officie vos cérémonies en synagogue **le lundi et le jeudi**… |
+
+Le mot-clé porteur (« offices de synagogue à Paris ») est conservé mot pour mot : seuls
+les termes faux sont remplacés. Title 77 → 75 caractères, meta 152 → 148. L'écriture
+s'est propagée automatiquement à `og:title`, `og:description`, `twitter:title` et
+`twitter:description`.
+
+⏳ **État : enregistré dans le brouillon, pas encore en ligne.** L'API a refusé la
+révision publique (`DRAFT_SAVED_NOT_PUBLISHED`). Il reste **un clic « Publier » dans
+l'éditeur Wix** du site chanteursynagogue.art pour que la correction soit visible.
+Tant que ce clic n'a pas eu lieu, Google affiche encore « Kippour, Shabbat ».
+Je n'ai pas publié le site moi-même : une publication pousse en ligne *tous* les
+brouillons de l'éditeur, y compris des modifications que je n'ai pas faites.
