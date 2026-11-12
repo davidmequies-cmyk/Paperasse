@@ -145,9 +145,14 @@ Quatre repères : **Base** 61 rue de Lyon, 75012 Paris · **Priorité** Paris, �
 
 > Volontairement **non repliable** : un texte visible est lu par les robots des IA, un texte replié
 > ne l'est pas toujours. C'est le seul endroit de la refonte où on renonce à un accordéon.
+>
+> La première question est posée **en pleine largeur, en tête** : c'est la plus pratique des cinq,
+> celle qui décide si la famille appelle maintenant ou dans six mois. Le délai « 6 à 12 mois » est
+> ✅ confirmé par David le 12/11.
 
 | Question | Réponse |
 |---|---|
+| **Combien de temps à l'avance faut-il réserver ?** *(en tête, pleine largeur)* | Idéalement 6 à 12 mois à l'avance pour une houppa ou une bar-mitsva : les belles dates se retiennent tôt. Un premier échange gratuit permet de vérifier la disponibilité de votre date, sans engagement. |
 | Quels jours intervient-il en synagogue ? | Le lundi et le jeudi, les jours de lecture de la Torah en semaine. Pour les soirées — galas, houppa, bar-mitsva — du dimanche au jeudi soir, et le samedi soir en hiver. |
 | Le répertoire peut-il être ashkénaze ou sépharade ? | Oui, David Méquiès maîtrise les deux traditions, ashkénaze et sépharade, et adapte le répertoire à la tradition de votre famille. |
 | Depuis combien de temps exerce-t-il ? | Depuis 1987, soit près de quarante ans de cérémonies juives, à Paris et bien au-delà. |
