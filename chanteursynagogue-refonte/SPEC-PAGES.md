@@ -12,7 +12,7 @@
 | `/apropos` | « L'Art d'une Voix » | À propos | Chanteur de synagogue et pianiste pour cérémonies juives \| David Méquiès |
 | `/chanteur-houppa` | Prestation Houppa | Houppa | Chanteur pour Houppa à Paris — mariage juif \| David Méquiès |
 | `/chanteur-bar-mitsva` | Prestation Bar-Mitsva | Bar-Mitsva | Chanteur pour Bar-Mitsva & Bat-Mitsva à Paris \| David Méquiès |
-| `/offices-synagogue` | Prestation Offices | Offices | Chanteur pour offices de synagogue à Paris — Kippour, Shabbat \| David Méquiès |
+| `/offices-synagogue` | Cérémonies en synagogue | Offices | ⚠️ title en ligne à remplacer → `Chanteur pour cérémonie en synagogue à Paris — lundi et jeudi \| David Méquiès` |
 | `/galerie` | Galerie | Galerie | ⚠️ relever le title actuel en ligne |
 | `/book-online` | Réserver (Bookings) | Réserver | ⚠️ relever le title actuel en ligne |
 | `/contact` | Contact | Contact | ⚠️ relever le title actuel en ligne |
@@ -25,7 +25,7 @@
 2. **Paragraphe réponse directe (GEO)** — 2–3 phrases factuelles en tête : qui (David Méquiès, chanteur de synagogue et pianiste), quoi (la prestation), où (Paris, Île-de-France, France, international), depuis quand (1987), formules (+ violoniste / + saxophone), consultation gratuite. Extractible tel quel par les IA.
 3. **Texte existant** de la page, restructuré en H2/H3 formulés en questions (« Comment se déroule la cérémonie ? », « Quel répertoire ? », « Comment réserver ? ») — reformater, ne pas réécrire.
 4. **Déroulé de la cérémonie** (étapes).
-5. **Mini-FAQ HTML visible** (3–5 questions formulées comme on les pose à une IA, réponses courtes autonomes). Exemples : « Combien coûte un chanteur pour une houppa ? » (→ devis personnalisé, formules duo/trio/quatuor, consultation gratuite) ; « Quel répertoire pour un office de Kippour ? » ; « Le répertoire peut-il être ashkénaze ou sépharade ? ».
+5. **Mini-FAQ HTML visible** (3–5 questions formulées comme on les pose à une IA, réponses courtes autonomes). Exemples : « Combien coûte un chanteur pour une houppa ? » (→ devis personnalisé, formules duo/trio/quatuor, consultation gratuite) ; « Quels jours intervenez-vous en synagogue ? » ; « Le répertoire peut-il être ashkénaze ou sépharade ? ».
 6. **Témoignage** (réel uniquement — rien d'inventé).
 7. **CTA final** : « Consultation gratuite » (→ /book-online) + tel 07 45 17 41 29 (click-to-call).
 8. **Maillage interne** : liens croisés vers les 2 autres prestations + accueil + /book-online.

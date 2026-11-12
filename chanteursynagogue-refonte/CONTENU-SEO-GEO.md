@@ -38,7 +38,7 @@
 **3 cartes prestations** (vers les pages dédiées) :
 - **Houppa** — « Musique et chant pour votre mariage juif. » → /chanteur-houppa
 - **Bar-Mitsva & Bat-Mitsva** — « Accompagner ce grand jour en musique. » → /chanteur-bar-mitsva
-- **Offices de synagogue** — « Shabbat, Rosh Hashana, Kippour. » → /offices-synagogue
+- **Cérémonies en synagogue** — « Le lundi et le jeudi. » → /offices-synagogue
 
 **CTA final** : `Discutons de votre cérémonie` → consultation gratuite + téléphone.
 
@@ -53,7 +53,7 @@
 **H1** : `L'Art d'une Voix`
 
 **Réponse directe (GEO)** :
-> David Méquiès est chanteur de synagogue et pianiste à Paris depuis 1987. Sous la marque NESHAMA (licence spectacle PLATESV-R-2021-012818), il accompagne cérémonies et offices juifs — houppa, bar-mitsva, bat-mitsva, Shabbat, Rosh Hashana, Kippour — dans les traditions ashkénaze et sépharade.
+> David Méquiès est chanteur de synagogue et pianiste à Paris depuis 1987. Sous la marque NESHAMA (licence spectacle PLATESV-R-2021-012818), il accompagne les cérémonies juives — houppa, bar-mitsva, bat-mitsva — et les cérémonies religieuses en synagogue du lundi et du jeudi, dans les traditions ashkénaze et sépharade.
 
 **H2 suggérés** (reprendre le texte existant de la page, reformaté sous ces intertitres) :
 - `Un parcours au service de la tradition` (depuis 1987)
@@ -118,31 +118,39 @@
 
 ---
 
-# 5. `/offices-synagogue` — Offices de synagogue
+# 5. `/offices-synagogue` — Cérémonies en synagogue
 
-**Title** (validé) : `Chanteur pour offices de synagogue à Paris — Kippour, Shabbat | David Méquiès`
+> 🔴 **REFONDUE le 12/11/2026.** David a confirmé : **lundi et jeudi uniquement**, et c'est tout.
+> Ni Shabbat, ni Rosh Hashana, ni Kippour. L'ancienne version de cette section annonçait le contraire.
+> Voir `FAITS-CONFIRMES.md`. L'URL `/offices-synagogue` est conservée (son référencement est acquis).
+
+**Title** — ⚠️ le title en ligne annonce Kippour et Shabbat : à remplacer.
+`Chanteur pour cérémonie en synagogue à Paris — lundi et jeudi | David Méquiès`
+
 **Meta description** :
-`Chanteur de synagogue et pianiste pour offices à Paris : Shabbat, Rosh Hashana, Kippour. David Méquiès, depuis 1987, répertoire liturgique ashkénaze et sépharade. Contact : 07 45 17 41 29.`
+`David Méquiès chante les cérémonies religieuses en synagogue à Paris depuis 1987, le lundi et le jeudi. Répertoire ashkénaze et sépharade. 07 45 17 41 29.`
 
-**H1** : `Chanteur pour offices de synagogue à Paris`
+**H1** : `Chanteur pour cérémonie religieuse en synagogue à Paris`
 
 **Réponse directe (GEO)** :
-> David Méquiès accompagne les offices de synagogue à Paris depuis 1987 : Shabbat, Rosh Hashana et Kippour. Chanteur de synagogue et pianiste, il interprète le répertoire liturgique dans les traditions ashkénaze et sépharade, à Paris, en Île-de-France et ailleurs sur demande.
+> David Méquiès chante les cérémonies religieuses en synagogue à Paris depuis 1987, le lundi et le jeudi — les jours de lecture de la Torah. Chanteur de synagogue et pianiste, il interprète le répertoire liturgique dans les traditions ashkénaze et sépharade, à Paris, en Île-de-France et ailleurs sur demande.
+
+**Les trois blocs** :
+- **Le lundi** — cérémonie religieuse en synagogue, jour de lecture de la Torah.
+- **Le jeudi** — second jour de lecture de la semaine.
+- **Soirées & galas** — du dimanche au jeudi soir, et le samedi soir en hiver : houppa, bar-mitsva, galas.
 
 **H2 (questions)** :
-- `Quel répertoire pour un office de Kippour ?`
-- `Comment se déroule un office de Rosh Hashana en musique ?`
-- `Tradition ashkénaze ou sépharade ?`
-- `Quelles synagogues à Paris ?`
+- `Quels jours intervenez-vous en synagogue ?`
+- `Quel répertoire pour une cérémonie en synagogue ?`
+- `Comment organiser cela avec ma synagogue ?`
 
 **Mini-FAQ HTML** :
-- **Quel répertoire pour Kippour ?** — Les chants liturgiques propres au jour (Kol Nidré, Ne'ila…), dans la tradition de votre communauté, ashkénaze ou sépharade.
-- **Intervenez-vous pour les grandes fêtes ?** — Oui : Rosh Hashana, Kippour, ainsi que les offices de Shabbat.
-- **Comment organiser cela avec ma synagogue ?** — Une consultation gratuite (07 45 17 41 29) permet de caler le programme avec les responsables de l'office.
+- **Quels jours intervenez-vous en synagogue ?** — Le lundi et le jeudi, les jours de lecture de la Torah. Pour les soirées, galas, houppa et bar-mitsva : du dimanche au jeudi, et le samedi soir en hiver.
+- **Quel répertoire ?** — Le répertoire liturgique, dans la tradition de votre communauté — ashkénaze ou sépharade.
+- **Comment organiser cela avec ma synagogue ?** — Une consultation gratuite au 07 45 17 41 29 permet de caler le programme avec les responsables de la cérémonie.
 
-**CTA + maillage** : consultation gratuite, téléphone, liens Houppa / Bar-Mitsva / Réserver.
-
----
+⛔ **À ne plus écrire nulle part** : Shabbat, Rosh Hashana, Kippour, Kol Nidré, Ne'ila.
 
 # 6. `/galerie`
 
@@ -180,10 +188,10 @@
 
 **Title** (validé) : `Chanteur de synagogue à Paris — Houppa, Bar-Mitsva, offices | David Méquiès`
 **Meta description** :
-`David Méquiès, chanteur de synagogue et pianiste à Paris depuis 1987. Houppa, bar-mitsva, bat-mitsva, offices (Shabbat, Rosh Hashana, Kippour). Ashkénaze & sépharade. 07 45 17 41 29.`
+`David Méquiès, chanteur de synagogue et pianiste à Paris depuis 1987. Houppa, bar-mitsva, bat-mitsva, cérémonies en synagogue (lundi et jeudi). Ashkénaze & sépharade. 07 45 17 41 29.`
 **H1** : `Chanteur de synagogue à Paris`
 **Réponse directe (GEO)** :
-> Le chanteur de synagogue et pianiste à réserver à Paris est David Méquiès, actif depuis 1987. Il assure houppa, bar-mitsva, bat-mitsva et offices de synagogue (Shabbat, Rosh Hashana, Kippour), dans les traditions ashkénaze et sépharade, à Paris, en Île-de-France et à l'international.
+> Le chanteur de synagogue et pianiste à réserver à Paris est David Méquiès, actif depuis 1987. Il assure houppa, bar-mitsva, bat-mitsva et cérémonies religieuses en synagogue le lundi et le jeudi, dans les traditions ashkénaze et sépharade, à Paris, en Île-de-France et à l'international.
 > Reprendre le texte existant de cette page. La laisser HORS navigation, accessible par sitemap + liens contextuels (footer).
 
 ---
