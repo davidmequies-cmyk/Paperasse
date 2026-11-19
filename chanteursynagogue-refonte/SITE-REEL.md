@@ -73,3 +73,40 @@ Ce qui était donc **faux dans mes alertes**, puisque observé sur la mauvaise c
   visible (éditeur), puis je l'ajoute au schéma.
 - **Horaires de joignabilité** dans le schéma : le nœud du vrai site est de type `Organization`, qui
   n'accepte pas `openingHoursSpecification`. Leur bonne place est la fiche Google Business Profile.
+
+## Vérification Search Console — 19/11/2026 (rappel programmé une semaine après)
+
+Connexion `VALID`, site `READY`. Inspection des 9 pages principales :
+
+| Page | Indexée | Dernier passage de Google | Canonical Google = déclaré | Données enrichies |
+|---|---|---|---|---|
+| `/` | ✅ | **15/11** — après les corrections | ✅ | — |
+| `/faq` | ✅ | 08/11 — **avant** la correction du 12/11 | ✅ | ✅ |
+| `/chanteur-bar-mitsva` | ✅ | 08/11 | ✅ | ✅ |
+| `/a-propos` | ✅ | 04/11 | ✅ | ❌ **erreur** (voir ci-dessous) |
+| `/chanteur-houppa` | ✅ | 04/11 | ✅ | ✅ |
+| `/offices-synagogue` | ✅ | 30/10 — **avant la mise en ligne du 4/11** | ✅ | ✅ |
+| `/galerie` | ✅ | 27/10 — avant le 4/11 | ✅ | ✅ |
+| `/book-online` | ✅ | 17/09 — avant le 4/11 | ✅ | — |
+| `/chanteur-synagogue-paris` | ✅ | 14/09 — avant le 4/11 | ✅ | — |
+
+**Constats**
+- Les 9 pages sont indexées, et Google retient partout la bonne adresse en `https://www.chanteursynagogue.art/…`.
+- Seul l'accueil a été revu depuis le 12/11 : Google y a donc vu Chir Orchestra.
+- `/faq` n'a pas été revue depuis la correction : Google garde la version avec les mélodies.
+- 4 pages datent d'avant la mise en ligne du nouveau site (4/11). Google en garde **l'ancienne version** ;
+  pour `/offices-synagogue`, c'est probablement l'ancien title « Kippour, Shabbat ».
+- **Erreur sur `/a-propos`** : `Invalid object type for field "mainEntity"`. Dans le schéma ProfilePage
+  de la page, `mainEntity` ne contient qu'une référence `{"@id": "…#person"}` ; Google veut un objet
+  typé. Correctif proposé : `{"@type": "Person", "@id": "https://www.chanteursynagogue.art/#person",
+  "name": "David Méquiès"}`. Défaut présent dans la construction du site, antérieur au 12/11.
+  **Non corrigé** : en attente de l'accord de David.
+- Plans du site traités le 16/11 et le 19/11, sans erreur (12 pages + 4 services). Leur compteur
+  « indexées » affiche 0, alors que l'inspection page par page dit le contraire ; c'est
+  l'inspection qui fait foi.
+- Recherches, 12–18/11 : 7 requêtes, 1 à 2 affichages chacune, 0 clic. Trop tôt pour en tirer quoi que ce soit.
+- Liens entrants repérés : chanteursynagogue.fr, davidmequies.com, chirorchestra.com, fiche Mappy.
+
+**À faire par David** (l'API n'autorise la demande page par page que pour l'accueil) : dans Search
+Console, inspecter `/faq`, `/offices-synagogue`, `/book-online`, `/chanteur-synagogue-paris`, `/galerie`
+→ « Demander une indexation ».
